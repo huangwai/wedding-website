@@ -3,17 +3,16 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#8e7ab5", // soft lavender
+      main: "#c8a97e", // wedding gold
     },
     secondary: {
-      main: "#d4af37", // gold accent
+      main: "#6b4f4f",
     },
   },
   typography: {
-    fontFamily: "'Playfair Display', serif",
-    h1: {
-      fontWeight: 600,
-    },
+    fontFamily: "Playfair Display, serif",
+    h1: { fontSize: "3rem", fontWeight: 600 },
+    h2: { fontSize: "2.2rem", fontWeight: 500 },
   },
 });
 

@@ -1,28 +1,29 @@
 import { AppBar, Toolbar, Button, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
 
-const pages = [
-  ["Home", "/"],
-  ["RSVP", "/rsvp"],
-  ["Details", "/details"],
-  ["Wedding Party", "/party"],
-  ["Travel", "/travel"],
-  ["FAQ", "/faq"],
-  ["Registry", "/registry"],
-  ["Gallery", "/gallery"],
-  ["Contact", "/contact"],
+const navItems = [
+  { label: "Home", id: "home" },
+
+  { label: "Details", id: "details" },
+  { label: "Wedding Party", id: "party" },
+  { label: "Travel", id: "travel" },
+  { label: "FAQ", id: "faq" },
+  { label: "Registry", id: "registry" },
+  { label: "Gallery", id: "gallery" },
+  { label: "RSVP", id: "rsvp" },
+  { label: "Contact", id: "contact" },
 ];
 
 export default function Navbar() {
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <AppBar position="sticky">
-      <Toolbar sx={{ gap: 2 }}>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Mi-Ju & Jimmy
-        </Typography>
-        {pages.map(([label, path]) => (
-          <Button key={path} color="inherit" component={Link} to={path}>
-            {label}
+    <AppBar position="sticky" color="transparent" elevation={0}>
+      <Toolbar sx={{ justifyContent: "center", gap: 2 }}>
+        {navItems.map((item) => (
+          <Button key={item.id} onClick={() => scrollToSection(item.id)}>
+            {item.label}
           </Button>
         ))}
       </Toolbar>
