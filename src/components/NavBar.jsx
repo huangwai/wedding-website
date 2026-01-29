@@ -6,8 +6,9 @@ const navItems = [
   { label: "Details", id: "details" },
   { label: "Wedding Party", id: "party" },
   { label: "Travel", id: "travel" },
-  { label: "FAQ", id: "faq" },
+
   { label: "Registry", id: "registry" },
+  { label: "FAQ", id: "faq" },
   { label: "Gallery", id: "gallery" },
   { label: "RSVP", id: "rsvp" },
   { label: "Contact", id: "contact" },
