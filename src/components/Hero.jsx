@@ -13,7 +13,7 @@ export default function Hero() {
         textAlign: "center",
         px: { xs: 2, sm: 4, md: 6 },
         py: { xs: 8, sm: 12, md: 16 },
-        bgcolor: "white",
+        bgcolor: "#421603",
       }}
     >
       <Typography

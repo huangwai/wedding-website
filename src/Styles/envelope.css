@@ -4,24 +4,25 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  background-color: #3b4049;
+  /* background-color: #64001b; */
 }
 
 .wrapper {
+  background-color: #e8e2d4;
   height: 200px;
   width: 300px;
-  background-color: #3760c9;
-  position: relative;
+  position: relative; /* make wrapper the positioning context */
   display: flex;
   justify-content: center;
-  z-index: 0;
+  align-items: center;
+  z-index: 1;
 }
 
 .lid {
@@ -39,7 +40,7 @@ body {
 
 /* Lid when closed */
 .lid.one {
-  border-top: 100px solid #658ced;
+  border-top: 100px solid #f2efe8;
   transform: rotateX(0deg);
   z-index: 3;
   transition-delay: 0.75s;
@@ -47,7 +48,7 @@ body {
 
 /* Lid when opened */
 .lid.two {
-  border-top: 100px solid #3760c9;
+  border-top: 100px solid #f2efe8;
   transform: rotateX(90deg);
   z-index: 1;
   transition-delay: 0.5s;
@@ -60,9 +61,9 @@ body {
   top: 0;
   left: 0;
   border-top: 100px solid transparent;
-  border-right: 150px solid #c4dff0;
-  border-bottom: 100px solid #c4dff0;
-  border-left: 150px solid #a4d4f2;
+  border-right: 150px solid #e8e2d4;
+  border-bottom: 100px solid #e8e2d4;
+  border-left: 150px solid #e8e2d4;
   z-index: 3;
 }
 
@@ -71,10 +72,29 @@ body {
   top: 0;
   width: 80%;
   height: 80%;
-  background-color: white;
   border-radius: 15px;
   z-index: 2;
   transition: 0.5s;
+  border: 2px solid #d1d1d1; /* optional edge */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* ensures child sections stay inside */
+  display: flex;
+  flex-direction: column; /* stack the sections vertically */
+}
+
+.letter .section1 {
+  flex: 1;
+  background-color: #e8e2d4; /* top */
+}
+
+.letter .section2 {
+  flex: 3;
+  background-color: #421603; /* middle */
+}
+
+.letter .section3 {
+  flex: 1;
+  background-color: #e1f0f8; /* bottom */
 }
 
 .letter p {
@@ -84,17 +104,63 @@ body {
   color: #3b4049;
 }
 
-.wrapper:hover .lid.one {
+.wrapper:active .lid.one {
   transform: rotateX(90deg);
   transition-delay: 0s;
 }
 
-.wrapper:hover .lid.two {
+.wrapper:active .lid.two {
   transform: rotateX(180deg);
   transition-delay: 0.25s;
 }
 
-.wrapper:hover .letter {
+.wrapper:active .letter {
   transform: translateY(-50px);
   transition-delay: 0.5s;
+}
+
+.open-btn {
+  position: absolute; /* absolute relative to wrapper */
+  top: 50%; /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%); /* center exactly */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #d4d4d4, #a8a8a8); /* silver */
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #888;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Courier New", monospace;
+  text-align: center;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.open-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1) rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional: dashed circular outline for stamp look */
+.open-btn::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 2px dashed #aaa; /* silver outline */
+  pointer-events: none;
 }

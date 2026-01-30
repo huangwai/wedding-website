@@ -24,7 +24,7 @@ const party = [
 
 export default function WeddingParty() {
   return (
-    <Box id="party" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#faf7f2" }}>
+    <Box id="party" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#421603" }}>
       <Container maxWidth="lg">
         <Typography
           variant="h3"

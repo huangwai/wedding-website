@@ -11,8 +11,9 @@ import theme from "./theme";
 import { useState } from "react";
 import FrontPage from "./Pages/FrontPage";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Envelope from "./components/Envelope";
 
-const WEDDING_PASSWORD = "mj10052026";
+const WEDDING_PASSWORD = "mj2026";
 
 function App() {
   const [password, setPassword] = useState("");
@@ -35,9 +36,19 @@ function App() {
     }
   };
 
+  // const handleEnterSite = () => {
+  //   localStorage.setItem("weddingEntered", "true");
+  //   console.log("entering site");
+  //   setHasEntered(true);
+  // };
   const handleEnterSite = () => {
-    localStorage.setItem("weddingEntered", "true");
-    setHasEntered(true);
+    console.log("entering site");
+
+    // Delay showing the wedding site by 2 seconds
+    setTimeout(() => {
+      localStorage.setItem("weddingEntered", "true");
+      setHasEntered(true);
+    }, 2000);
   };
 
   return (
@@ -108,7 +119,7 @@ function App() {
               px: { xs: 2, sm: 4 },
             }}
           >
-            <Typography variant="h1" gutterBottom>
+            {/* <Typography variant="h1" gutterBottom>
               Mi-Ju & Jimmy
             </Typography>
 
@@ -116,7 +127,10 @@ function App() {
 
             <Button variant="contained" size="large" onClick={handleEnterSite}>
               Enter Our Wedding
-            </Button>
+            </Button> */}
+
+            {/* Envelope */}
+            <Envelope onClick={() => handleEnterSite()} />
           </Box>
         </Fade>
       )}
