@@ -68,6 +68,12 @@ function App() {
             px: { xs: 2, sm: 4 },
           }}
         >
+          <img
+            src="/MJLogoV2.png"
+            alt="Logo"
+            height="300"
+            style={{ maxWidth: "25%", height: "auto" }}
+          />
           <LockOutlinedIcon sx={{ fontSize: 48, mb: 2 }} />
 
           <Typography variant="h2" gutterBottom>
