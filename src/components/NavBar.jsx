@@ -1,7 +1,6 @@
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   Stack,
   IconButton,
@@ -10,6 +9,7 @@ import {
   ListItemButton,
   ListItemText,
   useMediaQuery,
+  useScrollTrigger,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
@@ -18,11 +18,9 @@ import logo from "../../public/MJLogoV2.png";
 
 const sections = [
   { label: "Home", id: "home" },
-
   { label: "Details", id: "details" },
   { label: "Wedding Party", id: "party" },
   { label: "Travel", id: "travel" },
-
   { label: "Registry", id: "registry" },
   { label: "FAQ", id: "faq" },
   { label: "Gallery", id: "gallery" },
@@ -35,6 +33,12 @@ export default function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [open, setOpen] = useState(false);
 
+  // OPTIONAL: detect scroll
+  const scrolled = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 80,
+  });
+
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -45,10 +49,26 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="sticky" elevation={0}>
+      <AppBar
+        position="fixed"
+        elevation={0}
+        sx={{
+          // backgroundColor: scrolled ? "#421603" : "transparent",
+          backgroundColor: scrolled ? "#421603CC" : "transparent",
+          backdropFilter: scrolled ? "blur(6px)" : "none",
+          boxShadow: "none",
+          transition: "background-color 0.3s ease",
+        }}
+      >
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          {/* <Typography fontWeight={600}>A & J</Typography> */}
-          <img src={logo} alt="App Logo" height="50" />
+          <img
+            src={logo}
+            alt="App Logo"
+            height="50"
+            style={{ cursor: "pointer" }}
+            onClick={() => scrollTo("home")}
+          />
+
           {!isMobile ? (
             <Stack direction="row" spacing={2}>
               {sections.map(({ label, id }) => (
@@ -56,14 +76,18 @@ export default function Navbar() {
                   key={id}
                   color="inherit"
                   onClick={() => scrollTo(id)}
-                  sx={{ textTransform: "none", fontWeight: 500 }}
+                  sx={{
+                    textTransform: "none",
+                    fontWeight: 500,
+                    color: "#fff",
+                  }}
                 >
                   {label}
                 </Button>
               ))}
             </Stack>
           ) : (
-            <IconButton color="inherit" onClick={() => setOpen(true)}>
+            <IconButton sx={{ color: "#fff" }} onClick={() => setOpen(true)}>
               <MenuIcon />
             </IconButton>
           )}
