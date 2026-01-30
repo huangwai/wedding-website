@@ -14,6 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
+import logo from "../../public/MJLogoV2.png";
 
 const sections = [
   { label: "Home", id: "home" },
@@ -47,7 +48,7 @@ export default function Navbar() {
       <AppBar position="sticky" elevation={0}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* <Typography fontWeight={600}>A & J</Typography> */}
-          <img src="../../public/MJLogoV2.png" alt="App Logo" height="50" />
+          <img src={logo} alt="App Logo" height="50" />
           {!isMobile ? (
             <Stack direction="row" spacing={2}>
               {sections.map(({ label, id }) => (

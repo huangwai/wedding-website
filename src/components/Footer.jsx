@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import logo from "../../public/MJLogoV2.png";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
         © {new Date().getFullYear()} Mi-Ju & Jimmy.
       </Typography>
       <img
-        src="../../public/MJLogoV2.png"
+        src={logo}
         alt="App Logo"
         style={{ width: "70px", marginTop: "8px" }}
       />
