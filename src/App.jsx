@@ -54,12 +54,12 @@ function App() {
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
-            px: 2,
+            px: { xs: 2, sm: 4 },
           }}
         >
           <LockOutlinedIcon sx={{ fontSize: 48, mb: 2 }} />
 
-          <Typography variant="h1" gutterBottom>
+          <Typography variant="h2" gutterBottom>
             Mi-Ju & Jimmy
           </Typography>
 
@@ -105,7 +105,7 @@ function App() {
               justifyContent: "center",
               alignItems: "center",
               textAlign: "center",
-              px: 2,
+              px: { xs: 2, sm: 4 },
             }}
           >
             <Typography variant="h1" gutterBottom>

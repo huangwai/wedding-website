@@ -11,11 +11,24 @@ export default function Hero() {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        px: 2,
+        px: { xs: 2, sm: 4, md: 6 },
+        py: { xs: 8, sm: 12, md: 16 },
+        bgcolor: "white",
       }}
     >
-      <Typography variant="h1">Mi-Ju & Jimmy</Typography>
-      <Typography variant="h6" sx={{ mt: 2 }}>
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+          fontWeight: 600,
+        }}
+      >
+        Mi-Ju & Jimmy
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        sx={{ mt: 2, fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}
+      >
         October 05, 2026 • Rockville, Maryland
       </Typography>
     </Box>

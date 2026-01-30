@@ -2,9 +2,9 @@ import { Box, Typography, Container } from "@mui/material";
 
 export default function RSVP() {
   return (
-    <Box id="rsvp" sx={{ py: 12, bgcolor: "#f3ede6" }}>
+    <Box id="rsvp" sx={{ py: { xs: 8, sm: 12 }, bgcolor: "#f3ede6" }}>
       <Container maxWidth="md">
-        <Typography variant="h2" gutterBottom textAlign="center">
+        <Typography variant="h3" gutterBottom textAlign="center">
           RSVP
         </Typography>
 
@@ -15,7 +15,7 @@ export default function RSVP() {
         <Box
           sx={{
             width: "100%",
-            height: "800px",
+            height: { xs: "600px", sm: "700px", md: "800px" },
             borderRadius: 2,
             overflow: "hidden",
             boxShadow: 2,

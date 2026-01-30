@@ -36,19 +36,31 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <Box id="faq" sx={{ py: 10 }}>
+    <Box id="faq" sx={{ py: { xs: 8, sm: 10 } }}>
       <Container maxWidth="md">
-        <Typography variant="h2" gutterBottom textAlign="center">
+        <Typography
+          variant="h3"
+          gutterBottom
+          textAlign="center"
+          sx={{ fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.8rem" } }}
+        >
           Frequently Asked Questions
         </Typography>
 
         {faqs.map((faq, index) => (
           <Accordion key={index} sx={{ mb: 1 }}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography fontWeight={600}>{faq.question}</Typography>
+              <Typography
+                fontWeight={600}
+                sx={{ fontSize: { xs: "0.95rem", sm: "1rem" } }}
+              >
+                {faq.question}
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{faq.answer}</Typography>
+              <Typography sx={{ fontSize: { xs: "0.9rem", sm: "0.95rem" } }}>
+                {faq.answer}
+              </Typography>
             </AccordionDetails>
           </Accordion>
         ))}

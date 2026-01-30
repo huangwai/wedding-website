@@ -3,10 +3,10 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#c8a97e", // wedding gold
+      main: "#e8e2d4", // wedding gold
     },
     secondary: {
-      main: "#6b4f4f",
+      main: "#4e312d",
     },
   },
   typography: {

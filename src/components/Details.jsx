@@ -1,24 +1,39 @@
-import { Box, Typography, Container, Stack } from "@mui/material";
+import { Box, Typography, Container, Grid } from "@mui/material";
 
 export default function Details() {
   return (
-    <Box id="details" sx={{ py: 10, bgcolor: "#faf7f2" }}>
+    <Box id="details" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#faf7f2" }}>
       <Container maxWidth="md">
-        <Typography variant="h2" gutterBottom>
+        <Typography
+          variant="h3"
+          textAlign="center"
+          gutterBottom
+          sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+        >
           Wedding Details
         </Typography>
 
-        <Stack spacing={2}>
-          <Typography>
-            <strong>Ceremony:</strong> 4:30 PM
-          </Typography>
-          <Typography>
-            <strong>Venue:</strong> Rose Garden Estate
-          </Typography>
-          <Typography>
-            <strong>Reception:</strong> Immediately following
-          </Typography>
-        </Stack>
+        <Grid container spacing={4} sx={{ mt: 2 }}>
+          <Grid item xs={12} sm={6}>
+            <Typography fontWeight={600}>Ceremony</Typography>
+            <Typography>
+              June 12, 2026
+              <br />
+              4:30 PM
+              <br />
+              Stone Tower Winery
+            </Typography>
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <Typography fontWeight={600}>Reception</Typography>
+            <Typography>
+              Immediately following
+              <br />
+              Dinner & dancing to follow
+            </Typography>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );
