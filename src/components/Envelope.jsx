@@ -123,7 +123,6 @@ export default function Envelope({ onClick }) {
           />
         </div>
 
-        {/* Stamp */}
         <button
           onClick={handleClick}
           style={{
