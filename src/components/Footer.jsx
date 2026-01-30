@@ -13,9 +13,9 @@ export default function Footer() {
         © {new Date().getFullYear()} Mi-Ju & Jimmy.
       </Typography>
       <img
-        src="../../dist/MJLogoV2.png"
-        alt="Wedding Rings"
-        style={{ width: "50px", marginTop: "8px" }}
+        src="../../public/MJLogoV2.png"
+        alt="App Logo"
+        style={{ width: "70px", marginTop: "8px" }}
       />
     </Box>
   );

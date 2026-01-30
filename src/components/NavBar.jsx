@@ -47,7 +47,7 @@ export default function Navbar() {
       <AppBar position="sticky" elevation={0}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* <Typography fontWeight={600}>A & J</Typography> */}
-          <img src="../../dist/MJLogoV2.png" alt="Logo" height="50" />
+          <img src="../../public/MJLogoV2.png" alt="App Logo" height="50" />
           {!isMobile ? (
             <Stack direction="row" spacing={2}>
               {sections.map(({ label, id }) => (
