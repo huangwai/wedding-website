@@ -2,13 +2,14 @@ import { Box, Typography, Container, Grid } from "@mui/material";
 
 export default function Details() {
   return (
-    <Box id="details" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#faf7f2" }}>
+    <Box id="details" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#f2efe8" }}>
       <Container maxWidth="md">
         <Typography
-          variant="h3"
+          variant="h2"
           textAlign="center"
           gutterBottom
-          sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+          // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+          sx={{ color: "#421603" }}
         >
           Wedding Details
         </Typography>

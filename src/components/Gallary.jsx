@@ -14,10 +14,10 @@ export default function Gallery() {
     <Box id="gallery" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#faf7f2" }}>
       <Container maxWidth="lg">
         <Typography
-          variant="h3"
+          variant="h2"
           gutterBottom
           textAlign="center"
-          sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+          // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
         >
           Gallery
         </Typography>

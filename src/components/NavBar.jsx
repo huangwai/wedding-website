@@ -53,33 +53,55 @@ export default function Navbar() {
         position="fixed"
         elevation={0}
         sx={{
-          // backgroundColor: scrolled ? "#421603" : "transparent",
           backgroundColor: scrolled ? "#421603CC" : "transparent",
           backdropFilter: scrolled ? "blur(6px)" : "none",
-          boxShadow: "none",
           transition: "background-color 0.3s ease",
         }}
       >
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{
+            minHeight: { xs: 64, md: 72, lg: 80 },
+            px: { xs: 2, md: 4 },
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          {/* LOGO */}
           <img
             src={logo}
             alt="App Logo"
-            height="50"
+            height="48"
             style={{ cursor: "pointer" }}
             onClick={() => scrollTo("home")}
           />
 
+          {/* DESKTOP NAV */}
           {!isMobile ? (
-            <Stack direction="row" spacing={2}>
+            <Stack
+              direction="row"
+              spacing={{ lg: 3, xl: 4 }}
+              sx={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "nowrap", // 👈 prevents stacking
+                mt: "4px",
+              }}
+            >
               {sections.map(({ label, id }) => (
                 <Button
                   key={id}
-                  color="inherit"
                   onClick={() => scrollTo(id)}
                   sx={{
                     textTransform: "none",
                     fontWeight: 500,
+                    whiteSpace: "nowrap", // 👈 keeps text in one line
                     color: "#fff",
+                    fontSize: {
+                      lg: "1rem",
+                      xl: "1.25rem",
+                    },
+                    px: { lg: 1.5, xl: 2 },
                   }}
                 >
                   {label}
@@ -87,7 +109,10 @@ export default function Navbar() {
               ))}
             </Stack>
           ) : (
-            <IconButton sx={{ color: "#fff" }} onClick={() => setOpen(true)}>
+            <IconButton
+              sx={{ color: "#fff", ml: "auto" }}
+              onClick={() => setOpen(true)}
+            >
               <MenuIcon />
             </IconButton>
           )}
@@ -95,8 +120,13 @@ export default function Navbar() {
       </AppBar>
 
       {/* MOBILE DRAWER */}
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <List sx={{ width: 250 }}>
+      <Drawer
+        anchor="right"
+        open={open}
+        // sx={{ color: "red" }}
+        onClose={() => setOpen(false)}
+      >
+        <List sx={{ width: 250, color: "#421603" }}>
           {sections.map(({ label, id }) => (
             <ListItemButton key={id} onClick={() => scrollTo(id)}>
               <ListItemText primary={label} />

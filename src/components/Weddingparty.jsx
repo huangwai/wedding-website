@@ -27,10 +27,10 @@ export default function WeddingParty() {
     <Box id="party" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#421603" }}>
       <Container maxWidth="lg">
         <Typography
-          variant="h3"
+          variant="h2"
           textAlign="center"
           gutterBottom
-          sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+          sx={{ color: "#f2efe8" }}
         >
           Wedding Party
         </Typography>
@@ -49,9 +49,11 @@ export default function WeddingParty() {
                 }}
               />
 
-              <Typography fontWeight={600}>{name}</Typography>
+              <Typography color="#f2efe8" fontWeight={600}>
+                {name}
+              </Typography>
 
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="#f2efe8">
                 {role}
               </Typography>
             </Grid>

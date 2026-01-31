@@ -39,7 +39,7 @@ export default function Hero() {
         sx={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "#42160380", // brown with opacity
+          backgroundColor: "#42160380", // brown with opacity 42160380
           zIndex: 1,
         }}
       />
@@ -56,11 +56,12 @@ export default function Hero() {
         }}
       >
         <Typography
-          variant="h2"
-          sx={{
-            fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
-            fontWeight: 600,
-          }}
+          variant="h1"
+          // sx={{
+          //   fontSize: { xs: "2rem", sm: "3rem", md: "6rem" },
+          //   fontWeight: 400,
+          //   fontFamily: "Pinyon Script, cursive",
+          // }}
         >
           Mi-Ju & Jimmy
         </Typography>

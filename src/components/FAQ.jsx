@@ -39,10 +39,10 @@ export default function FAQ() {
     <Box id="faq" sx={{ py: { xs: 8, sm: 10 } }}>
       <Container maxWidth="md">
         <Typography
-          variant="h3"
+          variant="h2"
           gutterBottom
           textAlign="center"
-          sx={{ fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.8rem" } }}
+          // sx={{ fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.8rem" } }}
         >
           Frequently Asked Questions
         </Typography>
