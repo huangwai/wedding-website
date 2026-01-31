@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import video from "/public/Video/Hero.mp4";
 export default function Hero() {
   const [open, setOpen] = useState(false);
   // OPTIONAL: detect scroll
@@ -38,7 +39,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        src="/public/Video/Hero.mp4"
+        src={video}
         sx={{
           position: "absolute",
           inset: 0,
