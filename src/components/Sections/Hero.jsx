@@ -1,6 +1,21 @@
-import { Box, Typography } from "@mui/material";
-
+import { Box, Button, Typography } from "@mui/material";
+import { useState } from "react";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 export default function Hero() {
+  const [open, setOpen] = useState(false);
+  // OPTIONAL: detect scroll
+  const scrolled = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 80,
+  });
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    setOpen(false);
+  };
   return (
     <Box
       id="home"
@@ -23,7 +38,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        src="../../public/Video/Hero.mp4"
+        src="/public/Video/Hero.mp4"
         sx={{
           position: "absolute",
           inset: 0,
@@ -76,6 +91,26 @@ export default function Hero() {
         >
           October 05, 2026 • Rockville, Maryland
         </Typography>
+
+        <Button
+          sx={{
+            mt: 4,
+            px: 4,
+            py: 1.5,
+            fontSize: { xs: "0.9rem", sm: "1rem" },
+            fontFamily: "Cormorant Garamond, serif",
+            color: "#f2efe8",
+            backgroundColor: "transparent",
+            border: "1px solid transparent",
+            "&:hover": {
+              borderColor: "#f2efe8",
+              backgroundColor: "rgba(66, 22, 3, 0.06)",
+            },
+          }}
+          onClick={() => scrollTo("rsvp")}
+        >
+          RSVP Now
+        </Button>
       </Box>
     </Box>
   );

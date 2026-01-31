@@ -15,18 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
 import logo from "../../public/MJLogoV2.png";
-
-const sections = [
-  { label: "Home", id: "home" },
-  { label: "Details", id: "details" },
-  { label: "Wedding Party", id: "party" },
-  { label: "Travel", id: "travel" },
-  { label: "Registry", id: "registry" },
-  { label: "FAQ", id: "faq" },
-  { label: "Gallery", id: "gallery" },
-  { label: "RSVP", id: "rsvp" },
-  { label: "Contact", id: "contact" },
-];
+import { navSections } from "../assets/textList";
 
 export default function Navbar() {
   const theme = useTheme();
@@ -60,18 +49,20 @@ export default function Navbar() {
       >
         <Toolbar
           sx={{
-            minHeight: { xs: 64, md: 72, lg: 80 },
+            minHeight: { xs: 72, md: 96 },
             px: { xs: 2, md: 4 },
+            pt: { xs: 1, md: 2 },
             display: "flex",
-            alignItems: "center",
+            flexDirection: "column",
+            justifyContent: "center",
           }}
         >
-          {/* LOGO */}
+          {/* LOGO (CENTERED) */}
           <img
             src={logo}
             alt="App Logo"
-            height="48"
-            style={{ cursor: "pointer" }}
+            height="60"
+            style={{ cursor: "pointer", marginBottom: 8 }}
             onClick={() => scrollTo("home")}
           />
 
@@ -81,26 +72,25 @@ export default function Navbar() {
               direction="row"
               spacing={{ lg: 3, xl: 4 }}
               sx={{
-                flex: 1,
                 justifyContent: "center",
                 alignItems: "center",
-                flexWrap: "nowrap", // 👈 prevents stacking
-                mt: "4px",
+                flexWrap: "nowrap",
               }}
             >
-              {sections.map(({ label, id }) => (
+              {navSections.map(({ label, id }) => (
                 <Button
                   key={id}
                   onClick={() => scrollTo(id)}
                   sx={{
                     textTransform: "none",
-                    fontWeight: 500,
-                    whiteSpace: "nowrap", // 👈 keeps text in one line
-                    color: "#fff",
+                    fontWeight: 600,
+                    whiteSpace: "nowrap",
+                    color: "#f2efe8",
                     fontSize: {
                       lg: "1rem",
                       xl: "1.25rem",
                     },
+                    fontFamily: "Cormorant  Garamond, serif",
                     px: { lg: 1.5, xl: 2 },
                   }}
                 >
@@ -110,7 +100,12 @@ export default function Navbar() {
             </Stack>
           ) : (
             <IconButton
-              sx={{ color: "#fff", ml: "auto" }}
+              sx={{
+                color: "#f2efe8",
+                position: "absolute",
+                right: 16,
+                top: 16,
+              }}
               onClick={() => setOpen(true)}
             >
               <MenuIcon />
@@ -127,7 +122,7 @@ export default function Navbar() {
         onClose={() => setOpen(false)}
       >
         <List sx={{ width: 250, color: "#421603" }}>
-          {sections.map(({ label, id }) => (
+          {navSections.map(({ label, id }) => (
             <ListItemButton key={id} onClick={() => scrollTo(id)}>
               <ListItemText primary={label} />
             </ListItemButton>

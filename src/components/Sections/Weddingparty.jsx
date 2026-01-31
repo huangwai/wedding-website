@@ -1,26 +1,5 @@
 import { Box, Typography, Container, Grid, Avatar } from "@mui/material";
-
-//You can later replace Avatar with photos.
-const party = [
-  {
-    name: "Mi-Eh Moon",
-    role: "Bridesmaid",
-    Description: "Test",
-    img: "../assets/Photos/headshots/POG05338.jpg",
-  },
-  {
-    name: "Mi-Jin Ryu",
-    role: "Bridesmaid",
-    Description: "Test",
-    img: "",
-  },
-  { name: "Jamie Jeong", role: "Bridesmaid", Description: "Test", img: "" },
-  { name: "Judy Yoo", role: "Bridesmaid", Description: "Test", img: "" },
-  { name: "Jessey Huynh", role: "Groomsman", Description: "Test", img: "" },
-  { name: "David Huynh", role: "Groomsman", Description: "Test", img: "" },
-  { name: "Ronit Bhansali", role: "Groomsman", Description: "Test", img: "" },
-  { name: "Ishaan Gupta", role: "Groomsman", Description: "Test", img: "" },
-];
+import { weddingParty } from "../../assets/textList";
 
 export default function WeddingParty() {
   return (
@@ -36,7 +15,7 @@ export default function WeddingParty() {
         </Typography>
 
         <Grid container spacing={4} justifyContent="center">
-          {party.map(({ name, role, img }) => (
+          {weddingParty.map(({ name, role, img }) => (
             <Grid item xs={6} sm={4} md={3} key={name} textAlign="center">
               <Avatar
                 src={img}

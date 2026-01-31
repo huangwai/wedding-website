@@ -2,7 +2,10 @@ import { Box, Typography, Container, Stack, Button } from "@mui/material";
 
 export default function Registry() {
   return (
-    <Box id="registry" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#faf7f2" }}>
+    <Box
+      id="registry"
+      sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#421603", color: "#f2efe8" }}
+    >
       <Container maxWidth="sm" textAlign="center">
         <Typography
           textAlign="center"

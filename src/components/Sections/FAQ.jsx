@@ -7,36 +7,14 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
-const faqs = [
-  {
-    question: "What is the dress code?",
-    answer:
-      "The dress code is semi-formal. Suits, cocktail dresses, or anything you feel great in!",
-  },
-  {
-    question: "Can I bring a plus one?",
-    answer:
-      "If your invitation includes a plus one, they are more than welcome. Please RSVP accordingly.",
-  },
-  {
-    question: "Are kids welcome?",
-    answer:
-      "While we love your little ones, this will be an adults-only celebration.",
-  },
-  {
-    question: "Is there parking at the venue?",
-    answer: "Yes, complimentary parking will be available at the venue.",
-  },
-  {
-    question: "When should I RSVP by?",
-    answer: "Please RSVP by May 1, 2026 so we can plan accordingly.",
-  },
-];
+import { faqSection } from "../../assets/textList";
 
 export default function FAQ() {
   return (
-    <Box id="faq" sx={{ py: { xs: 8, sm: 10 } }}>
+    <Box
+      id="faq"
+      sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#f2efe8", color: "#421603" }}
+    >
       <Container maxWidth="md">
         <Typography
           variant="h2"
@@ -47,8 +25,11 @@ export default function FAQ() {
           Frequently Asked Questions
         </Typography>
 
-        {faqs.map((faq, index) => (
-          <Accordion key={index} sx={{ mb: 1 }}>
+        {faqSection.map((faq, index) => (
+          <Accordion
+            key={index}
+            sx={{ mb: 1, color: "#421603", backgroundColor: "#e8e2d4" }}
+          >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography
                 fontWeight={600}

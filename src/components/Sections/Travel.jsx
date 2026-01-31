@@ -2,7 +2,10 @@ import { Box, Typography, Container, Grid, Link } from "@mui/material";
 
 export default function Travel() {
   return (
-    <Box id="travel" sx={{ py: { xs: 8, sm: 10 } }}>
+    <Box
+      id="travel"
+      sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#f2efe8", color: "#421603" }}
+    >
       <Container maxWidth="md">
         <Typography
           variant="h2"

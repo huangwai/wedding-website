@@ -30,22 +30,22 @@ const theme = createTheme({
     h2: {
       fontFamily: "Pinyon Script, cursive",
       fontWeight: 400,
-      fontSize: "2rem",
+      fontSize: "3rem",
       lineHeight: 1.25,
 
       "@media (min-width:600px)": {
-        fontSize: "2.75rem",
+        fontSize: "2rem",
       },
       "@media (min-width:900px)": {
         fontSize: "3.5rem",
       },
       h3: {
-        fontFamily: "Playfair Display, serif",
-        fontWeight: 500,
-        fontSize: "1.75rem",
+        fontFamily: "Pinyon Script, cursive",
+        fontWeight: 300,
+        fontSize: "1.50rem",
 
         "@media (min-width:600px)": {
-          fontSize: "2.25rem",
+          fontSize: "1.5rem",
         },
         "@media (min-width:900px)": {
           fontSize: "2.75rem",
