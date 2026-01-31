@@ -4,7 +4,7 @@ export default function RSVP() {
   return (
     <Box id="rsvp" sx={{ py: { xs: 8, sm: 12 }, bgcolor: "#f3ede6" }}>
       <Container maxWidth="md">
-        <Typography variant="h3" gutterBottom textAlign="center">
+        <Typography variant="h2" gutterBottom textAlign="center">
           RSVP
         </Typography>
 

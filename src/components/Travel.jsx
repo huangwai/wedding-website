@@ -5,7 +5,7 @@ export default function Travel() {
     <Box id="travel" sx={{ py: { xs: 8, sm: 10 } }}>
       <Container maxWidth="md">
         <Typography
-          variant="h3"
+          variant="h2"
           textAlign="center"
           gutterBottom
           sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}

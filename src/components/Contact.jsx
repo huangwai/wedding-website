@@ -2,10 +2,10 @@ import { Box, Typography, Container, Stack, Link } from "@mui/material";
 
 export default function Contact() {
   return (
-    <Box id="contact" sx={{ py: { xs: 8, sm: 10 } }}>
+    <Box textAlign="center" id="contact" sx={{ py: { xs: 8, sm: 10 } }}>
       <Container maxWidth="sm" textAlign="center">
         <Typography
-          variant="h3"
+          variant="h2"
           gutterBottom
           sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
         >
