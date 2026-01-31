@@ -125,7 +125,7 @@ function App() {
               px: { xs: 2, sm: 4 },
             }}
           >
-            {/* <Typography variant="h1" gutterBottom>
+            <Typography variant="h1" gutterBottom>
               Mi-Ju & Jimmy
             </Typography>
 
@@ -133,10 +133,10 @@ function App() {
 
             <Button variant="contained" size="large" onClick={handleEnterSite}>
               Enter Our Wedding
-            </Button> */}
+            </Button>
 
             {/* Envelope */}
-            <Envelope onClick={() => handleEnterSite()} />
+            {/* <Envelope onClick={() => handleEnterSite()} /> */}
           </Box>
         </Fade>
       )}

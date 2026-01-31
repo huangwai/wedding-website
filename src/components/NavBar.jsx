@@ -14,7 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
-import logo from "../../public/MJLogoV2.png";
+import logo from "/public/MJLogoV2.png";
 import { navSections } from "../assets/textList";
 
 export default function Navbar() {
