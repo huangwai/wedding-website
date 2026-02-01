@@ -12,6 +12,7 @@ import { useState } from "react";
 import FrontPage from "./Pages/FrontPage";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Envelope from "./components/Envelope";
+import Intro from "./Pages/Intro";
 
 const WEDDING_PASSWORD = "mj2026";
 
@@ -113,6 +114,11 @@ function App() {
 
       {/* STEP 2: ENTER BUTTON */}
       {isAuthorized && !hasEntered && (
+        <Intro handleEnterSite={handleEnterSite} />
+      )}
+
+      {/* STEP 2: ENTER BUTTON
+      {isAuthorized && !hasEntered && (
         <Fade in timeout={500}>
           <Box
             sx={{
@@ -136,10 +142,9 @@ function App() {
             </Button>
 
             {/* Envelope */}
-            {/* <Envelope onClick={() => handleEnterSite()} /> */}
-          </Box>
-        </Fade>
-      )}
+      {/* <Envelope onClick={() => handleEnterSite()} /> */}
+      {/* </Box> */}
+      {/* </Fade> */}
 
       {/* STEP 3: WEDDING SITE */}
       <Fade in={isAuthorized && hasEntered} timeout={800}>
