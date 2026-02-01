@@ -14,49 +14,57 @@ export const weddingParty = [
   {
     name: "Mi-Eh Moon",
     role: "Bridesmaid",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Mi-Jin Ryu",
     role: "Bridesmaid",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Jamie Jeong",
     role: "Bridesmaid",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Judy Yoo",
     role: "Bridesmaid",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Jessey Huynh",
     role: "Groomsman",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
   {
     name: "David Huynh",
     role: "Groomsman",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Ronit Bhansali",
     role: "Groomsman",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Ishaan Gupta",
     role: "Groomsman",
-    Description: "Test",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/public/Photos/headshots/POG05338.jpg",
   },
 ];
@@ -70,23 +78,107 @@ export const faqSection = [
   {
     question: "Can I bring a plus one?",
     answer:
-      "If your invitation includes a plus one, they are more than welcome. Please RSVP accordingly.",
+      "Plus-ones are listed on your invitation. If your invitation does not include a guest, we kindly ask that you attend solo.",
   },
+  // {
+  //   question: "What time should I arrive by?",
+  //   answer:
+  //     "Please arrive by 1:30 PM to allow time for parking and seating before the ceremony begins at 2:30 PM.",
+  // },
   {
     question: "Are kids welcome?",
     answer:
       "While we love your little ones, this will be an adults-only celebration.",
   },
   {
-    question: "Is there parking at the venue?",
-    answer: "Yes, complimentary parking will be available at the venue.",
+    question: "Is the ceremony indoors or outdoors?",
+    answer:
+      "The ceremony will be outdoors, weather permitting. The reception will take place indoors. In the event of inclement weather, the ceremony will be moved indoors.",
   },
   {
-    question: "When should I RSVP by?",
-    answer: "Please RSVP by May 1, 2026 so we can plan accordingly.",
+    question: "Will there be parking available?",
+    answer:
+      "Yes, there will be complimentary parking available at the venue for all guests.",
+  },
+  // {
+  //   question: "When should I RSVP by?",
+  //   answer: "Please RSVP by May 1, 2026 so we can plan accordingly.",
+  // },
+  {
+    question: "Who can I contact if I have questions the day of the wedding?",
+    answer:
+      "Please reach out to our wedding coordinator or a member of the wedding party. Contact details will be shared closer to the date.",
+  },
+  {
+    question: "Is smoking or vaping allowed?",
+    answer: "Smoking and vaping are not permitted at the venue.",
   },
 ];
 
+export const hotels = [
+  //close to IAD Airport
+  {
+    name: "DoubleTree by Hilton Washington Dulles Airport",
+    address: "13869 Park Center Road, Herndon, Virginia, 20171, USA",
+    details: "About 10 minutes away from IAD Airport.",
+    link: "https://www.hilton.com/en/hotels/iaddddt-doubletree-washington-dulles-airport/",
+  },
+  //Close to DCA Airport
+  {
+    name: "Crystal Gateway Marriott",
+    address: "1700 Richmond Hwy, Arlington, VA 22202, USA",
+    details: "About 5 minutes away from DCA Airport.",
+    link: "https://www.marriott.com/en-us/hotels/wasgw-crystal-gateway-marriott/overview/",
+  },
+  //Close to BWI Airport
+  {
+    name: "Hilton Baltimore BWI Airport",
+    address: "1739 West Nursery Road, Linthicum Heights, Maryland, 21090, USA",
+    details:
+      "About 35 minutes away from the ceremony venue. Close to Georgetown and downtown DC.",
+    link: "https://www.hilton.com/en/hotels/bwiaphf-hilton-baltimore-bwi-airport/",
+  },
+  //Close to Glenview Mansion
+  {
+    name: "Hilton Washington DC/Rockville Hotel & Executive Meeting Ctr",
+    address: "1750 Rockville Pike, Rockville, MD 20852, USA",
+    details: "About 10 minutes away from the Glenview Mansion.",
+    link: "https://www.hilton.com/en/hotels/iadmrhf-hilton-washington-dc-rockville-hotel-and-executive-meeting-ctr/",
+  },
+  {
+    name: "Courtyard by Marriott Gaithersburg Washingtonian Center",
+    address: "204 Boardwalk Pl, Gaithersburg, MD 20878, USA",
+    details: "About 20 minutes away from the Glenview Mansion.",
+    link: "https://www.marriott.com/en-us/hotels/wascg-courtyard-gaithersburg-washingtonian-center/overview/",
+  },
+];
+
+export const airports = [
+  {
+    name: "Dulles International Airport (IAD)",
+    details:
+      "Approximately 40 minutes away from the ceremony venue. Expect about ~40–50 minutes by car depending on traffic via I-270 north",
+  },
+  {
+    name: "Reagan National Airport (DCA)",
+    details:
+      "Approximately 40 minutes away from the ceremony venue. Usually ~45–60 minutes by car via DC/I-495 and I-270, depending on route and time of day",
+  },
+  {
+    name: "Baltimore-Washington International Thurgood Marshall Airport (BWI)",
+    details:
+      "Approximately 40 minutes away from the ceremony venue. Typically takes ~1–1.5 hours by car depending on traffic — especially on weekends or holiday weekends.",
+  },
+];
+
+export const gallaryImages = [
+  "/public/Photos/headshots/POG05338.jpg",
+  "/public/Photos/headshots/POG03635.jpg",
+  "/public/Photos/headshots/DSC01307.jpg",
+  "/public/Photos/headshots/headshot01.jpg",
+  "/public/Photos/headshots/headshot02.jpeg",
+  "/public/Photos/headshots/IMG_0227.jpeg",
+];
 //Using it in JSX file
 //import navSections from "../config/navSections";
 //{navSections.map(({ label, id }) => (

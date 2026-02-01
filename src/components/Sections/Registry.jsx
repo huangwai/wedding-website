@@ -4,7 +4,12 @@ export default function Registry() {
   return (
     <Box
       id="registry"
-      sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#421603", color: "#f2efe8" }}
+      sx={{
+        py: { xs: 9, md: 16 },
+        px: { xs: 2, sm: 4 },
+        bgcolor: "#421603",
+        color: "#f2efe8",
+      }}
     >
       <Container maxWidth="sm" textAlign="center">
         <Typography

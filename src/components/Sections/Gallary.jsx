@@ -1,58 +1,121 @@
-import { Box, Typography, Container, Grid } from "@mui/material";
-
-//Replace image URLs with your engagement photos later.
-const images = [
-  "https://images.unsplash.com/photo-1519741497674-611481863552",
-  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-  "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b",
-  "https://images.unsplash.com/photo-1511988617509-a57c8a288659",
-];
+import {
+  Box,
+  Typography,
+  Container,
+  Modal,
+  IconButton,
+  Fade,
+  Backdrop,
+} from "@mui/material";
+import Masonry from "@mui/lab/Masonry";
+import CloseIcon from "@mui/icons-material/Close";
+import { useState } from "react";
+import { gallaryImages } from "../../assets/textList";
 
 export default function Gallery() {
+  const [open, setOpen] = useState(false);
+  const [activeImage, setActiveImage] = useState("");
+
+  const handleOpen = (img) => {
+    setActiveImage(img);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setActiveImage("");
+  };
+
   return (
     <Box
       id="gallery"
-      sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#421603", color: "#f2efe8" }}
+      sx={{
+        py: { xs: 9, md: 16 },
+        px: { xs: 2, sm: 4 },
+        bgcolor: "#421603",
+        color: "#f2efe8",
+      }}
     >
       <Container maxWidth="lg">
-        <Typography
-          variant="h2"
-          gutterBottom
-          textAlign="center"
-          // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
-        >
+        <Typography variant="h2" textAlign="center" gutterBottom>
           Gallery
         </Typography>
 
-        <Typography
-          // variant="h4"
-          gutterBottom
-          textAlign="center"
-          // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
-        >
+        {/* <Typography textAlign="center" sx={{ mb: 6 }}>
           Coming Soon!
-        </Typography>
+        </Typography> */}
 
-        {/* <Grid container spacing={2}>
-          {images.map((img, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+        {/* Masonry */}
+        <Masonry columns={{ xs: 1, sm: 1, md: 3 }} spacing={3}>
+          {gallaryImages.map((img, index) => (
+            <Fade in timeout={800} key={index}>
               <Box
                 component="img"
-                src={`${img}?w=600&auto=format`}
+                src={`${img}?w=800&auto=format`}
                 alt="Wedding"
                 loading="lazy"
+                onClick={() => handleOpen(img)}
                 sx={{
                   width: "100%",
-                  height: "100%",
                   borderRadius: 2,
                   objectFit: "cover",
+                  cursor: "pointer",
+                  aspectRatio: { xs: "4/3", sm: "4/3", md: "3/4" }, // responsive aspect ratio
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.02)",
+                    boxShadow: "0 12px 30px rgba(0,0,0,0.35)",
+                  },
                 }}
               />
-            </Grid>
+            </Fade>
           ))}
-        </Grid> */}
+        </Masonry>
       </Container>
+
+      {/* Lightbox */}
+      <Modal
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        slots={{ backdrop: Backdrop }}
+        slotProps={{
+          backdrop: { timeout: 400, sx: { bgcolor: "rgba(0,0,0,0.85)" } },
+        }}
+      >
+        <Fade in={open}>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              outline: "none",
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+            }}
+          >
+            <IconButton
+              onClick={handleClose}
+              sx={{ position: "absolute", top: -48, right: -48, color: "#fff" }}
+            >
+              <CloseIcon fontSize="large" />
+            </IconButton>
+
+            <Box
+              component="img"
+              src={`${activeImage}?w=1600&auto=format`}
+              alt="Wedding enlarged"
+              sx={{
+                width: "100%",
+                height: "auto",
+                maxHeight: "90vh",
+                borderRadius: 2,
+              }}
+            />
+          </Box>
+        </Fade>
+      </Modal>
     </Box>
   );
 }

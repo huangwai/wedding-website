@@ -15,8 +15,8 @@ const theme = createTheme({
 
     h1: {
       fontFamily: "Pinyon Script, cursive",
-      fontWeight: 400,
-      fontSize: "3.5rem",
+      fontWeight: 500,
+      fontSize: "4rem",
       lineHeight: 1.2,
       letterSpacing: "0.03em",
 
@@ -29,7 +29,7 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: "Pinyon Script, cursive",
-      fontWeight: 400,
+      fontWeight: 500,
       fontSize: "3rem",
       lineHeight: 1.25,
 
@@ -39,17 +39,17 @@ const theme = createTheme({
       "@media (min-width:900px)": {
         fontSize: "3.5rem",
       },
-      h3: {
-        fontFamily: "Pinyon Script, cursive",
-        fontWeight: 300,
-        fontSize: "1.50rem",
+    },
+    h3: {
+      fontFamily: "Cormorant Garamond, serif",
+      fontWeight: 600,
+      fontSize: "1.50rem",
 
-        "@media (min-width:600px)": {
-          fontSize: "1.5rem",
-        },
-        "@media (min-width:900px)": {
-          fontSize: "2.75rem",
-        },
+      "@media (min-width:600px)": {
+        fontSize: "1.5rem",
+      },
+      "@media (min-width:900px)": {
+        fontSize: "2.75rem",
       },
     },
   },

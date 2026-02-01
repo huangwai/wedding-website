@@ -1,41 +1,96 @@
-import { Box, Typography, Container, Grid, Link } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Container,
+  Grid,
+  Link,
+  Divider,
+  Card,
+  CardContent,
+} from "@mui/material";
 
+import { hotels, airports } from "../../assets/textList";
+import { cardSx } from "../CardSx";
 export default function Travel() {
   return (
     <Box
       id="travel"
-      sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#f2efe8", color: "#421603" }}
+      sx={{
+        py: { xs: 9, md: 16 },
+        px: { xs: 2, sm: 4 },
+        bgcolor: "#f2efe8",
+        color: "#421603",
+      }}
     >
       <Container maxWidth="md">
         <Typography
-          variant="h2"
           textAlign="center"
+          variant="h2"
+          // textAlign="center"
           gutterBottom
-          sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
         >
           Travel & Stay
         </Typography>
 
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={6}>
-            <Typography fontWeight={600}>Hotel Block</Typography>
-            <Typography>
-              Hilton Garden Inn Leesburg
-              <br />
-              Group rate available
-            </Typography>
-            <Link href="#" underline="hover">
-              Book here
-            </Link>
-          </Grid>
+        <Divider sx={{ my: 3, borderColor: "#ccc" }} />
 
-          <Grid item xs={12} sm={6}>
-            <Typography fontWeight={600}>Transportation</Typography>
-            <Typography>
-              Complimentary shuttles will be provided from the hotel to the
-              venue.
-            </Typography>
-          </Grid>
+        {/* Hotels */}
+        <Typography textAlign="center" variant="h3" gutterBottom>
+          Hotels
+        </Typography>
+
+        <Grid justifyContent="center" container spacing={3} mb={5}>
+          {hotels.map((hotel, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Card elevation={0} sx={cardSx}>
+                <CardContent sx={{ textAlign: "center", py: 3 }}>
+                  <Typography fontWeight={600} fontSize="1.05rem">
+                    {hotel.name}
+                  </Typography>
+                  <Typography variant="body2" sx={{ my: 1.5, opacity: 0.85 }}>
+                    {hotel.address}
+                  </Typography>
+
+                  <Typography variant="body2" sx={{ my: 1.5, opacity: 0.85 }}>
+                    {hotel.details}
+                  </Typography>
+
+                  {hotel.link && (
+                    <Link
+                      href={hotel.link}
+                      underline="hover"
+                      sx={{ fontWeight: 500, color: "#421603" }}
+                    >
+                      Book here
+                    </Link>
+                  )}
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+
+        {/* Airports */}
+        <Typography variant="h3" textAlign="center" gutterBottom>
+          Nearby Airports
+        </Typography>
+
+        <Grid justifyContent="center" container spacing={3}>
+          {airports.map((airport, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Card elevation={0} sx={cardSx}>
+                <CardContent sx={{ textAlign: "center", py: 3 }}>
+                  <Typography fontWeight={600} fontSize="1.05rem">
+                    {airport.name}
+                  </Typography>
+
+                  <Typography variant="body2" sx={{ opacity: 0.85 }}>
+                    {airport.details}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </Box>

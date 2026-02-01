@@ -14,7 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
-import logo from "/public/MJLogoV2.png";
+import logo from "/public/MJLogoWhite.png";
 import { navSections } from "../assets/textList";
 
 export default function Navbar() {
@@ -51,7 +51,8 @@ export default function Navbar() {
           sx={{
             minHeight: { xs: 72, md: 96 },
             px: { xs: 2, md: 4 },
-            pt: { xs: 1, md: 2 },
+            pt: { xs: 0.5, md: 1.5 },
+            pb: { xs: 0.5, md: 1.5 },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",

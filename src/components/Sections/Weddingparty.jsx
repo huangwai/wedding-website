@@ -3,7 +3,10 @@ import { weddingParty } from "../../assets/textList";
 
 export default function WeddingParty() {
   return (
-    <Box id="party" sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#421603" }}>
+    <Box
+      id="party"
+      sx={{ py: { xs: 9, md: 16 }, px: { xs: 2, sm: 4 }, bgcolor: "#421603" }}
+    >
       <Container maxWidth="lg">
         <Typography
           variant="h2"

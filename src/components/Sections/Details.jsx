@@ -12,7 +12,7 @@ export default function WeddingDetails() {
     <Box
       id="details"
       sx={{
-        py: { xs: 8, md: 12 },
+        py: { xs: 9, md: 16 },
         px: { xs: 2, sm: 4 },
         backgroundColor: "#f2efe8",
         color: "#421603",
@@ -97,7 +97,7 @@ export default function WeddingDetails() {
               <Card elevation={3} sx={{ borderRadius: 3 }}>
                 <CardMedia
                   component="img"
-                  image="/images/reception-1.jpg"
+                  image="/public/Photos/Reception/receptionImg01.webp"
                   alt="Reception venue"
                   sx={{ height: 220 }}
                 />
@@ -106,7 +106,7 @@ export default function WeddingDetails() {
               <Card elevation={3} sx={{ borderRadius: 3 }}>
                 <CardMedia
                   component="img"
-                  image="/images/reception-2.jpg"
+                  image="/public/Photos/Reception/receptionTerra01.jpg"
                   alt="Reception venue"
                   sx={{ height: 220 }}
                 />
