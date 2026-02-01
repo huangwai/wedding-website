@@ -97,7 +97,7 @@ export default function WeddingDetails() {
               <Card elevation={3} sx={{ borderRadius: 3 }}>
                 <CardMedia
                   component="img"
-                  image="/public/Photos/Reception/receptionImg01.webp"
+                  image="/Photos/Reception/receptionImg01.webp"
                   alt="Reception venue"
                   sx={{ height: 220 }}
                 />
@@ -106,7 +106,7 @@ export default function WeddingDetails() {
               <Card elevation={3} sx={{ borderRadius: 3 }}>
                 <CardMedia
                   component="img"
-                  image="/public/Photos/Reception/receptionTerra01.jpg"
+                  image="/Photos/Reception/receptionTerra01.jpg"
                   alt="Reception venue"
                   sx={{ height: 220 }}
                 />

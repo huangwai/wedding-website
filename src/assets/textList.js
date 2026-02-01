@@ -16,56 +16,56 @@ export const weddingParty = [
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Mi-Jin Ryu",
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Jamie Jeong",
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Judy Yoo",
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Jessey Huynh",
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
   {
     name: "David Huynh",
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Ronit Bhansali",
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
   {
     name: "Ishaan Gupta",
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/public/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/POG05338.jpg",
   },
 ];
 
@@ -172,12 +172,12 @@ export const airports = [
 ];
 
 export const gallaryImages = [
-  "/public/Photos/headshots/POG05338.jpg",
-  "/public/Photos/headshots/POG03635.jpg",
-  "/public/Photos/headshots/DSC01307.jpg",
-  "/public/Photos/headshots/headshot01.jpg",
-  "/public/Photos/headshots/headshot02.jpeg",
-  "/public/Photos/headshots/IMG_0227.jpeg",
+  "/Photos/headshots/POG05338.jpg",
+  "/Photos/headshots/POG03635.jpg",
+  "/Photos/headshots/DSC01307.jpg",
+  "/Photos/headshots/headshot01.jpg",
+  "/Photos/headshots/headshot02.jpeg",
+  "/Photos/headshots/IMG_0227.jpeg",
 ];
 //Using it in JSX file
 //import navSections from "../config/navSections";
