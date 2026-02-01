@@ -1,12 +1,14 @@
 export const navSections = [
   { label: "Home", id: "home" },
   { label: "Details", id: "details" },
+  { label: "Timeline", id: "timeline" },
+  { label: "RSVP", id: "rsvp" },
   { label: "Wedding Party", id: "party" },
   { label: "Travel", id: "travel" },
   { label: "Registry", id: "registry" },
   { label: "FAQ", id: "faq" },
   { label: "Gallery", id: "gallery" },
-  { label: "RSVP", id: "rsvp" },
+
   { label: "Contact", id: "contact" },
 ];
 
@@ -178,6 +180,29 @@ export const gallaryImages = [
   "/Photos/headshots/headshot01.jpg",
   "/Photos/headshots/headshot02.jpeg",
   "/Photos/headshots/IMG_0227.jpeg",
+];
+
+export const timelineItems = [
+  {
+    title: "Ceremony",
+    time: "2:30 PM",
+    image: "/Photos/Timeline/ceremony01.png",
+  },
+  {
+    title: "Cocktail Hour",
+    time: "5:00 PM",
+    image: "/images/cocktail.png",
+  },
+  {
+    title: "Reception",
+    time: "6:30 PM",
+    image: "/images/reception.png",
+  },
+  {
+    title: "After Party",
+    time: "6:30 PM",
+    image: "/images/reception.png",
+  },
 ];
 //Using it in JSX file
 //import navSections from "../config/navSections";

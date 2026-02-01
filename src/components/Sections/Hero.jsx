@@ -98,7 +98,7 @@ export default function Hero() {
             mt: 4,
             px: 4,
             py: 1.5,
-            fontSize: { xs: "0.9rem", sm: "1rem" },
+            fontSize: { xs: "0.9rem", sm: "1.2rem" },
             fontFamily: "Cormorant Garamond, serif",
             color: "#f2efe8",
             backgroundColor: "transparent",

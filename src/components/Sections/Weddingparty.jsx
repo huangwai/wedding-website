@@ -5,7 +5,7 @@ export default function WeddingParty() {
   return (
     <Box
       id="party"
-      sx={{ py: { xs: 9, md: 16 }, px: { xs: 2, sm: 4 }, bgcolor: "#421603" }}
+      sx={{ py: { xs: 14, md: 22 }, px: { xs: 2, sm: 4 }, bgcolor: "#421603" }}
     >
       <Container maxWidth="lg">
         <Typography

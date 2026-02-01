@@ -12,6 +12,7 @@ const theme = createTheme({
   typography: {
     //Default Body Font
     fontFamily: "Cormorant Garamond, serif",
+    // fontSize: "1.25rem",
 
     h1: {
       fontFamily: "Pinyon Script, cursive",
@@ -21,10 +22,10 @@ const theme = createTheme({
       letterSpacing: "0.03em",
 
       "@media (min-width:600px)": {
-        fontSize: "3.5rem",
+        fontSize: "4rem",
       },
       "@media (min-width:900px)": {
-        fontSize: "4.5rem",
+        fontSize: "5rem",
       },
     },
     h2: {
@@ -34,23 +35,23 @@ const theme = createTheme({
       lineHeight: 1.25,
 
       "@media (min-width:600px)": {
-        fontSize: "2rem",
+        fontSize: "3rem",
       },
       "@media (min-width:900px)": {
-        fontSize: "3.5rem",
+        fontSize: "4rem",
       },
     },
     h3: {
       fontFamily: "Cormorant Garamond, serif",
-      fontWeight: 600,
-      fontSize: "1.50rem",
+      fontWeight: 500,
+      fontSize: "1.8rem",
 
-      "@media (min-width:600px)": {
-        fontSize: "1.5rem",
-      },
-      "@media (min-width:900px)": {
-        fontSize: "2.75rem",
-      },
+      // "@media (min-width:600px)": {
+      //   fontSize: "1.25rem",
+      // },
+      // "@media (min-width:900px)": {
+      //   fontSize: "2.50rem",
+      // },
     },
   },
 });

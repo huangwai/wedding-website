@@ -7,7 +7,7 @@ export default function Footer() {
       sx={{
         py: 4,
         textAlign: "center",
-        bgcolor: "#f3ede6",
+        bgcolor: "#e8e2d4",
       }}
     >
       <Typography variant="body2">

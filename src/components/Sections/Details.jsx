@@ -12,7 +12,7 @@ export default function WeddingDetails() {
     <Box
       id="details"
       sx={{
-        py: { xs: 9, md: 16 },
+        py: { xs: 14, md: 22 },
         px: { xs: 2, sm: 4 },
         backgroundColor: "#f2efe8",
         color: "#421603",
@@ -21,7 +21,7 @@ export default function WeddingDetails() {
       {/* INNER CENTERED CONTAINER */}
       <Box sx={{ maxWidth: 1200, mx: "auto" }}>
         {/* TITLE */}
-        <Typography variant="h2" align="center" sx={{ mb: { xs: 8, md: 12 } }}>
+        <Typography gutterBottom variant="h2" align="center">
           Wedding Details
         </Typography>
 

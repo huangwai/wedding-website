@@ -5,7 +5,7 @@ export default function Registry() {
     <Box
       id="registry"
       sx={{
-        py: { xs: 9, md: 16 },
+        py: { xs: 14, md: 22 },
         px: { xs: 2, sm: 4 },
         bgcolor: "#421603",
         color: "#f2efe8",
@@ -16,7 +16,7 @@ export default function Registry() {
           textAlign="center"
           variant="h2"
           gutterBottom
-          sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+          // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
         >
           Registry
         </Typography>

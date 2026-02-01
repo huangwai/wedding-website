@@ -1,12 +1,12 @@
 // src/Pages/EnterWedding.js
 import { Box, Typography, Button, Fade } from "@mui/material";
-import video from "/public/video/IMG_8053.mov";
+// import video from "/public/video/introMov.mp4.mov";
 const Intro = ({ handleEnterSite }) => {
   return (
     // <Fade in timeout={500}>
     <Box>
       {/* VIDEO BACKGROUND */}
-      <Box
+      {/* <Box
         component="video"
         autoPlay
         muted
@@ -16,22 +16,23 @@ const Intro = ({ handleEnterSite }) => {
         sx={{
           position: "absolute",
           //   inset: 0,
-          width: "100%",
-          height: "100%",
+          width: "100vw",
+          height: "100vh",
           objectFit: "cover",
+          objectPosition: "50% 100%",
           zIndex: -1,
         }}
       />
 
       {/* BROWN TINT OVERLAY (HEX) */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           inset: 0,
           backgroundColor: "#42160380", // brown with opacity 42160380
           zIndex: -1,
         }}
-      />
+      /> */}
       {/* CONTENT */}
       <Box
         sx={{
@@ -43,7 +44,7 @@ const Intro = ({ handleEnterSite }) => {
           textAlign: "center",
           px: { xs: 2, sm: 4 },
           zIndex: 3,
-          //   backgroundColor: "#421603",
+          backgroundColor: "#421603",
           color: "#f2efe8",
         }}
       >

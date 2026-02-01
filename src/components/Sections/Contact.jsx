@@ -5,13 +5,18 @@ export default function Contact() {
     <Box
       textAlign="center"
       id="contact"
-      sx={{ py: { xs: 8, sm: 10 }, bgcolor: "#421603", color: "#f2efe8" }}
+      sx={{
+        py: { xs: 14, md: 22 },
+        px: { xs: 2, sm: 4 },
+        bgcolor: "#f2efe8",
+        color: "#421603",
+      }}
     >
       <Container maxWidth="sm" textAlign="center">
         <Typography
           variant="h2"
           gutterBottom
-          sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+          // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
         >
           Contact Us
         </Typography>
@@ -19,7 +24,9 @@ export default function Contact() {
         <Typography sx={{ mb: 3 }}>Questions? Reach out anytime.</Typography>
 
         <Stack spacing={1}>
-          <Link href="mailto:mijuhhan@gmail.com">mijuhhan@gmail.com</Link>
+          <Link color="#421603" href="mailto:mijuhhan@gmail.com">
+            mijuhhan@gmail.com
+          </Link>
           <Typography variant="body2">
             Please allow 24–48 hours for a response
           </Typography>

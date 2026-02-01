@@ -87,11 +87,9 @@ export default function Navbar() {
                     fontWeight: 600,
                     whiteSpace: "nowrap",
                     color: "#f2efe8",
-                    fontSize: {
-                      lg: "1rem",
-                      xl: "1.25rem",
-                    },
-                    fontFamily: "Cormorant  Garamond, serif",
+                    fontSize: "1.25rem",
+                    // xl: "1.25rem",
+                    // fontFamily: "Cormorant  Garamond, serif",
                     px: { lg: 1.5, xl: 2 },
                   }}
                 >

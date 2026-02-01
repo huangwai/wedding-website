@@ -1,4 +1,4 @@
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider, CssBaseline, Fade } from "@mui/material";
 import Hero from "../components/Sections/Hero";
 import Navbar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -11,20 +11,49 @@ import Contact from "../components/Sections/Contact";
 import Gallery from "../components/Sections/Gallary";
 import RSVP from "../components/Sections/RSVP";
 import theme from "../theme";
+import Timeline from "../components/Sections/Timeline";
+// import FadeInSection from "../components/FadeInSection";
 function FrontPage() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar />
+      {/* <FadeInSection> */}
       <Hero />
+      {/* </FadeInSection> */}
+
+      {/* <FadeInSection direction="up"> */}
       <Details />
-      <WeddingParty />
-      <Travel />
-      <Registry />
-      <FAQ />
-      <Gallery />
+      {/* </FadeInSection> */}
+
+      {/* <FadeInSection direction="up"> */}
+      <Timeline />
+      {/* </FadeInSection> */}
+      {/* // <FadeInSection direction="left"> */}
       <RSVP />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection direction="right"> */}
+      <WeddingParty />
+      {/* </FadeInSection> */}
+
+      {/* <FadeInSection direction="left"> */}
+      <Travel />
+      {/* </FadeInSection> */}
+
+      {/* <FadeInSection direction="right"> */}
+      <Registry />
+      {/* </FadeInSection> */}
+      {/* // <FadeInSection direction="left"> */}
+      <FAQ />
+      {/* // </FadeInSection> */}
+      {/* <FadeInSection direction="right"> */}
+      <Gallery />
+      {/* </FadeInSection> */}
+
+      {/* <FadeInSection direction="up"> */}
       <Contact />
+      {/* </FadeInSection> */}
+
       <Footer />
     </ThemeProvider>
   );
