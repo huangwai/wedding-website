@@ -30,9 +30,9 @@ export default function Gallery() {
     <Box
       id="gallery"
       sx={{
-        py: { xs: 14, md: 22 },
+        py: { xs: 12, md: 18 },
         px: { xs: 2, sm: 4 },
-        bgcolor: "#421603",
+        bgcolor: "#3b1717",
         color: "#f2efe8",
       }}
     >

@@ -32,20 +32,18 @@ export default function Hero() {
         py: { xs: 8, sm: 12, md: 16 },
       }}
     >
-      {/* VIDEO BACKGROUND */}
+      {/* Image BACKGROUND */}
       <Box
-        component="video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        src={video}
+        component="img"
+        src="/Photos/Engagement/DSC02905.jpg"
+        alt="background"
         sx={{
           position: "absolute",
           inset: 0,
           width: "100%",
           height: "100%",
           objectFit: "cover",
+          objectPosition: "center center",
           zIndex: 0,
         }}
       />
@@ -55,7 +53,7 @@ export default function Hero() {
         sx={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "#42160380", // brown with opacity 42160380
+          backgroundColor: "#42160399", // brown with opacity 42160380
           zIndex: 1,
         }}
       />
@@ -73,6 +71,7 @@ export default function Hero() {
       >
         <Typography
           variant="h1"
+          sx={{ color: "#e8e2d4" }}
           // sx={{
           //   fontSize: { xs: "2rem", sm: "3rem", md: "6rem" },
           //   fontWeight: 400,
@@ -88,12 +87,13 @@ export default function Hero() {
             mt: 2,
             fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
             opacity: 0.9,
+            color: "#f2efe8",
           }}
         >
           October 05, 2026 • Rockville, Maryland
         </Typography>
 
-        <Button
+        {/* <Button
           sx={{
             mt: 4,
             px: 4,
@@ -103,6 +103,7 @@ export default function Hero() {
             color: "#f2efe8",
             backgroundColor: "transparent",
             border: "1px solid transparent",
+            borderColor: "#f2efe8",
             "&:hover": {
               borderColor: "#f2efe8",
               backgroundColor: "rgba(66, 22, 3, 0.06)",
@@ -111,7 +112,7 @@ export default function Hero() {
           onClick={() => scrollTo("rsvp")}
         >
           RSVP Now
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   );

@@ -8,9 +8,15 @@ export default function FadeInSection({ children, direction = "up" }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect(); // 🚫 stop observing = no re-animation
+        }
       },
-      { threshold: 0.2 },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px", // triggers slightly earlier
+      },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -18,30 +24,28 @@ export default function FadeInSection({ children, direction = "up" }) {
   }, []);
 
   const getTransform = () => {
-    if (visible) return "translate(0, 0)";
+    if (visible) return "translate3d(0, 0, 0)";
 
     switch (direction) {
       case "left":
-        return "translateX(-40px)";
+        return "translate3d(-40px, 0, 0)";
       case "right":
-        return "translateX(40px)";
+        return "translate3d(40px, 0, 0)";
       case "down":
-        return "translateY(-40px)";
+        return "translate3d(0, -40px, 0)";
       default:
-        return "translateY(40px)";
+        return "translate3d(0, 40px, 0)";
     }
   };
 
   return (
-    // OUTER: blocks horizontal overflow
     <Box
       ref={ref}
       sx={{
         width: "100%",
-        overflowX: "hidden", // 🔥 THIS is the fix
+        overflow: "hidden", // covers both axes safely
       }}
     >
-      {/* INNER: animated content */}
       <Box
         sx={{
           opacity: visible ? 1 : 0,

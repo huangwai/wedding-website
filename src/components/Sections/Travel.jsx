@@ -16,7 +16,7 @@ export default function Travel() {
     <Box
       id="travel"
       sx={{
-        py: { xs: 14, md: 22 },
+        py: { xs: 12, md: 18 },
         px: { xs: 2, sm: 4 },
         bgcolor: "#f2efe8",
         color: "#421603",
@@ -32,7 +32,30 @@ export default function Travel() {
           Travel & Stay
         </Typography>
 
-        <Divider sx={{ my: 3, borderColor: "#ccc" }} />
+        {/* <Divider sx={{ my: 3, borderColor: "#ccc" }} /> */}
+        {/* Airports */}
+        <Typography variant="h3" textAlign="center" gutterBottom>
+          Nearby Airports
+        </Typography>
+
+        <Grid justifyContent="center" container spacing={3}>
+          {airports.map((airport, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Card elevation={0} sx={cardSx}>
+                <CardContent sx={{ textAlign: "center", py: 3 }}>
+                  <Typography fontWeight={600} fontSize="1.05rem">
+                    {airport.name}
+                  </Typography>
+
+                  <Typography variant="body2" sx={{ opacity: 0.85 }}>
+                    {airport.details}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+        <br></br>
 
         {/* Hotels */}
         <Typography textAlign="center" variant="h3" gutterBottom>
@@ -58,35 +81,22 @@ export default function Travel() {
                   {hotel.link && (
                     <Link
                       href={hotel.link}
+                      // variant="outlined"
                       underline="hover"
-                      sx={{ fontWeight: 500, color: "#421603" }}
+                      sx={{
+                        backgroundColor: "#3b1717",
+                        fontWeight: 500,
+                        color: "#f2efe8",
+                        border: "1px solid #f2efe8",
+                        px: 2,
+                        py: 1,
+                        borderRadius: 10,
+                        fontSize: "0.9rem",
+                      }}
                     >
                       Book here
                     </Link>
                   )}
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-
-        {/* Airports */}
-        <Typography variant="h3" textAlign="center" gutterBottom>
-          Nearby Airports
-        </Typography>
-
-        <Grid justifyContent="center" container spacing={3}>
-          {airports.map((airport, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card elevation={0} sx={cardSx}>
-                <CardContent sx={{ textAlign: "center", py: 3 }}>
-                  <Typography fontWeight={600} fontSize="1.05rem">
-                    {airport.name}
-                  </Typography>
-
-                  <Typography variant="body2" sx={{ opacity: 0.85 }}>
-                    {airport.details}
-                  </Typography>
                 </CardContent>
               </Card>
             </Grid>

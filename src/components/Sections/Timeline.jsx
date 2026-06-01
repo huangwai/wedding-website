@@ -7,16 +7,16 @@ export default function Timeline() {
       textAlign="center"
       id="timeline"
       sx={{
-        py: { xs: 14, md: 22 },
+        py: { xs: 12, md: 18 },
         px: { xs: 2, sm: 4 },
-        bgcolor: "#421603",
+        bgcolor: "#3b1717",
         color: "#f2efe8",
       }}
     >
       <Typography gutterBottom variant="h2">
         Timeline
       </Typography>
-      <Box
+      {/* <Box
         sx={{
           gap: { xs: 4, sm: 6 },
           textAlign: "center",
@@ -31,8 +31,8 @@ export default function Timeline() {
             sm: "repeat(2, 1fr)",
           },
         }}
-      >
-        {timelineItems.map((item, index) => (
+      > */}
+      {/* {timelineItems.map((item, index) => (
           <Box key={index}>
             <Box
               component="img"
@@ -49,8 +49,15 @@ export default function Timeline() {
             <Typography variant="h3">{item.title}</Typography>
             <Typography>{item.time}</Typography>
           </Box>
-        ))}
-      </Box>
+        ))} */}
+      <Typography
+        sx={{ textAlign: "center" }}
+        // justifyContent="center"
+        // textAlign="center"
+      >
+        Coming soon!
+      </Typography>
+      {/* </Box> */}
     </Box>
   );
 }

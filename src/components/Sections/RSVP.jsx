@@ -5,7 +5,7 @@ export default function RSVP() {
     <Box
       id="rsvp"
       sx={{
-        py: { xs: 14, md: 22 },
+        py: { xs: 12, md: 18 },
         px: { xs: 2, sm: 4 },
         bgcolor: "#f2efe8",
         color: "#421603",

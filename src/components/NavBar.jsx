@@ -42,7 +42,8 @@ export default function Navbar() {
         position="fixed"
         elevation={0}
         sx={{
-          backgroundColor: scrolled ? "#421603CC" : "transparent",
+          // backgroundColor: "#f2efe8",
+          backgroundColor: scrolled ? "#3b1717" : "transparent",
           backdropFilter: scrolled ? "blur(6px)" : "none",
           transition: "background-color 0.3s ease",
         }}
@@ -59,16 +60,16 @@ export default function Navbar() {
           }}
         >
           {/* LOGO (CENTERED) */}
-          <img
+          {/* <img
             src={logo}
             alt="App Logo"
             height="60"
             style={{ cursor: "pointer", marginBottom: 8 }}
             onClick={() => scrollTo("home")}
-          />
+          /> */}
 
           {/* DESKTOP NAV */}
-          {!isMobile ? (
+          {/* {isMobile ? (
             <Stack
               direction="row"
               spacing={{ lg: 3, xl: 4 }}
@@ -76,6 +77,7 @@ export default function Navbar() {
                 justifyContent: "center",
                 alignItems: "center",
                 flexWrap: "nowrap",
+                // color: "#f2efe8",
               }}
             >
               {navSections.map(({ label, id }) => (
@@ -88,8 +90,6 @@ export default function Navbar() {
                     whiteSpace: "nowrap",
                     color: "#f2efe8",
                     fontSize: "1.25rem",
-                    // xl: "1.25rem",
-                    // fontFamily: "Cormorant  Garamond, serif",
                     px: { lg: 1.5, xl: 2 },
                   }}
                 >
@@ -97,29 +97,24 @@ export default function Navbar() {
                 </Button>
               ))}
             </Stack>
-          ) : (
-            <IconButton
-              sx={{
-                color: "#f2efe8",
-                position: "absolute",
-                right: 16,
-                top: 16,
-              }}
-              onClick={() => setOpen(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
+          ) : ( */}
+          <IconButton
+            sx={{
+              color: "#f2efe8",
+              position: "absolute",
+              right: 16,
+              top: 16,
+            }}
+            onClick={() => setOpen(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          {/* )} */}
         </Toolbar>
       </AppBar>
 
       {/* MOBILE DRAWER */}
-      <Drawer
-        anchor="right"
-        open={open}
-        // sx={{ color: "red" }}
-        onClose={() => setOpen(false)}
-      >
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <List sx={{ width: 250, color: "#421603" }}>
           {navSections.map(({ label, id }) => (
             <ListItemButton key={id} onClick={() => scrollTo(id)}>

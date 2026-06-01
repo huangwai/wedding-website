@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#e8e2d4", // wedding gold
+      main: "#f3e8cf", // wedding gold
     },
     secondary: {
       main: "#4e312d",

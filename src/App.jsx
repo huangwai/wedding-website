@@ -75,13 +75,13 @@ function App() {
             height="300"
             style={{ maxWidth: "25%", height: "auto" }}
           />
-          <LockOutlinedIcon sx={{ fontSize: 48, mb: 2 }} />
+          {/* <LockOutlinedIcon sx={{ fontSize: 48, mb: 2 }} /> */}
 
-          <Typography variant="h2" gutterBottom>
+          <Typography sx={{ color: "#3b1717" }} variant="h2" gutterBottom>
             Mi-Ju & Jimmy
           </Typography>
 
-          <Typography sx={{ mb: 4 }}>
+          <Typography sx={{ mb: 4, color: "#3b1717" }}>
             Please enter the password from your invitation
           </Typography>
 
@@ -103,7 +103,12 @@ function App() {
             <Button
               fullWidth
               variant="contained"
-              sx={{ mt: 2 }}
+              sx={{
+                mt: 2,
+                backgroundColor: "#656440",
+                color: "#e8e2d4",
+                fontWeight: "bold",
+              }}
               onClick={handlePasswordSubmit}
             >
               Submit
@@ -114,37 +119,8 @@ function App() {
 
       {/* STEP 2: ENTER BUTTON */}
       {isAuthorized && !hasEntered && (
-        <Intro handleEnterSite={handleEnterSite} />
+        <Intro handleEnterSite={handleEnterSite} isAuthorized={isAuthorized} />
       )}
-
-      {/* STEP 2: ENTER BUTTON
-      {isAuthorized && !hasEntered && (
-        <Fade in timeout={500}>
-          <Box
-            sx={{
-              minHeight: "100vh",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-              px: { xs: 2, sm: 4 },
-            }}
-          >
-            <Typography variant="h1" gutterBottom>
-              Mi-Ju & Jimmy
-            </Typography>
-
-            <Typography sx={{ mb: 4 }}>We’re so glad you’re here 💍</Typography>
-
-            <Button variant="contained" size="large" onClick={handleEnterSite}>
-              Enter Our Wedding
-            </Button>
-
-            {/* Envelope */}
-      {/* <Envelope onClick={() => handleEnterSite()} /> */}
-      {/* </Box> */}
-      {/* </Fade> */}
 
       {/* STEP 3: WEDDING SITE */}
       <Fade in={isAuthorized && hasEntered} timeout={800}>

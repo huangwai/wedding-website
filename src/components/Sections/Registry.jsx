@@ -1,14 +1,15 @@
 import { Box, Typography, Container, Stack, Button } from "@mui/material";
+import { registry } from "../../assets/textList";
 
 export default function Registry() {
   return (
     <Box
       id="registry"
       sx={{
-        py: { xs: 14, md: 22 },
+        py: { xs: 12, md: 18 },
         px: { xs: 2, sm: 4 },
-        bgcolor: "#421603",
-        color: "#f2efe8",
+        bgcolor: "#f2efe8",
+        color: "#421603",
       }}
     >
       <Container maxWidth="sm" textAlign="center">
@@ -26,16 +27,17 @@ export default function Registry() {
           registered at:
         </Typography>
 
-        <Stack spacing={2}>
-          <Button variant="outlined" href="#" target="_blank">
-            Zola
-          </Button>
-          <Button variant="outlined" href="#" target="_blank">
-            Crate & Barrel
-          </Button>
-          <Button variant="outlined" href="#" target="_blank">
-            Amazon
-          </Button>
+        <Stack spacing={2} sx={{ color: "#421603" }}>
+          {registry.map((item, index) => (
+            <Button
+              sx={{ borderColor: "#421603", color: "#421603" }}
+              variant="outlined"
+              href={item.link}
+              target="_blank"
+            >
+              {item.name}
+            </Button>
+          ))}
         </Stack>
       </Container>
     </Box>

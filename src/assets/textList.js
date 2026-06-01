@@ -4,7 +4,7 @@ export const navSections = [
   { label: "Timeline", id: "timeline" },
   { label: "RSVP", id: "rsvp" },
   { label: "Wedding Party", id: "party" },
-  { label: "Travel", id: "travel" },
+  // { label: "Travel", id: "travel" },
   { label: "Registry", id: "registry" },
   { label: "FAQ", id: "faq" },
   { label: "Gallery", id: "gallery" },
@@ -176,8 +176,8 @@ export const airports = [
 export const gallaryImages = [
   "/Photos/headshots/POG05338.jpg",
   "/Photos/headshots/POG03635.jpg",
-  "/Photos/headshots/DSC01307.jpg",
-  "/Photos/headshots/headshot01.jpg",
+  "/Photos/headshots/DSC01307.JPG",
+  "/Photos/headshots/headshot01.JPG",
   "/Photos/headshots/headshot02.jpeg",
   "/Photos/headshots/IMG_0227.jpeg",
 ];
@@ -202,6 +202,38 @@ export const timelineItems = [
     title: "After Party",
     time: "6:30 PM",
     image: "/images/reception.png",
+  },
+];
+
+export const registry = [
+  {
+    name: "target",
+    link: "https://www.target.com/",
+  },
+  {
+    name: "Crate & Barrel",
+    link: "#",
+  },
+  {
+    name: "Amazon",
+    link: "https://www.amazon.com/",
+  },
+];
+
+export const details = [
+  {
+    type: "CEREMONY",
+    name: "Glenview Mansion",
+    addressLine1: "603 Edmonston Dr.",
+    addressLine2: "Rockville, MD 20851",
+    image: "/Photos/Ceremony/glenviewimg01.png",
+  },
+  {
+    type: "RECEPTION",
+    name: "Terra Gaucha",
+    addressLine1: "1651 Chapman Ave,",
+    addressLine2: "Rockville, MD 20852",
+    image: "/Photos/Reception/receptionImg01.png",
   },
 ];
 //Using it in JSX file
