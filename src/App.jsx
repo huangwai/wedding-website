@@ -10,26 +10,40 @@ import {
 import theme from "./theme";
 import { useState } from "react";
 import FrontPage from "./Pages/FrontPage";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Envelope from "./components/Envelope";
 import Intro from "./Pages/Intro";
 
 const WEDDING_PASSWORD = "mj2026";
+const SESSION_DURATION_MS = 7 * 60 * 60 * 1000; // 1 days
+
+function isSessionValid() {
+  const authorized = localStorage.getItem("weddingAuthorized") === "true";
+  const timestamp = parseInt(
+    localStorage.getItem("weddingAuthTime") || "0",
+    10,
+  );
+  const now = Date.now();
+  return authorized && now - timestamp < SESSION_DURATION_MS;
+}
+
+function clearSession() {
+  localStorage.removeItem("weddingAuthorized");
+  localStorage.removeItem("weddingAuthTime");
+  localStorage.removeItem("weddingEntered");
+}
 
 function App() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
-  const [isAuthorized, setIsAuthorized] = useState(
-    localStorage.getItem("weddingAuthorized") === "true",
-  );
+  const [isAuthorized, setIsAuthorized] = useState(() => isSessionValid());
   const [hasEntered, setHasEntered] = useState(
-    localStorage.getItem("weddingEntered") === "true",
+    () => isSessionValid() && localStorage.getItem("weddingEntered") === "true",
   );
 
   const handlePasswordSubmit = () => {
     if (password === WEDDING_PASSWORD) {
       localStorage.setItem("weddingAuthorized", "true");
+      localStorage.setItem("weddingAuthTime", Date.now().toString()); // 👈 save timestamp
       setIsAuthorized(true);
       setError(false);
     } else {
