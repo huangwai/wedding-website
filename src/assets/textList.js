@@ -174,12 +174,18 @@ export const airports = [
 ];
 
 export const gallaryImages = [
-  "/Photos/headshots/POG05338.jpg",
-  "/Photos/headshots/POG03635.jpg",
-  "/Photos/headshots/DSC01307.JPG",
-  "/Photos/headshots/headshot01.JPG",
-  "/Photos/headshots/headshot02.jpeg",
-  "/Photos/headshots/IMG_0227.jpeg",
+  "/Photos/Engagement/DSC02799.jpg",
+  "/Photos/Engagement/DSC02823.jpg",
+  "/Photos/Engagement/DSC02899.jpg",
+  "/Photos/Engagement/DSC02905.jpg",
+
+  "/Photos/Engagement/DSC02922.jpg",
+  "/Photos/Engagement/DSC02946.jpg",
+  "/Photos/Engagement/DSC03486.jpg",
+  "/Photos/Engagement/DSC03766.jpg",
+
+  "/Photos/Engagement/DSC03990.jpg",
+  "/Photos/Engagement/DSC08172.jpg",
 ];
 
 export const timelineItems = [
