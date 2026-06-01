@@ -1,6 +1,5 @@
 // src/Pages/EnterWedding.js
 import { Box, Typography, Button, Fade } from "@mui/material";
-import video from "/public/video/introMov.mp4.mov";
 import { Card, CardMedia } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
 const Intro = ({ handleEnterSite, isAuthorized }) => {
