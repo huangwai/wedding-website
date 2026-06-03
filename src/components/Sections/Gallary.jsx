@@ -11,6 +11,7 @@ import Masonry from "@mui/lab/Masonry";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import { gallaryImages } from "../../assets/textList";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 
 export default function Gallery() {
   const [open, setOpen] = useState(false);

@@ -174,18 +174,18 @@ export const airports = [
 ];
 
 export const gallaryImages = [
-  "/Photos/Engagement/DSC02799.jpg",
-  "/Photos/Engagement/DSC02823.jpg",
-  "/Photos/Engagement/DSC02899.jpg",
-  "/Photos/Engagement/DSC02905.jpg",
+  "/Photos/Engagement/DSC02799.jpeg",
+  "/Photos/Engagement/DSC02823.jpeg",
+  "/Photos/Engagement/DSC02899.jpeg",
+  "/Photos/Engagement/DSC02905.jpeg",
 
-  "/Photos/Engagement/DSC02922.jpg",
-  "/Photos/Engagement/DSC02946.jpg",
-  "/Photos/Engagement/DSC03486.jpg",
-  "/Photos/Engagement/DSC03766.jpg",
+  "/Photos/Engagement/DSC02922.jpeg",
+  "/Photos/Engagement/DSC02946.jpeg",
+  "/Photos/Engagement/DSC03486.jpeg",
+  "/Photos/Engagement/DSC03766.jpeg",
 
-  "/Photos/Engagement/DSC03990.jpg",
-  "/Photos/Engagement/DSC08172.jpg",
+  "/Photos/Engagement/DSC03990.jpeg",
+  "/Photos/Engagement/DSC08172.jpeg",
 ];
 
 export const timelineItems = [
@@ -204,24 +204,19 @@ export const timelineItems = [
     time: "6:30 PM",
     image: "/images/reception.png",
   },
-  {
-    title: "After Party",
-    time: "6:30 PM",
-    image: "/images/reception.png",
-  },
 ];
 
 export const registry = [
   {
-    name: "target",
+    name: "Honeymoon Fund",
     link: "https://www.target.com/",
   },
   {
-    name: "Crate & Barrel",
+    name: "House Funding",
     link: "#",
   },
   {
-    name: "Amazon",
+    name: "Misc",
     link: "https://www.amazon.com/",
   },
 ];
@@ -233,6 +228,7 @@ export const details = [
     addressLine1: "603 Edmonston Dr.",
     addressLine2: "Rockville, MD 20851",
     image: "/Photos/Ceremony/glenviewimg01.png",
+    url: "https://maps.app.goo.gl/2WoWjCxtJDSXGCei8",
   },
   {
     type: "RECEPTION",
@@ -240,6 +236,7 @@ export const details = [
     addressLine1: "1651 Chapman Ave,",
     addressLine2: "Rockville, MD 20852",
     image: "/Photos/Reception/receptionImg01.png",
+    url: "https://maps.app.goo.gl/JxBEv23g7P7DMBng6",
   },
 ];
 //Using it in JSX file

@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Image BACKGROUND */}
       <Box
         component="img"
-        src="/Photos/Engagement/DSC02905.jpg"
+        src="/Photos/Engagement/DSC02905.jpeg"
         alt="background"
         sx={{
           position: "absolute",

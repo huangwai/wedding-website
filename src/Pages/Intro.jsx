@@ -91,10 +91,15 @@ const Intro = ({ handleEnterSite, isAuthorized }) => {
         <Button
           variant="outlined"
           size="large"
+
           onClick={handleClick}
           sx={{
             opacity: buttonVisible ? 1 : 0,
             transition: "opacity 1s ease",
+            fontWeight: "bold",
+            // fontSize: "1rem",
+            // width: "15vw",
+            // height: "5vh",
           }}
         >
           Enter Our Wedding

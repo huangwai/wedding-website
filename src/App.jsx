@@ -11,6 +11,8 @@ import theme from "./theme";
 import { useState } from "react";
 import FrontPage from "./Pages/FrontPage";
 import Intro from "./Pages/Intro";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import GalleryPage from "./Pages/GallaryPage";
 
 const WEDDING_PASSWORD = "mj2026";
 const SESSION_DURATION_MS = 7 * 60 * 60 * 1000; // 1 days
@@ -139,7 +141,12 @@ function App() {
       {/* STEP 3: WEDDING SITE */}
       <Fade in={isAuthorized && hasEntered} timeout={800}>
         <Box sx={{ display: isAuthorized && hasEntered ? "block" : "none" }}>
-          <FrontPage />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<FrontPage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
+            </Routes>
+          </BrowserRouter>
         </Box>
       </Fade>
     </ThemeProvider>

@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { details } from "../../assets/textList";
 import { cardSx } from "../CardSx";
+import { Link } from "@mui/material";
 export default function TwoColumnCards() {
   return (
     <Box
@@ -62,7 +63,7 @@ export default function TwoColumnCards() {
                     fontSize: { xs: "2rem", md: "3rem" },
                     fontWeight: "light",
                     mt: 2,
-                    mb: 5,
+                    mb: 4,
                   }}
                 >
                   {item.type}
@@ -74,12 +75,18 @@ export default function TwoColumnCards() {
                 <Typography variant="h3" sx={{ fontWeight: "bold" }}>
                   {item.name}
                 </Typography>
-                <Typography sx={{ color: "#656440", fontWeight: "lighter" }}>
+                <Link
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  underline="hover"
+                  color="inherit"
+                >
                   {item.addressLine1}
-                </Typography>
-                <Typography sx={{ color: "#656440", fontWeight: "lighter" }}>
+                  <br />
                   {item.addressLine2}
-                </Typography>
+                </Link>
+
                 <CardMedia
                   component="img"
                   alt="Image of Venue"
@@ -89,9 +96,8 @@ export default function TwoColumnCards() {
                     maxHeight: "25vh",
                     maxWidth: "50vw",
                     mb: -2,
-                    alignContent: "center",
-                    // backgroundColor: "red",
-                    alignItems: "center",
+                    mt: -2,
+                    mx: "auto", // 👈 centers the image
                   }}
                 ></CardMedia>
               </CardContent>

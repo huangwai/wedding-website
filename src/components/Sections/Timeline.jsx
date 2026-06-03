@@ -16,7 +16,7 @@ export default function Timeline() {
       <Typography gutterBottom variant="h2">
         Timeline
       </Typography>
-      {/* <Box
+      <Box
         sx={{
           gap: { xs: 4, sm: 6 },
           textAlign: "center",
@@ -26,13 +26,10 @@ export default function Timeline() {
           py: { xs: 8, md: 10 },
 
           display: "grid",
-          gridTemplateColumns: {
-            xs: "1fr",
-            sm: "repeat(2, 1fr)",
-          },
+          gridTemplateColumns: "1fr",
         }}
-      > */}
-      {/* {timelineItems.map((item, index) => (
+      >
+        {timelineItems.map((item, index) => (
           <Box key={index}>
             <Box
               component="img"
@@ -49,15 +46,8 @@ export default function Timeline() {
             <Typography variant="h3">{item.title}</Typography>
             <Typography>{item.time}</Typography>
           </Box>
-        ))} */}
-      <Typography
-        sx={{ textAlign: "center" }}
-        // justifyContent="center"
-        // textAlign="center"
-      >
-        Coming soon!
-      </Typography>
-      {/* </Box> */}
+        ))}
+      </Box>
     </Box>
   );
 }

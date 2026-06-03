@@ -16,8 +16,8 @@ export default function FAQ() {
       sx={{
         py: { xs: 12, md: 18 },
         px: { xs: 2, sm: 4 },
-        bgcolor: "#f2efe8",
-        color: "#421603",
+        bgcolor: "#3b1717",
+        color: "#f2efe8",
       }}
     >
       <Container maxWidth="md">

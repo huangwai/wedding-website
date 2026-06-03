@@ -24,18 +24,18 @@ export default function WeddingParty() {
                 src={img}
                 alt={name}
                 sx={{
-                  width: { xs: 80, sm: 110 },
-                  height: { xs: 80, sm: 110 },
+                  width: { xs: 90, sm: 200 },
+                  height: { xs: 90, sm: 200 },
                   mx: "auto",
                   mb: 2,
                 }}
               />
 
-              <Typography color="#f2efe8" fontWeight={600}>
+              <Typography variant="h3" color="#f2efe8" fontWeight={600}>
                 {name}
               </Typography>
 
-              <Typography variant="body2" color="#f2efe8">
+              <Typography variant="h6" color="#f2efe8">
                 {role}
               </Typography>
             </Grid>
