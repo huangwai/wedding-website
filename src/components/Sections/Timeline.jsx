@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { timelineItems } from "../../assets/textList";
+import timelineImage from "../../../public/Photos/Engagement/DSC02799.jpeg"; // 👈 update filename/path as needed
 
 export default function Timeline() {
   return (
@@ -8,7 +8,7 @@ export default function Timeline() {
       id="timeline"
       sx={{
         py: { xs: 12, md: 18 },
-        px: { xs: 2, sm: 4 },
+        px: { xs: 4, sm: 8, md: 16 },
         bgcolor: "#3b1717",
         color: "#f2efe8",
       }}
@@ -16,38 +16,20 @@ export default function Timeline() {
       <Typography gutterBottom variant="h2">
         Timeline
       </Typography>
-      <Box
-        sx={{
-          gap: { xs: 4, sm: 6 },
-          textAlign: "center",
-          maxWidth: "900px",
-          mx: "auto",
-          px: 2,
-          py: { xs: 8, md: 10 },
 
-          display: "grid",
-          gridTemplateColumns: "1fr",
+      <Box
+        component="img"
+        src={timelineImage}
+        alt="Wedding Timeline"
+        sx={{
+          width: "100%",
+          maxWidth: "900px",
+          height: "auto",
+          mx: "auto",
+          display: "block",
+          borderRadius: 2,
         }}
-      >
-        {timelineItems.map((item, index) => (
-          <Box key={index}>
-            <Box
-              component="img"
-              src={item.image}
-              alt={item.title}
-              sx={{
-                width: 70,
-                height: 70,
-                objectFit: "contain",
-                mb: 1.5,
-                mx: "auto",
-              }}
-            />
-            <Typography variant="h3">{item.title}</Typography>
-            <Typography>{item.time}</Typography>
-          </Box>
-        ))}
-      </Box>
+      />
     </Box>
   );
 }

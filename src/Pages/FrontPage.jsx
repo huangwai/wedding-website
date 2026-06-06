@@ -20,32 +20,32 @@ function FrontPage() {
       <FadeInSection>
         <Hero />
       </FadeInSection>
-      <FadeInSection direction="up">
+      <FadeInSection>
         <Details />
       </FadeInSection>
-      <FadeInSection direction="up">
+      <FadeInSection>
         <Timeline />
       </FadeInSection>
-      <FadeInSection direction="left">
+      <FadeInSection>
         <RSVP />
       </FadeInSection>
-      <FadeInSection direction="right">
+      <FadeInSection>
         <WeddingParty />
       </FadeInSection>
       {/* <FadeInSection direction="left">
         <Travel />
       </FadeInSection> */}
-      <FadeInSection direction="right">
+      <FadeInSection>
         <Registry />
       </FadeInSection>
 
-      <FadeInSection direction="left">
+      <FadeInSection>
         <FAQ />
       </FadeInSection>
       {/* <FadeInSection direction="right">
         <Gallery />
       </FadeInSection> */}
-      <FadeInSection direction="up">
+      <FadeInSection>
         <Contact />
       </FadeInSection>
       <Footer />

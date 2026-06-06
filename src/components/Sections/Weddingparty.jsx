@@ -17,25 +17,36 @@ export default function WeddingParty() {
           Wedding Party
         </Typography>
 
-        <Grid container spacing={4} justifyContent="center">
+        <Grid
+          container
+          spacing={{ xs: 3, sm: 4, md: 6 }}
+          justifyContent="center"
+        >
           {weddingParty.map(({ name, role, img }) => (
             <Grid item xs={6} sm={4} md={3} key={name} textAlign="center">
               <Avatar
                 src={img}
                 alt={name}
                 sx={{
-                  width: { xs: 90, sm: 200 },
-                  height: { xs: 90, sm: 200 },
+                  width: { xs: 80, sm: 140, md: 180 },
+                  height: { xs: 80, sm: 140, md: 180 },
                   mx: "auto",
-                  mb: 2,
+                  mb: { xs: 1, sm: 1.5, md: 2 },
                 }}
               />
 
-              <Typography variant="h3" color="#f2efe8" fontWeight={600}>
+              <Typography
+                color="#f2efe8"
+                fontWeight={600}
+                sx={{ fontSize: { xs: "0.85rem", sm: "1.1rem", md: "1.3rem" } }}
+              >
                 {name}
               </Typography>
 
-              <Typography variant="h6" color="#f2efe8">
+              <Typography
+                color="#f2efe8"
+                sx={{ fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" } }}
+              >
                 {role}
               </Typography>
             </Grid>

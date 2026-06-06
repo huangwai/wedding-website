@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import logo from "../../public/MJLogoV2.png";
+import logo from "/MJLogoV2.png";
 
 export default function Footer() {
   return (

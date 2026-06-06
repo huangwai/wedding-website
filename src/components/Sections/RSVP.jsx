@@ -22,7 +22,7 @@ export default function RSVP() {
 
         <Box
           sx={{
-            width: "100%",
+            maxWidth: "100%",
             height: { xs: "600px", sm: "700px", md: "800px" },
             borderRadius: 2,
             overflow: "hidden",

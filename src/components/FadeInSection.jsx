@@ -1,61 +1,33 @@
-import { Box } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import { Box } from "@mui/material";
 
-export default function FadeInSection({ children, direction = "up" }) {
+export default function FadeInSection({ children }) {
   const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect(); // 🚫 stop observing = no re-animation
+          setIsVisible(true);
+          observer.unobserve(entry.current);
         }
       },
-      {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px", // triggers slightly earlier
-      },
+      { threshold: 0.1 },
     );
-
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
-
-  const getTransform = () => {
-    if (visible) return "translate3d(0, 0, 0)";
-
-    switch (direction) {
-      case "left":
-        return "translate3d(-40px, 0, 0)";
-      case "right":
-        return "translate3d(40px, 0, 0)";
-      case "down":
-        return "translate3d(0, -40px, 0)";
-      default:
-        return "translate3d(0, 40px, 0)";
-    }
-  };
 
   return (
     <Box
       ref={ref}
       sx={{
-        width: "100%",
-        overflow: "hidden", // covers both axes safely
+        opacity: isVisible ? 1 : 0,
+        transition: "opacity 0.9s ease",
       }}
     >
-      <Box
-        sx={{
-          opacity: visible ? 1 : 0,
-          transform: getTransform(),
-          transition: "opacity 0.8s ease, transform 0.8s ease",
-          willChange: "opacity, transform",
-        }}
-      >
-        {children}
-      </Box>
+      {children}
     </Box>
   );
 }

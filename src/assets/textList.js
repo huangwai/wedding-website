@@ -43,7 +43,7 @@ export const weddingParty = [
   },
   {
     name: "Jessey Huynh",
-    role: "Groomsman",
+    role: "Best Man",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/Photos/headshots/POG05338.jpg",

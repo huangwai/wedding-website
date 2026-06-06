@@ -49,7 +49,7 @@ export default function Gallery() {
         {/* Masonry */}
         <Masonry columns={{ xs: 1, sm: 1, md: 3 }} spacing={3}>
           {gallaryImages.map((img, index) => (
-            <Fade in timeout={800} key={index}>
+            <Fade in timeout={1000} key={index}>
               <Box
                 component="img"
                 src={`${img}?w=800&auto=format`}

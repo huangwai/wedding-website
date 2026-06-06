@@ -93,9 +93,9 @@ export default function TwoColumnCards() {
                   image={item.image}
                   justifyContent="center"
                   sx={{
-                    maxHeight: "25vh",
-                    maxWidth: "50vw",
-                    mb: -2,
+                    maxHeight: { xs: "30vh", md: "40vh" },
+                    maxWidth: { xs: "90%", md: "75%" },
+                    mb: -6,
                     mt: -2,
                     mx: "auto", // 👈 centers the image
                   }}

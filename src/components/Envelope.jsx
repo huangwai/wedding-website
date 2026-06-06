@@ -1,24 +1,4 @@
 import SilverDish from "./SilverDish";
-// export default function Envelope() {
-//   return (
-//     <body className="body">
-//       <SilverDish />
-//       <div className="wrapper">
-//         <div className="lid one"></div>
-//         <div className="lid two"></div>
-//         <div className="envelope"></div>
-//         <div className="letter">
-//           <div className="section1"></div>
-//           <div className="section2"></div>
-//           {/* <div className="section3"></div> */}
-//         </div>
-//         {/* <!-- Button centered inside the letter --> */}
-//         <button className="open-btn">Open</button>
-//       </div>
-//     </body>
-//   );
-// }
-
 import { useState } from "react";
 
 export default function Envelope({ onClick }) {
