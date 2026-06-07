@@ -60,14 +60,14 @@ export const weddingParty = [
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Ronit_headshot.jpg",
   },
   {
     name: "Ishaan Gupta",
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Ishaan_headshot.jpg",
   },
 ];
 
@@ -208,16 +208,14 @@ export const timelineItems = [
 
 export const registry = [
   {
-    name: "Honeymoon Fund",
-    link: "https://www.target.com/",
-  },
-  {
-    name: "House Funding",
-    link: "#",
-  },
-  {
-    name: "Misc",
-    link: "https://www.amazon.com/",
+    titleScriptPart: "Gift",
+    titleSerifPart: "REGISTRY",
+    heading: "Your presence is the greatest gift of all.",
+    body: "However, if you would like to contribute to our new chapter together, we welcome gifting through our registry linked below.",
+    links: [
+      { label: "Link to With Joy", url: "https://withjoy.com" },
+      // add more registry links here
+    ],
   },
 ];
 
@@ -238,6 +236,15 @@ export const details = [
     image: "/Photos/Reception/receptionImg01.png",
     url: "https://maps.app.goo.gl/JxBEv23g7P7DMBng6",
   },
+];
+
+export const eventDetails = [
+  { time: "3:00 pm", label: "Ceremony" },
+  { time: "3:45 pm", label: "Coffee Hour" },
+  { time: "6:00 pm", label: "Dinner" },
+  { time: "00:00", label: "etc etc blah blah" },
+  { time: "00:00", label: "Guest arrival" },
+  { time: "00:00", label: "Ceremony" },
 ];
 //Using it in JSX file
 //import navSections from "../config/navSections";
