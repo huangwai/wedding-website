@@ -66,7 +66,7 @@ const Registry = ({
             variant="h2"
             sx={{
               fontStyle: "italic",
-              fontSize: { xs: "1.6rem", sm: "2.8rem", md: "5.2rem" },
+              fontSize: { xs: "2.0rem", sm: "2.8rem", md: "5.2rem" },
               fontWeight: 400,
               lineHeight: 1,
               color: textColor,
@@ -79,8 +79,8 @@ const Registry = ({
               fontFamily: "Cormorant Garamond, serif",
               fontStyle: "normal",
               fontSize: {
-                xs: "0.5rem",
-                sm: "0.9rem",
+                xs: "1.0rem",
+                sm: "1.5rem",
                 md: "clamp(14px, 2.4vw, 28px)",
               },
               fontWeight: 400,
@@ -121,7 +121,7 @@ const Registry = ({
               fontFamily: "Cormorant Garamond, serif",
               fontWeight: 700,
               fontSize: {
-                xs: "0.7rem",
+                xs: "0.8rem",
                 sm: "1rem",
                 md: "clamp(15px, 2vw, 26px)",
               },
@@ -138,9 +138,9 @@ const Registry = ({
             sx={{
               fontFamily: "Cormorant Garamond, serif",
               fontSize: {
-                xs: "0.6rem",
+                xs: "0.75rem",
                 sm: "0.85rem",
-                md: "clamp(12px, 1.4vw, 18px)",
+                md: "clamp(14px, 2.2vw, 22px)",
               },
               color: textColor,
               lineHeight: 1.8,

@@ -45,7 +45,7 @@ const Timeline = ({
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "0.65rem", sm: "1.2rem", md: "2.8rem" },
+              fontSize: { xs: "1.0rem", sm: "1.2rem", md: "2.8rem" },
               fontWeight: 400,
               lineHeight: 1,
               mb: "-4px",
@@ -58,7 +58,7 @@ const Timeline = ({
             sx={{
               fontFamily: "Cormorant Garamond, serif",
               fontStyle: "normal",
-              fontSize: { xs: "0.65rem", sm: "1.2rem", md: "2.8rem" },
+              fontSize: { xs: "1.0rem", sm: "1.2rem", md: "2.8rem" },
               fontWeight: 400,
               letterSpacing: { xs: "0.15em", sm: "0.25em", md: "0.35em" },
               color: "#fff",
@@ -83,11 +83,11 @@ const Timeline = ({
           >
             <Typography
               component="span"
+              // variant="body"
               sx={{
-                fontFamily: "Cormorant Garamond, serif",
                 fontStyle: "italic",
                 fontSize: {
-                  xs: "0.55rem",
+                  xs: "0.75rem",
                   sm: "0.85rem",
                   md: "clamp(14px, 2.2vw, 22px)",
                 },
@@ -105,7 +105,7 @@ const Timeline = ({
                 fontFamily: "Cormorant Garamond, serif",
                 fontStyle: "normal",
                 fontSize: {
-                  xs: "0.55rem",
+                  xs: "0.75rem",
                   sm: "0.85rem",
                   md: "clamp(14px, 2.2vw, 22px)",
                 },

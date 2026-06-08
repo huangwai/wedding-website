@@ -53,6 +53,16 @@ const theme = createTheme({
       //   fontSize: "2.50rem",
       // },
     },
+    body: {
+      fontFamily: "Cormorant Garamond, serif",
+      fontSize: "clamp(14px, 2.2vw, 22px)",
+      "@media (min-width:600px)": {
+        fontSize: "0.75rem",
+      },
+      "@media (min-width:900px)": {
+        fontSize: ".85rem",
+      },
+    },
   },
 });
 
