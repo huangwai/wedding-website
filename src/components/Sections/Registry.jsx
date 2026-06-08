@@ -1,8 +1,6 @@
 import { registry } from "../../assets/textList";
 import { Box, Typography, Link } from "@mui/material";
 
-const SERIF = "'Palatino Linotype', 'Book Antiqua', Palatino, serif";
-
 const Registry = ({
   titleScriptPart = registry[0].titleScriptPart,
   titleSerifPart = registry[0].titleSerifPart,
@@ -15,23 +13,21 @@ const Registry = ({
 }) => {
   return (
     <Box
+      id="registry"
       sx={{
-        py: { xs: 10, md: 16 },
-        px: { xs: 2, sm: 4 },
+        py: { xs: 4, sm: 8, md: 16 },
+        px: { xs: 1.5, sm: 3, md: 4 },
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        // width: "100%",
+        flexDirection: "row", // always side-by-side
         mx: "auto",
         maxWidth: "100%",
-        // height: "100%",
-        // aspectRatio: { md: "16 / 9" },
         backgroundColor: bgColor,
         overflow: "hidden",
         borderRadius: "4px",
         position: "relative",
       }}
     >
-      {/* ── Background floral image — sits behind everything ── */}
+      {/* ── Background floral image ── */}
       {floralSrc && (
         <Box
           component="img"
@@ -53,25 +49,24 @@ const Registry = ({
       {/* ── Left panel: title ── */}
       <Box
         sx={{
-          flex: { md: "0 0 46%" },
+          flex: "0 0 46%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          px: { xs: 4, md: "8%" },
-          py: { xs: 5, md: "6%" },
+          px: { xs: 1, sm: 3, md: "8%" },
+          py: { xs: 2, sm: 4, md: "6%" },
           position: "relative",
           zIndex: 1,
-          minHeight: { xs: 220, md: "auto" },
+          minHeight: { xs: 100, md: "auto" },
         }}
       >
         <Box sx={{ textAlign: "center" }}>
           <Typography
             variant="h2"
             sx={{
-              // fontFamily: SERIF,
               fontStyle: "italic",
-              fontSize: { xs: "3.2rem", md: "5.2rem" },
+              fontSize: { xs: "1.6rem", sm: "2.8rem", md: "5.2rem" },
               fontWeight: 400,
               lineHeight: 1,
               color: textColor,
@@ -84,12 +79,12 @@ const Registry = ({
               fontFamily: "Cormorant Garamond, serif",
               fontStyle: "normal",
               fontSize: {
-                xs: "1.1rem",
-                sm: "1.4rem",
+                xs: "0.5rem",
+                sm: "0.9rem",
                 md: "clamp(14px, 2.4vw, 28px)",
               },
               fontWeight: 400,
-              letterSpacing: "0.4em",
+              letterSpacing: { xs: "0.15em", sm: "0.3em", md: "0.4em" },
               color: textColor,
               mt: "-6px",
             }}
@@ -102,11 +97,11 @@ const Registry = ({
       {/* ── Right panel: white card ── */}
       <Box
         sx={{
-          flex: { md: "0 0 54%" },
+          flex: "0 0 54%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          p: { xs: 3, sm: 4, md: "4%" },
+          p: { xs: 1.5, sm: 3, md: "4%" },
           position: "relative",
           zIndex: 1,
         }}
@@ -115,7 +110,7 @@ const Registry = ({
           sx={{
             backgroundColor: "#fff",
             borderRadius: "12px",
-            p: { xs: 3, sm: 4, md: "6% 8%" },
+            p: { xs: 2, sm: 3, md: "6% 8%" },
             width: "100%",
             maxWidth: { md: "540px" },
           }}
@@ -126,12 +121,12 @@ const Registry = ({
               fontFamily: "Cormorant Garamond, serif",
               fontWeight: 700,
               fontSize: {
-                xs: "1.1rem",
-                sm: "1.3rem",
+                xs: "0.7rem",
+                sm: "1rem",
                 md: "clamp(15px, 2vw, 26px)",
               },
               color: textColor,
-              mb: { xs: 2, md: 3 },
+              mb: { xs: 1, sm: 2, md: 3 },
               lineHeight: 1.4,
             }}
           >
@@ -143,13 +138,13 @@ const Registry = ({
             sx={{
               fontFamily: "Cormorant Garamond, serif",
               fontSize: {
-                xs: "0.85rem",
-                sm: "0.95rem",
+                xs: "0.6rem",
+                sm: "0.85rem",
                 md: "clamp(12px, 1.4vw, 18px)",
               },
               color: textColor,
               lineHeight: 1.8,
-              mb: { xs: 2, md: 3 },
+              mb: { xs: 1, sm: 2, md: 3 },
               letterSpacing: "0.02em",
             }}
           >
@@ -164,12 +159,12 @@ const Registry = ({
                 fontFamily: "Cormorant Garamond, serif",
                 fontWeight: 700,
                 fontSize: {
-                  xs: "1rem",
-                  sm: "1.1rem",
+                  xs: "0.65rem",
+                  sm: "0.95rem",
                   md: "clamp(13px, 1.8vw, 22px)",
                 },
                 color: textColor,
-                mt: i === 0 ? 0 : 1,
+                mt: i === 0 ? 0 : { xs: 0.5, md: 1 },
               }}
             >
               <Link
@@ -193,46 +188,3 @@ const Registry = ({
 };
 
 export default Registry;
-
-// export default function Registry() {
-//   return (
-//     <Box
-//       id="registry"
-//       sx={{
-//         py: { xs: 12, md: 18 },
-//         px: { xs: 2, sm: 4 },
-//         bgcolor: "#f2efe8",
-//         color: "#421603",
-//       }}
-//     >
-//       <Container maxWidth="sm" textAlign="center">
-//         <Typography
-//           textAlign="center"
-//           variant="h2"
-//           gutterBottom
-//           // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
-//         >
-//           Registry
-//         </Typography>
-
-//         <Typography sx={{ mb: 4 }}>
-//           Your presence is the greatest gift, but if you wish to give, we are
-//           registered at:
-//         </Typography>
-
-//         <Stack spacing={2} sx={{ color: "#421603" }}>
-//           {registry.map((item, index) => (
-//             <Button
-//               sx={{ borderColor: "#421603", color: "#421603" }}
-//               variant="outlined"
-//               href={item.link}
-//               target="_blank"
-//             >
-//               {item.name}
-//             </Button>
-//           ))}
-//         </Stack>
-//       </Container>
-//     </Box>
-//   );
-// }

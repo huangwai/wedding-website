@@ -1,7 +1,5 @@
 import { Box, Typography } from "@mui/material";
-// import timelineImage from "../../../public/Photos/Engagement/DSC02799.jpeg"; // 👈 update f
 import { eventDetails } from "../../assets/textList";
-// ilename/path as needed
 
 const SERIF = "'Palatino Linotype', 'Book Antiqua', Palatino, serif";
 
@@ -9,44 +7,45 @@ const Timeline = ({
   titleScriptPart = "The",
   titleSerifPart = "PROGRAM",
   events = eventDetails,
-  imageSrc = "/Photos/Engagement/DSC03766.jpeg",
+  imageSrc = "/Photos/Engagement/DSC03766.jpg",
   imageAlt = "Wedding photo",
   accentColor = "#656440",
 }) => {
   return (
     <Box
+      id="timeline"
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        // width: "%",
-        // aspectRatio: { md: "16 / 9" },
+        flexDirection: "row", // always side-by-side
         fontFamily: SERIF,
         overflow: "hidden",
         borderRadius: "4px",
+
+        // mt: { xs: 4, sm: 6, md: 12 },
+        // mt: "1rem",
       }}
     >
       {/* ── Left: schedule ── */}
       <Box
         sx={{
           backgroundColor: accentColor,
-          flex: { md: "0 0 57%" },
+          flex: "0 0 57%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          px: { xs: 3, sm: 5, md: "7%" },
-          py: { xs: 4, sm: 5, md: "5%" },
+          px: { xs: 1.5, sm: 3, md: "7%" },
+          py: { xs: 2, sm: 3, md: "5%" },
+          // mt: "1rem",
           color: "#fff",
         }}
       >
         {/* Title */}
-        <Box sx={{ mb: { xs: 2, sm: 3, md: "6%" }, textAlign: "center" }}>
+        <Box sx={{ mb: { xs: 1, sm: 2, md: "6%" }, textAlign: "center" }}>
           <Typography
             variant="h2"
             sx={{
-              // fontFamily: SERIF,
-              // fontStyle: "italic",
-              fontSize: { xs: "1.0rem", md: "2.8rem" },
+              fontSize: { xs: "0.65rem", sm: "1.2rem", md: "2.8rem" },
               fontWeight: 400,
               lineHeight: 1,
               mb: "-4px",
@@ -59,9 +58,9 @@ const Timeline = ({
             sx={{
               fontFamily: "Cormorant Garamond, serif",
               fontStyle: "normal",
-              fontSize: { xs: "1.0rem", md: "2.8rem" },
+              fontSize: { xs: "0.65rem", sm: "1.2rem", md: "2.8rem" },
               fontWeight: 400,
-              letterSpacing: "0.35em",
+              letterSpacing: { xs: "0.15em", sm: "0.25em", md: "0.35em" },
               color: "#fff",
             }}
           >
@@ -77,8 +76,8 @@ const Timeline = ({
               display: "flex",
               alignItems: "baseline",
               justifyContent: "center",
-              mb: { xs: 1, sm: 1.5, md: "clamp(8px, 2%, 22px)" },
-              gap: { xs: "6%", md: "8%" },
+              mb: { xs: 0.5, sm: 1, md: "clamp(8px, 2%, 22px)" },
+              gap: { xs: "4%", sm: "6%", md: "8%" },
               width: "100%",
             }}
           >
@@ -88,12 +87,12 @@ const Timeline = ({
                 fontFamily: "Cormorant Garamond, serif",
                 fontStyle: "italic",
                 fontSize: {
-                  xs: "0.85rem",
-                  sm: "1rem",
-                  md: "clamp(30px, 2.2vw, 22px)",
+                  xs: "0.55rem",
+                  sm: "0.85rem",
+                  md: "clamp(14px, 2.2vw, 22px)",
                 },
                 textAlign: "right",
-                minWidth: { xs: "30%", md: "26%" },
+                minWidth: { xs: "35%", sm: "30%", md: "26%" },
                 flexShrink: 0,
                 color: "#fff",
               }}
@@ -106,11 +105,11 @@ const Timeline = ({
                 fontFamily: "Cormorant Garamond, serif",
                 fontStyle: "normal",
                 fontSize: {
-                  xs: "0.85rem",
-                  sm: "1rem",
-                  md: "clamp(30px, 2.2vw, 22px)",
+                  xs: "0.55rem",
+                  sm: "0.85rem",
+                  md: "clamp(14px, 2.2vw, 22px)",
                 },
-                minWidth: { xs: "30%", md: "26%" },
+                minWidth: { xs: "35%", sm: "30%", md: "26%" },
                 color: "#fff",
               }}
             >
@@ -123,8 +122,8 @@ const Timeline = ({
       {/* ── Right: photo ── */}
       <Box
         sx={{
-          flex: { md: "0 0 43%" },
-          minHeight: { xs: 200, sm: 280, md: "auto" },
+          flex: "0 0 43%",
+          minHeight: { xs: 140, sm: 220, md: "auto" },
           overflow: "hidden",
           backgroundColor: "#1a1a1a",
         }}

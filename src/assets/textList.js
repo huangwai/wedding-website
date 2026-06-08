@@ -18,42 +18,42 @@ export const weddingParty = [
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Arlo.jpg",
   },
   {
     name: "Mi-Jin Ryu",
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Arlo.jpg",
   },
   {
     name: "Jamie Jeong",
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Arlo.jpg",
   },
   {
     name: "Judy Yoo",
     role: "Bridesmaid",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Arlo.jpg",
   },
   {
     name: "Jessey Huynh",
     role: "Best Man",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Jessey_headshot.jpg",
   },
   {
     name: "David Huynh",
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/POG05338.jpg",
+    img: "/Photos/headshots/Nyla.jpg",
   },
   {
     name: "Ronit Bhansali",
@@ -174,18 +174,18 @@ export const airports = [
 ];
 
 export const gallaryImages = [
-  "/Photos/Engagement/DSC02799.jpeg",
-  "/Photos/Engagement/DSC02823.jpeg",
-  "/Photos/Engagement/DSC02899.jpeg",
-  "/Photos/Engagement/DSC02905.jpeg",
+  "/Photos/Engagement/DSC02799.jpg",
+  "/Photos/Engagement/DSC02823.jpg",
+  "/Photos/Engagement/DSC02899.jpg",
+  "/Photos/Engagement/DSC02905.jpg",
 
-  "/Photos/Engagement/DSC02922.jpeg",
-  "/Photos/Engagement/DSC02946.jpeg",
-  "/Photos/Engagement/DSC03486.jpeg",
-  "/Photos/Engagement/DSC03766.jpeg",
+  "/Photos/Engagement/DSC02922.jpg",
+  "/Photos/Engagement/DSC02946.jpg",
+  "/Photos/Engagement/DSC03486.jpg",
+  "/Photos/Engagement/DSC03766.jpg",
 
-  "/Photos/Engagement/DSC03990.jpeg",
-  "/Photos/Engagement/DSC08172.jpeg",
+  "/Photos/Engagement/DSC03990.jpg",
+  "/Photos/Engagement/DSC08172.jpg",
 ];
 
 export const timelineItems = [

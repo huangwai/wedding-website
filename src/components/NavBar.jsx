@@ -33,7 +33,7 @@ export default function Navbar() {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "center",
     });
     setOpen(false);
   };
@@ -52,7 +52,7 @@ export default function Navbar() {
       setTimeout(() => {
         document
           .getElementById(id)
-          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+          ?.scrollIntoView({ behavior: "smooth", block: "center" });
       }, 300); // slight delay lets the page mount before scrolling
       setOpen(false);
       return;

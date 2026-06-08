@@ -1,28 +1,27 @@
 import {
   Box,
-  Grid,
   Card,
   CardContent,
   Typography,
   CardMedia,
+  Link,
 } from "@mui/material";
 import { details } from "../../assets/textList";
-import { cardSx } from "../CardSx";
-import { Link } from "@mui/material";
-export default function TwoColumnCards() {
+
+export default function Details() {
   return (
     <Box
       id="details"
       sx={{
-        py: { xs: 10, md: 16 },
-        px: { xs: 2, sm: 4 },
+        py: { xs: 4, sm: 8, md: 16 },
+        px: { xs: 1.5, sm: 3, md: 6 },
         backgroundColor: "#e8e2d4",
         color: "#421603",
         mx: "auto",
         maxWidth: "100%",
       }}
     >
-      <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
+      <Box sx={{ textAlign: "center", mb: { xs: 3, md: 6 } }}>
         <Typography
           variant="h2"
           sx={{ mb: -2, fontSize: { xs: "3.2rem", md: "5.2rem" } }}
@@ -42,69 +41,96 @@ export default function TwoColumnCards() {
         </Typography>
       </Box>
 
-      {/* <Grid container spacing={1} justifyContent="center"> */}
-      <Grid container spacing={{ xs: 2, md: 10 }} justifyContent="center">
+      {/* Always side-by-side */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          gap: { xs: 1.5, sm: 2, md: 4 },
+          mx: "auto",
+        }}
+      >
         {details.map((item, index) => (
-          <Grid item xs={12} md={6}>
-            <Card
-              elevation={3}
+          <Card
+            key={index}
+            elevation={3}
+            sx={{
+              backgroundColor: "#f2efe8",
+              flex: "1 1 0",
+              minWidth: 0, // prevents flex children from overflowing
+              py: 1,
+              px: { xs: 1, sm: 2, md: 5 },
+            }}
+          >
+            <CardContent
               sx={{
-                backgroundColor: "#f2efe8",
-                height: "100%",
-                py: 1,
-                px: 10,
-                // maxWidth: "100vw",
+                textAlign: "center",
+                color: "#421603",
+                px: { xs: 0.5, sm: 1 },
               }}
             >
-              <CardContent sx={{ textAlign: "center", color: "#421603" }}>
-                <Typography
-                  variant="h3"
-                  sx={{
-                    fontSize: { xs: "2rem", md: "3rem" },
-                    fontWeight: "light",
-                    mt: 2,
-                    mb: 4,
-                  }}
-                >
-                  {item.type}
-                </Typography>
-                <Typography sx={{ color: "#656440", mb: 2 }}>
-                  JOIN US AT
-                </Typography>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontSize: { xs: "1rem", sm: "1.5rem", md: "2.5rem" },
+                  fontWeight: "light",
+                  mt: 1,
+                  mb: { xs: 1, md: 3 },
+                }}
+              >
+                {item.type}
+              </Typography>
 
-                <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-                  {item.name}
-                </Typography>
-                <Link
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  underline="hover"
-                  color="inherit"
-                >
-                  {item.addressLine1}
-                  <br />
-                  {item.addressLine2}
-                </Link>
+              <Typography
+                sx={{
+                  color: "#656440",
+                  mb: 1,
+                  fontSize: { xs: "0.65rem", sm: "0.85rem", md: "1rem" },
+                }}
+              >
+                JOIN US AT
+              </Typography>
 
-                <CardMedia
-                  component="img"
-                  alt="Image of Venue"
-                  image={item.image}
-                  justifyContent="center"
-                  sx={{
-                    maxHeight: { xs: "30vh", md: "40vh" },
-                    maxWidth: { xs: "90%", md: "75%" },
-                    mb: -6,
-                    mt: -2,
-                    mx: "auto", // 👈 centers the image
-                  }}
-                ></CardMedia>
-              </CardContent>
-            </Card>
-          </Grid>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: { xs: "0.75rem", sm: "1rem", md: "1.6rem" },
+                  mb: 1,
+                }}
+              >
+                {item.name}
+              </Typography>
+
+              <Link
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="hover"
+                color="inherit"
+                sx={{ fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" } }}
+              >
+                {item.addressLine1}
+                <br />
+                {item.addressLine2}
+              </Link>
+
+              <CardMedia
+                component="img"
+                alt="Image of Venue"
+                image={item.image}
+                sx={{
+                  maxHeight: { xs: "20vh", sm: "28vh", md: "38vh" },
+                  maxWidth: "90%",
+                  mt: { xs: 1.5, md: 2 },
+                  mb: { xs: -1, md: -3 },
+                  mx: "auto",
+                }}
+              />
+            </CardContent>
+          </Card>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 }
