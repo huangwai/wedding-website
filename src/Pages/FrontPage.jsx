@@ -1,4 +1,4 @@
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider, CssBaseline, Fade } from "@mui/material";
 import Hero from "../components/Sections/Hero";
 import Navbar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -12,6 +12,8 @@ import RSVP from "../components/Sections/RSVP";
 import theme from "../theme";
 import Timeline from "../components/Sections/Timeline";
 import FadeInSection from "../components/FadeInSection";
+import ImageViewOne from "../components/Sections/ImageViewOne";
+import ImageViewSection from "../components/Sections/ImageViewSection";
 function FrontPage() {
   return (
     <ThemeProvider theme={theme}>
@@ -30,6 +32,9 @@ function FrontPage() {
         <RSVP />
       </FadeInSection>
       <FadeInSection>
+        <ImageViewOne />
+      </FadeInSection>
+      <FadeInSection>
         <WeddingParty />
       </FadeInSection>
       {/* <FadeInSection direction="left">
@@ -38,7 +43,9 @@ function FrontPage() {
       <FadeInSection>
         <Registry />
       </FadeInSection>
-
+      <FadeInSection>
+        <ImageViewSection />
+      </FadeInSection>
       <FadeInSection>
         <FAQ />
       </FadeInSection>

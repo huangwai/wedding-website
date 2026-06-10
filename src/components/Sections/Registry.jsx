@@ -15,7 +15,7 @@ const Registry = ({
     <Box
       id="registry"
       sx={{
-        py: { xs: 4, sm: 8, md: 16 },
+        py: { xs: 2, sm: 3, md: 4 },
         px: { xs: 1.5, sm: 3, md: 4 },
         display: "flex",
         flexDirection: "row", // always side-by-side
@@ -25,6 +25,7 @@ const Registry = ({
         overflow: "hidden",
         borderRadius: "4px",
         position: "relative",
+        height: { xs: "45vh", md: "65vh" },
       }}
     >
       {/* ── Background floral image ── */}
@@ -138,9 +139,9 @@ const Registry = ({
             sx={{
               fontFamily: "Cormorant Garamond, serif",
               fontSize: {
-                xs: "0.75rem",
-                sm: "0.85rem",
-                md: "clamp(14px, 2.2vw, 22px)",
+                xs: "0.70rem",
+                sm: "0.80rem",
+                md: "clamp(12px, 2.0vw, 20px)",
               },
               color: textColor,
               lineHeight: 1.8,

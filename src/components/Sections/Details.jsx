@@ -13,18 +13,19 @@ export default function Details() {
     <Box
       id="details"
       sx={{
-        py: { xs: 4, sm: 8, md: 16 },
+        py: { xs: 2, sm: 3, md: 4 },
         px: { xs: 1.5, sm: 3, md: 6 },
         backgroundColor: "#e8e2d4",
         color: "#421603",
         mx: "auto",
         maxWidth: "100%",
+        // maxHeight: { xs: "45vh", md: "65vh" },
       }}
     >
       <Box sx={{ textAlign: "center", mb: { xs: 3, md: 6 } }}>
         <Typography
           variant="h2"
-          sx={{ mb: -2, fontSize: { xs: "3.2rem", md: "5.2rem" } }}
+          sx={{ mb: -2, fontSize: { xs: "2.2rem", md: "3.2rem" } }}
         >
           The
         </Typography>
@@ -33,7 +34,7 @@ export default function Details() {
           sx={{
             mb: -1,
             fontFamily: "Cormorant Garamond, serif",
-            fontSize: { xs: "3rem", md: "4rem" },
+            fontSize: { xs: "2.0rem", md: "3rem" },
             fontWeight: "none",
           }}
         >
@@ -108,7 +109,10 @@ export default function Details() {
                 rel="noopener noreferrer"
                 underline="hover"
                 color="inherit"
-                sx={{ fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" } }}
+                sx={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" },
+                }}
               >
                 {item.addressLine1}
                 <br />

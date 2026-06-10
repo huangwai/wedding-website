@@ -1,8 +1,6 @@
 import {
   AppBar,
   Toolbar,
-  Button,
-  Stack,
   IconButton,
   Drawer,
   List,
@@ -15,7 +13,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom"; // 👈 add these
-import logo from "/public/MJLogoWhite.png";
 import { navSections } from "../assets/textList";
 
 export default function Navbar() {
@@ -67,6 +64,7 @@ export default function Navbar() {
         position="fixed"
         elevation={0}
         sx={{
+          // backgroundColor: "transparent",
           backgroundColor: scrolled ? "#3b1717" : "transparent",
           backdropFilter: scrolled ? "blur(6px)" : "none",
           transition: "background-color 0.3s ease",
@@ -94,7 +92,12 @@ export default function Navbar() {
 
       {/* DRAWER */}
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <List sx={{ width: 250, color: "#421603" }}>
+        <List
+          sx={{
+            width: 250,
+            color: "#421603",
+          }}
+        >
           {navSections.map(({ label, id }) => (
             <ListItemButton key={id} onClick={() => handleNavClick(id)}>
               <ListItemText primary={label} />

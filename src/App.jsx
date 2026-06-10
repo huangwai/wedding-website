@@ -97,7 +97,13 @@ function App() {
             Mi-Ju & Jimmy
           </Typography>
 
-          <Typography sx={{ mb: 4, color: "#3b1717" }}>
+          <Typography
+            sx={{
+              mb: 4,
+              color: "#3b1717",
+              fontFamily: "Cormorant Garamond, serif",
+            }}
+          >
             Please enter the password from your invitation
           </Typography>
 
@@ -121,6 +127,7 @@ function App() {
               variant="contained"
               sx={{
                 mt: 2,
+                fontFamily: "Cormorant Garamond, serif",
                 backgroundColor: "#656440",
                 color: "#e8e2d4",
                 fontWeight: "bold",

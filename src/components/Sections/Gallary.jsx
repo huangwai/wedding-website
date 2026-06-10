@@ -42,17 +42,17 @@ export default function Gallery() {
           Gallery
         </Typography>
 
-        {/* <Typography textAlign="center" sx={{ mb: 6 }}>
-          Coming Soon!
-        </Typography> */}
-
         {/* Masonry */}
-        <Masonry columns={{ xs: 1, sm: 1, md: 3 }} spacing={3}>
+        <Masonry
+          columns={{ xs: 2, sm: 2, md: 3 }}
+          spacing={{ xs: 1.5, sm: 2, md: 3 }}
+        >
           {gallaryImages.map((img, index) => (
             <Fade in timeout={1000} key={index}>
               <Box
                 component="img"
-                src={`${img}?w=800&auto=format`}
+                // src={`${img}?w=800&auto=format`}
+                src={img}
                 alt="Wedding"
                 loading="lazy"
                 onClick={() => handleOpen(img)}

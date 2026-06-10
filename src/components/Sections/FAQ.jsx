@@ -14,10 +14,11 @@ export default function FAQ() {
     <Box
       id="faq"
       sx={{
-        py: { xs: 12, md: 18 },
+        py: { xs: 2, sm: 3, md: 4 },
         px: { xs: 2, sm: 4 },
         bgcolor: "#3b1717",
         color: "#f2efe8",
+        height: { xs: "auto", md: "auto" },
       }}
     >
       <Container maxWidth="md">

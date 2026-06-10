@@ -5,7 +5,12 @@ export default function WeddingParty() {
   return (
     <Box
       id="party"
-      sx={{ py: { xs: 12, md: 18 }, px: { xs: 2, sm: 4 }, bgcolor: "#3b1717" }}
+      sx={{
+        py: { xs: 2, sm: 3, md: 4 },
+        px: { xs: 2, sm: 4 },
+        bgcolor: "#3b1717",
+        height: { xs: "auto" },
+      }}
     >
       <Container maxWidth="lg">
         <Typography
@@ -38,14 +43,21 @@ export default function WeddingParty() {
               <Typography
                 color="#f2efe8"
                 fontWeight={600}
-                sx={{ fontSize: { xs: "0.85rem", sm: "1.1rem", md: "1.3rem" } }}
+                sx={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: { xs: "0.85rem", sm: "1.1rem", md: "1.3rem" },
+                }}
               >
                 {name}
               </Typography>
 
               <Typography
                 color="#f2efe8"
-                sx={{ fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" } }}
+                fontWeight={500}
+                sx={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" },
+                }}
               >
                 {role}
               </Typography>

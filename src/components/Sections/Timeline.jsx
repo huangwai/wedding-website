@@ -7,7 +7,7 @@ const Timeline = ({
   titleScriptPart = "The",
   titleSerifPart = "PROGRAM",
   events = eventDetails,
-  imageSrc = "/Photos/Engagement/DSC03766.jpg",
+  imageSrc = "/Photos/Engagement/engagement01.jpeg",
   imageAlt = "Wedding photo",
   accentColor = "#656440",
 }) => {
@@ -20,9 +20,7 @@ const Timeline = ({
         fontFamily: SERIF,
         overflow: "hidden",
         borderRadius: "4px",
-
-        // mt: { xs: 4, sm: 6, md: 12 },
-        // mt: "1rem",
+        height: { xs: "45vh", md: "65vh" },
       }}
     >
       {/* ── Left: schedule ── */}
@@ -45,7 +43,7 @@ const Timeline = ({
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "1.0rem", sm: "1.2rem", md: "2.8rem" },
+              fontSize: { xs: "1.5rem", sm: "1.2rem", md: "2.8rem" },
               fontWeight: 400,
               lineHeight: 1,
               mb: "-4px",
@@ -58,7 +56,7 @@ const Timeline = ({
             sx={{
               fontFamily: "Cormorant Garamond, serif",
               fontStyle: "normal",
-              fontSize: { xs: "1.0rem", sm: "1.2rem", md: "2.8rem" },
+              fontSize: { xs: "1.5rem", sm: "1.2rem", md: "2.8rem" },
               fontWeight: 400,
               letterSpacing: { xs: "0.15em", sm: "0.25em", md: "0.35em" },
               color: "#fff",
@@ -74,7 +72,7 @@ const Timeline = ({
             key={i}
             sx={{
               display: "flex",
-              alignItems: "baseline",
+              alignItems: "center",
               justifyContent: "center",
               mb: { xs: 0.5, sm: 1, md: "clamp(8px, 2%, 22px)" },
               gap: { xs: "4%", sm: "6%", md: "8%" },
@@ -87,14 +85,17 @@ const Timeline = ({
               sx={{
                 fontStyle: "italic",
                 fontSize: {
-                  xs: "0.75rem",
-                  sm: "0.85rem",
+                  xs: "0.85rem",
+                  sm: "0.95rem",
                   md: "clamp(14px, 2.2vw, 22px)",
                 },
                 textAlign: "right",
                 minWidth: { xs: "35%", sm: "30%", md: "26%" },
                 flexShrink: 0,
                 color: "#fff",
+                justifyContent: "center",
+                display: "flex",
+                alignItems: "center",
               }}
             >
               {ev.time}
@@ -102,6 +103,9 @@ const Timeline = ({
             <Typography
               component="span"
               sx={{
+                justifyContent: "space-around",
+                display: "flex",
+                alignItems: "center",
                 fontFamily: "Cormorant Garamond, serif",
                 fontStyle: "normal",
                 fontSize: {

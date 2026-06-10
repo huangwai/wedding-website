@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Image BACKGROUND */}
       <Box
         component="img"
-        src="/Photos/Engagement/DSC02905.jpg"
+        src="/Photos/Engagement/DSC02905.jpeg"
         alt="background"
         sx={{
           position: "absolute",
@@ -85,6 +85,7 @@ export default function Hero() {
           variant="subtitle1"
           sx={{
             mt: 2,
+            fontFamily: "Cormorant Garamond, serif",
             fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
             opacity: 0.9,
             color: "#f2efe8",

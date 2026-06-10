@@ -69,6 +69,20 @@ export const weddingParty = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     img: "/Photos/headshots/Ishaan_headshot.jpg",
   },
+  {
+    name: "Jonathan Moon",
+    role: "Flower Boy",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+    img: "/Photos/headshots/Arlo.jpg",
+  },
+  {
+    name: "Jayce Moon",
+    role: "Ring Bearer",
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
+    img: "/Photos/headshots/Arlo.jpg",
+  },
 ];
 
 export const faqSection = [
@@ -102,14 +116,10 @@ export const faqSection = [
     answer:
       "Yes, there will be complimentary parking available at the venue for all guests.",
   },
-  // {
-  //   question: "When should I RSVP by?",
-  //   answer: "Please RSVP by May 1, 2026 so we can plan accordingly.",
-  // },
   {
     question: "Who can I contact if I have questions the day of the wedding?",
     answer:
-      "Please reach out to our wedding coordinator or a member of the wedding party. Contact details will be shared closer to the date.",
+      "Please reach out to mijuhhan@gmail.com if you have any questions or need assistance on the day of the wedding.",
   },
   {
     question: "Is smoking or vaping allowed?",
@@ -174,18 +184,18 @@ export const airports = [
 ];
 
 export const gallaryImages = [
-  "/Photos/Engagement/DSC02799.jpg",
-  "/Photos/Engagement/DSC02823.jpg",
-  "/Photos/Engagement/DSC02899.jpg",
-  "/Photos/Engagement/DSC02905.jpg",
+  "/Photos/Engagement/DSC02799.jpeg",
+  "/Photos/Engagement/DSC02823.jpeg",
+  "/Photos/Engagement/DSC02899.jpeg",
+  "/Photos/Engagement/DSC02905.jpeg",
 
-  "/Photos/Engagement/DSC02922.jpg",
-  "/Photos/Engagement/DSC02946.jpg",
-  "/Photos/Engagement/DSC03486.jpg",
-  "/Photos/Engagement/DSC03766.jpg",
+  "/Photos/Engagement/DSC02922.jpeg",
+  "/Photos/Engagement/DSC02946.jpeg",
+  "/Photos/Engagement/DSC03486.jpeg",
+  "/Photos/Engagement/DSC03766.jpeg",
 
-  "/Photos/Engagement/DSC03990.jpg",
-  "/Photos/Engagement/DSC08172.jpg",
+  "/Photos/Engagement/DSC03990.jpeg",
+  "/Photos/Engagement/DSC08172.jpeg",
 ];
 
 export const timelineItems = [
@@ -213,7 +223,10 @@ export const registry = [
     heading: "Your presence is the greatest gift of all.",
     body: "However, if you would like to contribute to our new chapter together, we welcome gifting through our registry linked below.",
     links: [
-      { label: "Link to With Joy", url: "https://withjoy.com" },
+      {
+        label: "Link to register",
+        url: "https://withjoy.com/jimmy-and-mi-ju/registry",
+      },
       // add more registry links here
     ],
   },
@@ -239,17 +252,16 @@ export const details = [
 ];
 
 export const eventDetails = [
-  { time: "3:00 pm", label: "Ceremony" },
-  { time: "3:45 pm", label: "Coffee Hour" },
-  { time: "6:00 pm", label: "Dinner" },
-  { time: "00:00", label: "etc etc blah blah" },
-  { time: "00:00", label: "Guest arrival" },
-  { time: "00:00", label: "Ceremony" },
+  { time: "3:00 pm - 3:45 pm", label: "Ceremony" },
+  { time: "3:45 pm - 5:30 pm", label: "Coffee Hour" },
+  { time: "6:00 pm - 8:00 pm", label: "Dinner" },
 ];
-//Using it in JSX file
-//import navSections from "../config/navSections";
-//{navSections.map(({ label, id }) => (
-// <Button key={id} onClick={() => scrollTo(id)}>
-// {label}
-// </Button>
-//))}
+
+export const imagePairList = [
+  "/Photos/Engagement/DSC03486.jpeg",
+  "/Photos/Engagement/DSC02946.jpeg",
+];
+export const imageList = [
+  "/Photos/Engagement/engagement3.jpeg",
+  // "/Photos/Engagement/DSC02946.jpeg",
+];
