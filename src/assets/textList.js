@@ -53,7 +53,7 @@ export const weddingParty = [
     role: "Groomsman",
     Description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-    img: "/Photos/headshots/Nyla.jpg",
+    img: "/Photos/headshots/david_headshot.jpg",
   },
   {
     name: "Ronit Bhansali",
@@ -184,18 +184,18 @@ export const airports = [
 ];
 
 export const gallaryImages = [
-  "/Photos/Engagement/DSC02799.jpeg",
-  "/Photos/Engagement/DSC02823.jpeg",
-  "/Photos/Engagement/DSC02899.jpeg",
-  "/Photos/Engagement/DSC02905.jpeg",
+  "/Photos/Engagement/engagement001.jpeg",
+  "/Photos/Engagement/engagement002.jpeg",
+  "/Photos/Engagement/engagement004.jpeg",
+  "/Photos/Engagement/engagement005.jpeg",
 
-  "/Photos/Engagement/DSC02922.jpeg",
-  "/Photos/Engagement/DSC02946.jpeg",
-  "/Photos/Engagement/DSC03486.jpeg",
-  "/Photos/Engagement/DSC03766.jpeg",
+  "/Photos/Engagement/engagement006.jpeg",
+  "/Photos/Engagement/engagement007.jpeg",
+  "/Photos/Engagement/engagement008.jpeg",
+  "/Photos/Engagement/engagement010.jpeg",
 
-  "/Photos/Engagement/DSC03990.jpeg",
-  "/Photos/Engagement/DSC08172.jpeg",
+  "/Photos/Engagement/engagement011.jpeg",
+  // "/Photos/Engagement/engagement012.jpeg",
 ];
 
 export const timelineItems = [
@@ -238,7 +238,7 @@ export const details = [
     name: "Glenview Mansion",
     addressLine1: "603 Edmonston Dr.",
     addressLine2: "Rockville, MD 20851",
-    image: "/Photos/Ceremony/glenviewimg01.png",
+    image: "/Photos/Ceremony/glenview.png",
     url: "https://maps.app.goo.gl/2WoWjCxtJDSXGCei8",
   },
   {
@@ -246,7 +246,7 @@ export const details = [
     name: "Terra Gaucha",
     addressLine1: "1651 Chapman Ave,",
     addressLine2: "Rockville, MD 20852",
-    image: "/Photos/Reception/receptionImg01.png",
+    image: "/Photos/Reception/terraGauchaV2.png",
     url: "https://maps.app.goo.gl/JxBEv23g7P7DMBng6",
   },
 ];
@@ -258,10 +258,10 @@ export const eventDetails = [
 ];
 
 export const imagePairList = [
-  "/Photos/Engagement/DSC03486.jpeg",
-  "/Photos/Engagement/DSC02946.jpeg",
+  "/Photos/Engagement/engagement003.jpeg",
+  "/Photos/Engagement/engagement012.jpeg",
 ];
 export const imageList = [
-  "/Photos/Engagement/engagement3.jpeg",
+  "/Photos/Engagement/engagement009.jpeg",
   // "/Photos/Engagement/DSC02946.jpeg",
 ];

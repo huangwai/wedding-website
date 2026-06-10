@@ -16,7 +16,7 @@ const Registry = ({
       id="registry"
       sx={{
         py: { xs: 2, sm: 3, md: 4 },
-        px: { xs: 1.5, sm: 3, md: 4 },
+        px: { xs: 2, sm: 4 },
         display: "flex",
         flexDirection: "row", // always side-by-side
         mx: "auto",

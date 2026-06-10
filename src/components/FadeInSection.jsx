@@ -10,10 +10,10 @@ export default function FadeInSection({ children }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.current);
+          observer.unobserve(entry.target); // 👈 fix: was entry.current
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }, // 👈 add rootMargin
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();

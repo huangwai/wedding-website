@@ -17,6 +17,12 @@ import GalleryPage from "./Pages/GallaryPage";
 const WEDDING_PASSWORD = "mj2026";
 const SESSION_DURATION_MS = 7 * 60 * 60 * 1000; // 1 days
 
+function clearSession() {
+  localStorage.removeItem("weddingAuthorized");
+  localStorage.removeItem("weddingAuthTime");
+  localStorage.removeItem("weddingEntered");
+}
+
 function isSessionValid() {
   const authorized = localStorage.getItem("weddingAuthorized") === "true";
   const timestamp = parseInt(
@@ -24,13 +30,9 @@ function isSessionValid() {
     10,
   );
   const now = Date.now();
-  return authorized && now - timestamp < SESSION_DURATION_MS;
-}
-
-function clearSession() {
-  localStorage.removeItem("weddingAuthorized");
-  localStorage.removeItem("weddingAuthTime");
-  localStorage.removeItem("weddingEntered");
+  const valid = authorized && now - timestamp < SESSION_DURATION_MS;
+  if (!valid) clearSession(); // 👈 actively wipe expired keys
+  return valid;
 }
 
 function App() {
@@ -53,11 +55,6 @@ function App() {
     }
   };
 
-  // const handleEnterSite = () => {
-  //   localStorage.setItem("weddingEntered", "true");
-  //   console.log("entering site");
-  //   setHasEntered(true);
-  // };
   const handleEnterSite = () => {
     console.log("entering site");
 
@@ -151,7 +148,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<FrontPage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
+              {/* <Route path="/gallery" element={<GalleryPage />} /> */}
             </Routes>
           </BrowserRouter>
         </Box>

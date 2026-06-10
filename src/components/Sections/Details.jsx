@@ -14,7 +14,7 @@ export default function Details() {
       id="details"
       sx={{
         py: { xs: 2, sm: 3, md: 4 },
-        px: { xs: 1.5, sm: 3, md: 6 },
+        px: { xs: 2, sm: 3, md: 5 },
         backgroundColor: "#e8e2d4",
         color: "#421603",
         mx: "auto",
@@ -22,10 +22,13 @@ export default function Details() {
         // maxHeight: { xs: "45vh", md: "65vh" },
       }}
     >
-      <Box sx={{ textAlign: "center", mb: { xs: 3, md: 6 } }}>
+      <Box sx={{ textAlign: "center", mb: { xs: 3, sm: 4, md: 6 } }}>
         <Typography
           variant="h2"
-          sx={{ mb: -2, fontSize: { xs: "2.2rem", md: "3.2rem" } }}
+          sx={{
+            mb: -2,
+            fontSize: { xs: "2.2rem", sm: "2.7rem", md: "3.2rem" },
+          }}
         >
           The
         </Typography>
@@ -34,7 +37,7 @@ export default function Details() {
           sx={{
             mb: -1,
             fontFamily: "Cormorant Garamond, serif",
-            fontSize: { xs: "2.0rem", md: "3rem" },
+            fontSize: { xs: "2.0rem", sm: "2.5rem", md: "3rem" },
             fontWeight: "none",
           }}
         >
@@ -47,8 +50,9 @@ export default function Details() {
         sx={{
           display: "flex",
           flexDirection: "row",
-          gap: { xs: 1.5, sm: 2, md: 4 },
+          gap: { xs: 2, sm: 3, md: 5 },
           mx: "auto",
+          maxWidth: { xs: "85%", sm: "75%", md: "65%" },
         }}
       >
         {details.map((item, index) => (
@@ -58,25 +62,34 @@ export default function Details() {
             sx={{
               backgroundColor: "#f2efe8",
               flex: "1 1 0",
-              minWidth: 0, // prevents flex children from overflowing
-              py: 1,
-              px: { xs: 1, sm: 2, md: 5 },
+              minWidth: 0,
+              aspectRatio: "1 / 1",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              border: "1px solid orange",
             }}
           >
             <CardContent
               sx={{
                 textAlign: "center",
                 color: "#421603",
-                px: { xs: 0.5, sm: 1 },
+                px: { xs: 0.5, sm: 1, md: 2 },
+                py: { xs: 0.5, sm: 1, md: 2 },
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                gap: { xs: 0.5, sm: 0.75, md: 1.5 },
+                overflow: "hidden",
               }}
             >
               <Typography
                 variant="h3"
                 sx={{
-                  fontSize: { xs: "1rem", sm: "1.5rem", md: "2.5rem" },
+                  fontSize: { xs: "0.8rem", sm: "1.2rem", md: "2rem" },
                   fontWeight: "light",
-                  mt: 1,
-                  mb: { xs: 1, md: 3 },
+                  mt: 2,
                 }}
               >
                 {item.type}
@@ -85,8 +98,7 @@ export default function Details() {
               <Typography
                 sx={{
                   color: "#656440",
-                  mb: 1,
-                  fontSize: { xs: "0.65rem", sm: "0.85rem", md: "1rem" },
+                  fontSize: { xs: "0.45rem", sm: "0.65rem", md: "0.85rem" },
                 }}
               >
                 JOIN US AT
@@ -96,8 +108,7 @@ export default function Details() {
                 variant="h3"
                 sx={{
                   fontWeight: "bold",
-                  fontSize: { xs: "0.75rem", sm: "1rem", md: "1.6rem" },
-                  mb: 1,
+                  fontSize: { xs: "0.7rem", sm: "1.0rem", md: "1.75rem" },
                 }}
               >
                 {item.name}
@@ -111,7 +122,7 @@ export default function Details() {
                 color="inherit"
                 sx={{
                   fontFamily: "Cormorant Garamond, serif",
-                  fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" },
+                  fontSize: { xs: "0.6rem", sm: "0.85rem", md: "1.0rem" },
                 }}
               >
                 {item.addressLine1}
@@ -124,11 +135,13 @@ export default function Details() {
                 alt="Image of Venue"
                 image={item.image}
                 sx={{
-                  maxHeight: { xs: "20vh", sm: "28vh", md: "38vh" },
-                  maxWidth: "90%",
-                  mt: { xs: 1.5, md: 2 },
-                  mb: { xs: -1, md: -3 },
+                  width: "90%",
                   mx: "auto",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                  borderRadius: 1,
+                  flex: 1,
+                  minHeight: 0,
                 }}
               />
             </CardContent>

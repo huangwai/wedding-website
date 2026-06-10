@@ -1,6 +1,9 @@
 import { Box, Typography, Container } from "@mui/material";
-
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
 export default function RSVP() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       id="rsvp"
@@ -32,14 +35,20 @@ export default function RSVP() {
             borderRadius: 2,
             overflow: "hidden",
             boxShadow: 2,
-            height: { xs: "28vh", md: "45vh" },
+            height: { xs: "28vh", md: "35vh" },
           }}
         >
           <iframe
             src="https://withjoy.com/jimmy-and-mi-ju/rsvp"
             width="100%"
             height="100%"
-            style={{ border: "none" }}
+            style={{
+              border: "none",
+              transform: isMobile ? "scale(0.5)" : "scale(0.80)",
+              transformOrigin: "top left",
+              width: isMobile ? "200%" : "130%",
+              height: isMobile ? "200%" : "130%",
+            }}
             title="Wedding RSVP"
           />
         </Box>

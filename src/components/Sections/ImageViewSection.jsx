@@ -3,7 +3,7 @@ import { imagePairList } from "../../assets/textList";
 
 export default function ImageViewSection() {
   return (
-    <Box sx={{ display: "flex", height: { xs: "45vh", md: "auto" } }}>
+    <Box sx={{ display: "flex", height: { xs: "45vh", md: "65vh" } }}>
       {imagePairList.map((src, i) => (
         <Box
           key={i}

@@ -22,48 +22,53 @@ export default function WeddingParty() {
           Wedding Party
         </Typography>
 
-        <Grid
-          container
-          spacing={{ xs: 3, sm: 4, md: 6 }}
-          justifyContent="center"
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: { xs: 2, sm: 3, md: 4 },
+          }}
         >
           {weddingParty.map(({ name, role, img }) => (
-            <Grid item xs={6} sm={4} md={3} key={name} textAlign="center">
+            <Box
+              key={name}
+              textAlign="center"
+              sx={{ width: "calc(25% - 24px)" }}
+            >
               <Avatar
                 src={img}
                 alt={name}
                 sx={{
-                  width: { xs: 80, sm: 140, md: 180 },
-                  height: { xs: 80, sm: 140, md: 180 },
+                  width: { xs: 60, sm: 120, md: 160 },
+                  height: { xs: 60, sm: 120, md: 160 },
                   mx: "auto",
-                  mb: { xs: 1, sm: 1.5, md: 2 },
+                  mb: { xs: 0.8, sm: 1.2, md: 1.8 },
                 }}
               />
-
               <Typography
                 color="#f2efe8"
                 fontWeight={600}
                 sx={{
                   fontFamily: "Cormorant Garamond, serif",
-                  fontSize: { xs: "0.85rem", sm: "1.1rem", md: "1.3rem" },
+                  fontSize: { xs: "0.70rem", sm: "1.0rem", md: "1.2rem" },
                 }}
               >
                 {name}
               </Typography>
-
               <Typography
                 color="#f2efe8"
                 fontWeight={500}
                 sx={{
                   fontFamily: "Cormorant Garamond, serif",
-                  fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" },
+                  fontSize: { xs: "0.70rem", sm: "0.9rem", md: "1rem" },
                 }}
               >
                 {role}
               </Typography>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );

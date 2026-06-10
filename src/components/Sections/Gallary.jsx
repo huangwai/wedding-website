@@ -31,7 +31,7 @@ export default function Gallery() {
     <Box
       id="gallery"
       sx={{
-        py: { xs: 12, md: 18 },
+        py: { xs: 2, sm: 3, md: 4 },
         px: { xs: 2, sm: 4 },
         bgcolor: "#3b1717",
         color: "#f2efe8",
@@ -44,7 +44,7 @@ export default function Gallery() {
 
         {/* Masonry */}
         <Masonry
-          columns={{ xs: 2, sm: 2, md: 3 }}
+          columns={{ xs: 3, sm: 3, md: 3 }}
           spacing={{ xs: 1.5, sm: 2, md: 3 }}
         >
           {gallaryImages.map((img, index) => (

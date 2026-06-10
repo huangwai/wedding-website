@@ -37,21 +37,19 @@ function FrontPage() {
       <FadeInSection>
         <WeddingParty />
       </FadeInSection>
-      {/* <FadeInSection direction="left">
-        <Travel />
-      </FadeInSection> */}
       <FadeInSection>
         <Registry />
+      </FadeInSection>
+
+      <FadeInSection>
+        <FAQ />
       </FadeInSection>
       <FadeInSection>
         <ImageViewSection />
       </FadeInSection>
       <FadeInSection>
-        <FAQ />
-      </FadeInSection>
-      {/* <FadeInSection direction="right">
         <Gallery />
-      </FadeInSection> */}
+      </FadeInSection>
       <FadeInSection>
         <Contact />
       </FadeInSection>
