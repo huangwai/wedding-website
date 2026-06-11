@@ -19,40 +19,39 @@ function FrontPage() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar />
-      <FadeInSection>
-        <Hero />
-      </FadeInSection>
-      <FadeInSection>
-        <Details />
-      </FadeInSection>
-      <FadeInSection>
-        <Timeline />
-      </FadeInSection>
-      <FadeInSection>
-        <RSVP />
-      </FadeInSection>
-      <FadeInSection>
-        <ImageViewOne />
-      </FadeInSection>
-      <FadeInSection>
-        <WeddingParty />
-      </FadeInSection>
-      <FadeInSection>
-        <Registry />
-      </FadeInSection>
-
-      <FadeInSection>
-        <FAQ />
-      </FadeInSection>
-      <FadeInSection>
-        <ImageViewSection />
-      </FadeInSection>
-      <FadeInSection>
-        <Gallery />
-      </FadeInSection>
-      <FadeInSection>
-        <Contact />
-      </FadeInSection>
+      {/* <FadeInSection> */}
+      <Hero />
+      {/* </FadeInSection> */}
+      {/* <FadeInSect/ion> */}
+      <Details />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <Timeline />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <RSVP />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <ImageViewOne />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <WeddingParty />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <Registry />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <ImageViewSection />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <FAQ />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <Gallery />
+      {/* </FadeInSection> */}
+      {/* <FadeInSection> */}
+      <Contact />
+      {/* </FadeInSection> */}
       <Footer />
     </ThemeProvider>
   );

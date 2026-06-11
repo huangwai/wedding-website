@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import video from "/public/Video/Hero.mp4";
+import FadeInSection from "../FadeInSection";
 export default function Hero() {
   const [open, setOpen] = useState(false);
   // OPTIONAL: detect scroll
@@ -69,51 +70,25 @@ export default function Hero() {
           alignItems: "center",
         }}
       >
-        <Typography
-          variant="h1"
-          sx={{ color: "#e8e2d4" }}
-          // sx={{
-          //   fontSize: { xs: "2rem", sm: "3rem", md: "6rem" },
-          //   fontWeight: 400,
-          //   fontFamily: "Pinyon Script, cursive",
-          // }}
-        >
-          Mi-Ju & Jimmy
-        </Typography>
-
-        <Typography
-          variant="subtitle1"
-          sx={{
-            mt: 2,
-            fontFamily: "Cormorant Garamond, serif",
-            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
-            opacity: 0.9,
-            color: "#f2efe8",
-          }}
-        >
-          October 05, 2026 • Rockville, Maryland
-        </Typography>
-
-        {/* <Button
-          sx={{
-            mt: 4,
-            px: 4,
-            py: 1.5,
-            fontSize: { xs: "0.9rem", sm: "1.2rem" },
-            fontFamily: "Cormorant Garamond, serif",
-            color: "#f2efe8",
-            backgroundColor: "transparent",
-            border: "1px solid transparent",
-            borderColor: "#f2efe8",
-            "&:hover": {
-              borderColor: "#f2efe8",
-              backgroundColor: "rgba(66, 22, 3, 0.06)",
-            },
-          }}
-          onClick={() => scrollTo("rsvp")}
-        >
-          RSVP Now
-        </Button> */}
+        <FadeInSection direction="down" delay={400}>
+          <Typography variant="h1" sx={{ color: "#e8e2d4" }}>
+            Mi-Ju & Jimmy
+          </Typography>
+        </FadeInSection>
+        <FadeInSection direction="up" delay={400}>
+          <Typography
+            variant="subtitle1"
+            sx={{
+              mt: 2,
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
+              opacity: 0.9,
+              color: "#f2efe8",
+            }}
+          >
+            October 05, 2026 • Rockville, Maryland
+          </Typography>
+        </FadeInSection>
       </Box>
     </Box>
   );

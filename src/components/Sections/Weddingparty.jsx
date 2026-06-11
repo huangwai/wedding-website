@@ -1,5 +1,6 @@
 import { Box, Typography, Container, Grid, Avatar } from "@mui/material";
 import { weddingParty } from "../../assets/textList";
+import FadeInSection from "../FadeInSection";
 
 export default function WeddingParty() {
   return (
@@ -13,62 +14,65 @@ export default function WeddingParty() {
       }}
     >
       <Container maxWidth="lg">
-        <Typography
-          variant="h2"
-          textAlign="center"
-          gutterBottom
-          sx={{ color: "#f2efe8" }}
-        >
-          Wedding Party
-        </Typography>
-
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: { xs: 2, sm: 3, md: 4 },
-          }}
-        >
-          {weddingParty.map(({ name, role, img }) => (
-            <Box
-              key={name}
-              textAlign="center"
-              sx={{ width: "calc(25% - 24px)" }}
-            >
-              <Avatar
-                src={img}
-                alt={name}
-                sx={{
-                  width: { xs: 60, sm: 120, md: 160 },
-                  height: { xs: 60, sm: 120, md: 160 },
-                  mx: "auto",
-                  mb: { xs: 0.8, sm: 1.2, md: 1.8 },
-                }}
-              />
-              <Typography
-                color="#f2efe8"
-                fontWeight={600}
-                sx={{
-                  fontFamily: "Cormorant Garamond, serif",
-                  fontSize: { xs: "0.70rem", sm: "1.0rem", md: "1.2rem" },
-                }}
+        <FadeInSection direction="down" delay={300}>
+          <Typography
+            variant="h2"
+            textAlign="center"
+            gutterBottom
+            sx={{ color: "#f2efe8" }}
+          >
+            Wedding Party
+          </Typography>
+        </FadeInSection>
+        <FadeInSection direction="up" delay={300}>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: { xs: 2, sm: 3, md: 4 },
+            }}
+          >
+            {weddingParty.map(({ name, role, img }) => (
+              <Box
+                key={name}
+                textAlign="center"
+                sx={{ width: "calc(25% - 24px)" }}
               >
-                {name}
-              </Typography>
-              <Typography
-                color="#f2efe8"
-                fontWeight={500}
-                sx={{
-                  fontFamily: "Cormorant Garamond, serif",
-                  fontSize: { xs: "0.70rem", sm: "0.9rem", md: "1rem" },
-                }}
-              >
-                {role}
-              </Typography>
-            </Box>
-          ))}
-        </Box>
+                <Avatar
+                  src={img}
+                  alt={name}
+                  sx={{
+                    width: { xs: 60, sm: 120, md: 160 },
+                    height: { xs: 60, sm: 120, md: 160 },
+                    mx: "auto",
+                    mb: { xs: 0.8, sm: 1.2, md: 1.8 },
+                  }}
+                />
+                <Typography
+                  color="#f2efe8"
+                  fontWeight={600}
+                  sx={{
+                    fontFamily: "Cormorant Garamond, serif",
+                    fontSize: { xs: "0.70rem", sm: "1.0rem", md: "1.2rem" },
+                  }}
+                >
+                  {name}
+                </Typography>
+                <Typography
+                  color="#f2efe8"
+                  fontWeight={500}
+                  sx={{
+                    fontFamily: "Cormorant Garamond, serif",
+                    fontSize: { xs: "0.70rem", sm: "0.9rem", md: "1rem" },
+                  }}
+                >
+                  {role}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+        </FadeInSection>
       </Container>
     </Box>
   );

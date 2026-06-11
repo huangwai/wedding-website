@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { eventDetails } from "../../assets/textList";
+import FadeInSection from "../FadeInSection";
 
 const SERIF = "'Palatino Linotype', 'Book Antiqua', Palatino, serif";
 
@@ -7,7 +8,7 @@ const Timeline = ({
   titleScriptPart = "The",
   titleSerifPart = "PROGRAM",
   events = eventDetails,
-  imageSrc = "/Photos/Engagement/engagement010.jpeg",
+  imageSrc = "/Photos/Engagement/engagement004.jpeg",
   imageAlt = "Wedding photo",
   accentColor = "#656440",
 }) => {
@@ -39,33 +40,40 @@ const Timeline = ({
         }}
       >
         {/* Title */}
+        {/* <FadeInSection direction="left"> */}
         <Box sx={{ mb: { xs: 1, sm: 2, md: "6%" }, textAlign: "center" }}>
-          <Typography
-            variant="h2"
-            sx={{
-              fontSize: { xs: "1.5rem", sm: "1.2rem", md: "2.8rem" },
-              fontWeight: 400,
-              lineHeight: 1,
-              mb: "-4px",
-              color: "#fff",
-            }}
-          >
-            {titleScriptPart}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Cormorant Garamond, serif",
-              fontStyle: "normal",
-              fontSize: { xs: "1.5rem", sm: "1.2rem", md: "2.8rem" },
-              fontWeight: 400,
-              letterSpacing: { xs: "0.15em", sm: "0.25em", md: "0.35em" },
-              color: "#fff",
-            }}
-          >
-            {titleSerifPart}
-          </Typography>
+          <FadeInSection direction="down" delay={300}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.8rem" },
+                fontWeight: 400,
+                lineHeight: 1,
+                mb: "-4px",
+                color: "#fff",
+              }}
+            >
+              {titleScriptPart}
+            </Typography>
+          </FadeInSection>
+          <FadeInSection direction="down" delay={300}>
+            <Typography
+              sx={{
+                fontFamily: "Cormorant Garamond, serif",
+                fontStyle: "normal",
+                fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.8rem" },
+                fontWeight: 400,
+                letterSpacing: { xs: "0.15em", sm: "0.25em", md: "0.35em" },
+                color: "#fff",
+              }}
+            >
+              {titleSerifPart}
+            </Typography>
+          </FadeInSection>
         </Box>
+        {/* </FadeInSection> */}
 
+        {/* <FadeInSection direction="right" delay={300}> */}
         {/* Event rows */}
         {events.map((ev, i) => (
           <Box
@@ -79,6 +87,7 @@ const Timeline = ({
               width: "100%",
             }}
           >
+            <FadeInSection direction="right" delay={300}>
             <Typography
               component="span"
               // variant="body"
@@ -86,7 +95,7 @@ const Timeline = ({
                 fontStyle: "italic",
                 fontSize: {
                   xs: "0.85rem",
-                  sm: "0.95rem",
+                  sm: "1.2rem",
                   md: "clamp(14px, 2.2vw, 22px)",
                 },
                 textAlign: "right",
@@ -100,6 +109,8 @@ const Timeline = ({
             >
               {ev.time}
             </Typography>
+            </FadeInSection>
+            <FadeInSection direction="left" delay={300}>
             <Typography
               component="span"
               sx={{
@@ -109,8 +120,8 @@ const Timeline = ({
                 fontFamily: "Cormorant Garamond, serif",
                 fontStyle: "normal",
                 fontSize: {
-                  xs: "0.75rem",
-                  sm: "0.85rem",
+                  xs: "0.85rem",
+                  sm: "1.2rem",
                   md: "clamp(14px, 2.2vw, 22px)",
                 },
                 minWidth: { xs: "35%", sm: "30%", md: "26%" },
@@ -119,8 +130,10 @@ const Timeline = ({
             >
               {ev.label}
             </Typography>
+            </FadeInSection>
           </Box>
         ))}
+        {/* </FadeInSection> */}
       </Box>
 
       {/* ── Right: photo ── */}

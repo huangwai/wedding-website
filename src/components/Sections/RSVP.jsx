@@ -1,6 +1,8 @@
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography, Container, Fade } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
+import FadeInSection from "../FadeInSection";
+
 export default function RSVP() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -16,42 +18,49 @@ export default function RSVP() {
       }}
     >
       <Container maxWidth="md">
-        <Typography variant="h2" gutterBottom textAlign="center">
-          RSVP
-        </Typography>
+        <FadeInSection direction="down" delay={300}>
+          <Typography variant="h2" gutterBottom textAlign="center">
+            RSVP
+          </Typography>
+        </FadeInSection>
+        <FadeInSection direction="down">
+          <Typography
+            textAlign="center"
+            sx={{ fontFamily: "Cormorant Garamond, serif", mb: 2 }}
+          >
+            Please respond by August 15, 2026
+          </Typography>
+        </FadeInSection>
 
-        <Typography
-          textAlign="center"
-          sx={{ fontFamily: "Cormorant Garamond, serif", mb: 2 }}
-        >
-          Please respond by August 15, 2026
-        </Typography>
-
-        <Box
-          sx={{
-            maxWidth: "100%",
-            // height: { xs: "600px", sm: "700px", md: "800px" },
-            height: "45vh",
-            borderRadius: 2,
-            overflow: "hidden",
-            boxShadow: 2,
-            height: { xs: "28vh", md: "35vh" },
-          }}
-        >
-          <iframe
-            src="https://withjoy.com/jimmy-and-mi-ju/rsvp"
-            width="100%"
-            height="100%"
-            style={{
-              border: "none",
-              transform: isMobile ? "scale(0.5)" : "scale(0.80)",
-              transformOrigin: "top left",
-              width: isMobile ? "200%" : "130%",
-              height: isMobile ? "200%" : "130%",
+        <FadeInSection direction="up" delay={300}>
+          <Box
+            sx={{
+              maxWidth: "100%",
+              // height: { xs: "600px", sm: "700px", md: "800px" },
+              height: "45vh",
+              borderRadius: 2,
+              overflow: "hidden",
+              boxShadow: 2,
+              height: { xs: "22vh", sm: "25vh", md: "35vh" },
             }}
-            title="Wedding RSVP"
-          />
-        </Box>
+          >
+            {/* <FadeInSection direction="up"> */}
+            <iframe
+              src="https://withjoy.com/jimmy-and-mi-ju/rsvp"
+              width="100%"
+              height="100%"
+              style={{
+                border: "none",
+                transform: isMobile ? "scale(0.5)" : "scale(0.80)",
+                transformOrigin: "top left",
+                width: isMobile ? "200%" : "130%",
+                height: isMobile ? "200%" : "130%",
+              }}
+              title="Wedding RSVP"
+            />
+            {/* </FadeInSection> */}
+          </Box>
+        </FadeInSection>
       </Container>
     </Box>
   );

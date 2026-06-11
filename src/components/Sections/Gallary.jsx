@@ -12,6 +12,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import { gallaryImages } from "../../assets/textList";
 import { ThemeProvider, CssBaseline } from "@mui/material";
+import FadeInSection from "../FadeInSection";
 
 export default function Gallery() {
   const [open, setOpen] = useState(false);
@@ -38,40 +39,44 @@ export default function Gallery() {
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h2" textAlign="center" gutterBottom>
-          Gallery
-        </Typography>
+        <FadeInSection direction="down" delay={300}>
+          <Typography variant="h2" textAlign="center" gutterBottom>
+            Gallery
+          </Typography>
+        </FadeInSection>
 
         {/* Masonry */}
-        <Masonry
-          columns={{ xs: 3, sm: 3, md: 3 }}
-          spacing={{ xs: 1.5, sm: 2, md: 3 }}
-        >
-          {gallaryImages.map((img, index) => (
-            <Fade in timeout={1000} key={index}>
-              <Box
-                component="img"
-                // src={`${img}?w=800&auto=format`}
-                src={img}
-                alt="Wedding"
-                loading="lazy"
-                onClick={() => handleOpen(img)}
-                sx={{
-                  width: "100%",
-                  borderRadius: 2,
-                  objectFit: "cover",
-                  cursor: "pointer",
-                  aspectRatio: { xs: "4/3", sm: "4/3", md: "3/4" }, // responsive aspect ratio
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.02)",
-                    boxShadow: "0 12px 30px rgba(0,0,0,0.35)",
-                  },
-                }}
-              />
-            </Fade>
-          ))}
-        </Masonry>
+        <FadeInSection direction="up" delay={300}>
+          <Masonry
+            columns={{ xs: 3, sm: 3, md: 3 }}
+            spacing={{ xs: 1.5, sm: 2, md: 3 }}
+          >
+            {gallaryImages.map((img, index) => (
+              <Fade in timeout={1000} key={index}>
+                <Box
+                  component="img"
+                  // src={`${img}?w=800&auto=format`}
+                  src={img}
+                  alt="Wedding"
+                  loading="lazy"
+                  onClick={() => handleOpen(img)}
+                  sx={{
+                    width: "100%",
+                    borderRadius: 2,
+                    objectFit: "cover",
+                    cursor: "pointer",
+                    aspectRatio: { xs: "4/3", sm: "4/3", md: "3/4" }, // responsive aspect ratio
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "&:hover": {
+                      transform: "scale(1.02)",
+                      boxShadow: "0 12px 30px rgba(0,0,0,0.35)",
+                    },
+                  }}
+                />
+              </Fade>
+            ))}
+          </Masonry>
+        </FadeInSection>
       </Container>
 
       {/* Lightbox */}

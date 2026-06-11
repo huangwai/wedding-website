@@ -184,16 +184,17 @@ export const airports = [
 ];
 
 export const gallaryImages = [
+  "/Photos/Engagement/DSC02905.jpeg",
+  // "/Photos/Engagement/DSC03766.jpeg",
   "/Photos/Engagement/engagement001.jpeg",
   "/Photos/Engagement/engagement002.jpeg",
-  "/Photos/Engagement/engagement004.jpeg",
+  "/Photos/Engagement/engagement003.jpeg",
+  // "/Photos/Engagement/engagement004.jpeg",
   "/Photos/Engagement/engagement005.jpeg",
-
   "/Photos/Engagement/engagement006.jpeg",
   "/Photos/Engagement/engagement007.jpeg",
   "/Photos/Engagement/engagement008.jpeg",
-  "/Photos/Engagement/engagement010.jpeg",
-
+  // "/Photos/Engagement/engagement010.jpeg",
   "/Photos/Engagement/engagement011.jpeg",
   // "/Photos/Engagement/engagement012.jpeg",
 ];
@@ -258,7 +259,7 @@ export const eventDetails = [
 ];
 
 export const imagePairList = [
-  "/Photos/Engagement/engagement003.jpeg",
+  "/Photos/Engagement/engagement010.jpeg",
   "/Photos/Engagement/engagement012.jpeg",
 ];
 export const imageList = [

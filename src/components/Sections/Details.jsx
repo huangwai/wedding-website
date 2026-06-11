@@ -7,9 +7,11 @@ import {
   Link,
 } from "@mui/material";
 import { details } from "../../assets/textList";
+import FadeInSection from "../FadeInSection";
 
 export default function Details() {
   return (
+    // <FadeInSection>
     <Box
       id="details"
       sx={{
@@ -23,131 +25,143 @@ export default function Details() {
       }}
     >
       <Box sx={{ textAlign: "center", mb: { xs: 3, sm: 4, md: 6 } }}>
-        <Typography
-          variant="h2"
-          sx={{
-            mb: -2,
-            fontSize: { xs: "2.2rem", sm: "2.7rem", md: "3.2rem" },
-          }}
-        >
-          The
-        </Typography>
-        <Typography
-          variant="h2"
-          sx={{
-            mb: -1,
-            fontFamily: "Cormorant Garamond, serif",
-            fontSize: { xs: "2.0rem", sm: "2.5rem", md: "3rem" },
-            fontWeight: "none",
-          }}
-        >
-          WEDDING
-        </Typography>
+        <FadeInSection direction="down" delay={300}>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: -2,
+              fontSize: { xs: "2.2rem", sm: "2.7rem", md: "3.2rem" },
+            }}
+          >
+            The
+          </Typography>
+        </FadeInSection>
+        <FadeInSection direction="down" delay={300}>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: -1,
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: { xs: "2.0rem", sm: "2.5rem", md: "3rem" },
+              fontWeight: "none",
+            }}
+          >
+            WEDDING
+          </Typography>
+        </FadeInSection>
       </Box>
 
       {/* Always side-by-side */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          gap: { xs: 2, sm: 3, md: 5 },
-          mx: "auto",
-          maxWidth: { xs: "85%", sm: "75%", md: "65%" },
-        }}
-      >
-        {details.map((item, index) => (
-          <Card
-            key={index}
-            elevation={3}
-            sx={{
-              backgroundColor: "#f2efe8",
-              flex: "1 1 0",
-              minWidth: 0,
-              aspectRatio: "1 / 1",
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              border: "1px solid orange",
-            }}
-          >
-            <CardContent
+      <FadeInSection direction="up" delay={300}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            gap: { xs: 2, sm: 3, md: 5 },
+            mx: "auto",
+            maxWidth: { xs: "85%", sm: "75%", md: "65%" },
+          }}
+        >
+          {/* <FadeInSection direction="up"> */}
+          {details.map((item, index) => (
+            // <FadeInSection key={index} direction="up">
+            <Card
+              key={index}
+              elevation={3}
               sx={{
-                textAlign: "center",
-                color: "#421603",
-                px: { xs: 0.5, sm: 1, md: 2 },
-                py: { xs: 0.5, sm: 1, md: 2 },
-                flex: 1,
+                backgroundColor: "#f2efe8",
+                flex: "1 1 0",
+                minWidth: 0,
+                aspectRatio: "1 / 1",
+                overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "flex-start",
-                gap: { xs: 0.5, sm: 0.75, md: 1.5 },
-                overflow: "hidden",
+                border: ".5px solid #421603",
               }}
             >
-              <Typography
-                variant="h3"
+              <CardContent
                 sx={{
-                  fontSize: { xs: "0.8rem", sm: "1.2rem", md: "2rem" },
-                  fontWeight: "light",
-                  mt: 2,
-                }}
-              >
-                {item.type}
-              </Typography>
-
-              <Typography
-                sx={{
-                  color: "#656440",
-                  fontSize: { xs: "0.45rem", sm: "0.65rem", md: "0.85rem" },
-                }}
-              >
-                JOIN US AT
-              </Typography>
-
-              <Typography
-                variant="h3"
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: { xs: "0.7rem", sm: "1.0rem", md: "1.75rem" },
-                }}
-              >
-                {item.name}
-              </Typography>
-
-              <Link
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                underline="hover"
-                color="inherit"
-                sx={{
-                  fontFamily: "Cormorant Garamond, serif",
-                  fontSize: { xs: "0.6rem", sm: "0.85rem", md: "1.0rem" },
-                }}
-              >
-                {item.addressLine1}
-                <br />
-                {item.addressLine2}
-              </Link>
-
-              <CardMedia
-                component="img"
-                alt="Image of Venue"
-                image={item.image}
-                sx={{
-                  width: "90%",
-                  mx: "auto",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                  borderRadius: 1,
+                  textAlign: "center",
+                  color: "#421603",
+                  px: { xs: 0.5, sm: 1, md: 2 },
+                  py: { xs: 0.5, sm: 1, md: 2 },
                   flex: 1,
-                  minHeight: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  gap: { xs: 0.5, sm: 0.75, md: 1.5 },
+                  overflow: "hidden",
                 }}
-              />
-            </CardContent>
-          </Card>
-        ))}
-      </Box>
+              >
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontSize: { xs: "0.8rem", sm: "1.2rem", md: "2rem" },
+                    fontWeight: "light",
+                    fontWeight: 500,
+                    mt: 2,
+                  }}
+                >
+                  {item.type}
+                </Typography>
+
+                <Typography
+                  sx={{
+                    color: "#656440",
+                    fontSize: { xs: "0.45rem", sm: "0.65rem", md: "0.85rem" },
+                  }}
+                >
+                  JOIN US AT
+                </Typography>
+
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: { xs: "0.7rem", sm: "1.0rem", md: "1.75rem" },
+                  }}
+                >
+                  {item.name}
+                </Typography>
+
+                <Link
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  underline="hover"
+                  color="inherit"
+                  sx={{
+                    fontFamily: "Cormorant Garamond, serif",
+                    fontSize: { xs: "0.6rem", sm: "0.85rem", md: "1.0rem" },
+                  }}
+                >
+                  {item.addressLine1}
+                  <br />
+                  {item.addressLine2}
+                </Link>
+
+                <CardMedia
+                  component="img"
+                  alt="Image of Venue"
+                  image={item.image}
+                  sx={{
+                    width: "90%",
+                    mx: "auto",
+                    objectFit: "contain",
+                    objectPosition: "center",
+                    borderRadius: 1,
+                    flex: 1,
+                    minHeight: 0,
+                  }}
+                />
+              </CardContent>
+            </Card>
+            // </FadeInSection>
+          ))}
+          {/* </FadeInSection> */}
+        </Box>
+      </FadeInSection>
     </Box>
+    // </FadeInSection>
   );
 }

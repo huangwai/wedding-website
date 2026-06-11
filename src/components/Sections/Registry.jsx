@@ -1,5 +1,6 @@
 import { registry } from "../../assets/textList";
 import { Box, Typography, Link } from "@mui/material";
+import FadeInSection from "../FadeInSection";
 
 const Registry = ({
   titleScriptPart = registry[0].titleScriptPart,
@@ -63,39 +64,40 @@ const Registry = ({
         }}
       >
         <Box sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h2"
-            sx={{
-              fontStyle: "italic",
-              fontSize: { xs: "2.0rem", sm: "2.8rem", md: "5.2rem" },
-              fontWeight: 400,
-              lineHeight: 1,
-              color: textColor,
-            }}
-          >
-            {titleScriptPart}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Cormorant Garamond, serif",
-              fontStyle: "normal",
-              fontSize: {
-                xs: "1.0rem",
-                sm: "1.5rem",
-                md: "clamp(14px, 2.4vw, 28px)",
-              },
-              fontWeight: 400,
-              letterSpacing: { xs: "0.15em", sm: "0.3em", md: "0.4em" },
-              color: textColor,
-              mt: "-6px",
-            }}
-          >
-            {titleSerifPart}
-          </Typography>
+          <FadeInSection direction="right" delay={300}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontStyle: "italic",
+                fontSize: { xs: "3.0rem", sm: "3.5rem", md: "5.2rem" },
+                fontWeight: 400,
+                lineHeight: 1,
+                color: textColor,
+              }}
+            >
+              {titleScriptPart}
+            </Typography>
+          </FadeInSection>
+          <FadeInSection direction="right" delay={300}>
+            <Typography
+              sx={{
+                fontFamily: "Cormorant Garamond, serif",
+                fontStyle: "normal",
+                fontSize: { xs: "1.5rem", sm: "2.0rem", md: "3.2rem" },
+                fontWeight: 400,
+                letterSpacing: { xs: "0.15em", sm: "0.18em", md: "0.2em" },
+                color: textColor,
+                mt: "-6px",
+              }}
+            >
+              {titleSerifPart}
+            </Typography>
+          </FadeInSection>
         </Box>
       </Box>
 
       {/* ── Right panel: white card ── */}
+      {/* <FadeInSection */}
       <Box
         sx={{
           flex: "0 0 54%",
@@ -117,70 +119,81 @@ const Registry = ({
           }}
         >
           {/* Heading */}
-          <Typography
-            sx={{
-              fontFamily: "Cormorant Garamond, serif",
-              fontWeight: 700,
-              fontSize: {
-                xs: "0.8rem",
-                sm: "1rem",
-                md: "clamp(15px, 2vw, 26px)",
-              },
-              color: textColor,
-              mb: { xs: 1, sm: 2, md: 3 },
-              lineHeight: 1.4,
-            }}
-          >
-            {heading}
-          </Typography>
-
-          {/* Body */}
-          <Typography
-            sx={{
-              fontFamily: "Cormorant Garamond, serif",
-              fontSize: {
-                xs: "0.70rem",
-                sm: "0.80rem",
-                md: "clamp(12px, 2.0vw, 20px)",
-              },
-              color: textColor,
-              lineHeight: 1.8,
-              mb: { xs: 1, sm: 2, md: 3 },
-              letterSpacing: "0.02em",
-            }}
-          >
-            {body}
-          </Typography>
-
-          {/* Links */}
-          {links.map((link, i) => (
+          <FadeInSection direction="left" delay={300}>
             <Typography
-              key={i}
               sx={{
                 fontFamily: "Cormorant Garamond, serif",
                 fontWeight: 700,
                 fontSize: {
-                  xs: "0.65rem",
-                  sm: "0.95rem",
-                  md: "clamp(13px, 1.8vw, 22px)",
+                  xs: "0.85rem",
+                  sm: "1rem",
+                  md: "1.5rem",
                 },
                 color: textColor,
-                mt: i === 0 ? 0 : { xs: 0.5, md: 1 },
+                mb: { xs: 1, sm: 2, md: 3 },
+                lineHeight: 1.4,
               }}
             >
-              <Link
-                href={link.url}
-                underline="hover"
-                sx={{
-                  color: "inherit",
-                  fontFamily: "Cormorant Garamond, serif",
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {link.label}
-              </Link>
+              {heading}
             </Typography>
+          </FadeInSection>
+
+          {/* Body */}
+          <FadeInSection direction="left" delay={300}>
+            <Typography
+              sx={{
+                fontFamily: "Cormorant Garamond, serif",
+                fontSize: {
+                  xs: "0.70rem",
+                  sm: "0.80rem",
+                  md: "clamp(12px, 2.0vw, 20px)",
+                },
+                color: textColor,
+                lineHeight: 1.8,
+                mb: { xs: 1, sm: 2, md: 3 },
+                letterSpacing: "0.02em",
+              }}
+            >
+              {body}
+            </Typography>
+          </FadeInSection>
+
+          {/* Links */}
+          {links.map((link, i) => (
+            <FadeInSection direction="left" delay={300}>
+              <Typography
+                key={i}
+                sx={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontWeight: 700,
+                  fontSize: {
+                    xs: "0.65rem",
+                    sm: "0.95rem",
+                    md: "clamp(13px, 1.8vw, 22px)",
+                  },
+                  color: textColor,
+                  mt: i === 0 ? 0 : { xs: 0.5, md: 1 },
+                }}
+              >
+                <Link
+                  href={link.url}
+                  underline="hover"
+                  sx={{
+                    color: "inherit",
+                    fontFamily: "Cormorant Garamond, serif",
+                    fontSize: {
+                      xs: "0.75rem",
+                      sm: "0.95rem",
+                      md: "clamp(13px, 1.8vw, 22px)",
+                    },
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label}
+                </Link>
+              </Typography>
+            </FadeInSection>
           ))}
         </Box>
       </Box>
