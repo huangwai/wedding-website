@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { imagePairList } from "../../assets/textList";
 
 export default function ImageViewSection() {

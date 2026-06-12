@@ -43,6 +43,9 @@ export default function FadeInSection({
         transform: isVisible ? "none" : getTransform(),
         transition: `opacity 0.9s ease ${delay}ms, transform 0.9s ease ${delay}ms`,
         willChange: "opacity, transform",
+        width: "100%", // 👈 don't shrink to content width
+        overflow: "visible", // 👈 don't clip translated elements
+        // display: "contents",
       }}
     >
       {children}

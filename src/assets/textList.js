@@ -107,11 +107,6 @@ export const faqSection = [
       "While we love your little ones, this will be an adults-only celebration.",
   },
   {
-    question: "Is the ceremony indoors or outdoors?",
-    answer:
-      "The ceremony will be outdoors, weather permitting. The reception will take place indoors. In the event of inclement weather, the ceremony will be moved indoors.",
-  },
-  {
     question: "Will there be parking available?",
     answer:
       "Yes, there will be complimentary parking available at the venue for all guests.",
@@ -120,10 +115,6 @@ export const faqSection = [
     question: "Who can I contact if I have questions the day of the wedding?",
     answer:
       "Please reach out to mijuhhan@gmail.com if you have any questions or need assistance on the day of the wedding.",
-  },
-  {
-    question: "Is smoking or vaping allowed?",
-    answer: "Smoking and vaping are not permitted at the venue.",
   },
 ];
 
@@ -253,6 +244,7 @@ export const details = [
 ];
 
 export const eventDetails = [
+  { time: "2:30 pm - 3:00 pm", label: "Guest Arrival" },
   { time: "3:00 pm - 3:45 pm", label: "Ceremony" },
   { time: "3:45 pm - 5:30 pm", label: "Coffee Hour" },
   { time: "6:00 pm - 8:00 pm", label: "Dinner" },
@@ -263,6 +255,6 @@ export const imagePairList = [
   "/Photos/Engagement/engagement012.jpeg",
 ];
 export const imageList = [
-  "/Photos/Engagement/engagement009.jpeg",
+  "/Photos/Engagement/engagement014.jpeg",
   // "/Photos/Engagement/DSC02946.jpeg",
 ];

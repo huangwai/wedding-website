@@ -22,12 +22,13 @@ export default function FAQ() {
         height: { xs: "auto", md: "auto" },
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{ mb: 2, mt: 2 }}>
         <FadeInSection direction="down" delay={300}>
           <Typography
             variant="h2"
             gutterBottom
             textAlign="center"
+
             // sx={{ fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.8rem" } }}
           >
             Frequently Asked Questions

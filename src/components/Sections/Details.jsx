@@ -21,6 +21,7 @@ export default function Details() {
         color: "#421603",
         mx: "auto",
         maxWidth: "100%",
+        // mt: 1,
         // maxHeight: { xs: "45vh", md: "65vh" },
       }}
     >
@@ -30,6 +31,7 @@ export default function Details() {
             variant="h2"
             sx={{
               mb: -2,
+              mt: 2,
               fontSize: { xs: "2.2rem", sm: "2.7rem", md: "3.2rem" },
             }}
           >
@@ -77,6 +79,7 @@ export default function Details() {
                 display: "flex",
                 flexDirection: "column",
                 border: ".5px solid #421603",
+                mb: 2,
               }}
             >
               <CardContent
@@ -156,6 +159,7 @@ export default function Details() {
                 />
               </CardContent>
             </Card>
+
             // </FadeInSection>
           ))}
           {/* </FadeInSection> */}

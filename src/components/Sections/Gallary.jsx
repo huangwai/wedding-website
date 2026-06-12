@@ -67,6 +67,7 @@ export default function Gallery() {
                     cursor: "pointer",
                     aspectRatio: { xs: "4/3", sm: "4/3", md: "3/4" }, // responsive aspect ratio
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
+
                     "&:hover": {
                       transform: "scale(1.02)",
                       boxShadow: "0 12px 30px rgba(0,0,0,0.35)",

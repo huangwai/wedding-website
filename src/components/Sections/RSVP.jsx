@@ -17,9 +17,9 @@ export default function RSVP() {
         height: { xs: "45vh", md: "65vh" },
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{ mt: 2 }}>
         <FadeInSection direction="down" delay={300}>
-          <Typography variant="h2" gutterBottom textAlign="center">
+          <Typography variant="h2" gutterBottom textAlign="center" sx={{mb:-1}}>
             RSVP
           </Typography>
         </FadeInSection>

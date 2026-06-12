@@ -88,48 +88,48 @@ const Timeline = ({
             }}
           >
             <FadeInSection direction="right" delay={300}>
-            <Typography
-              component="span"
-              // variant="body"
-              sx={{
-                fontStyle: "italic",
-                fontSize: {
-                  xs: "0.85rem",
-                  sm: "1.2rem",
-                  md: "clamp(14px, 2.2vw, 22px)",
-                },
-                textAlign: "right",
-                minWidth: { xs: "35%", sm: "30%", md: "26%" },
-                flexShrink: 0,
-                color: "#fff",
-                justifyContent: "center",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {ev.time}
-            </Typography>
+              <Typography
+                component="span"
+                // variant="body"
+                sx={{
+                  fontStyle: "italic",
+                  fontSize: {
+                    xs: "0.85rem",
+                    sm: "1.2rem",
+                    md: "clamp(14px, 2.2vw, 22px)",
+                  },
+                  textAlign: "right",
+                  minWidth: { xs: "35%", sm: "30%", md: "26%" },
+                  flexShrink: 0,
+                  color: "#fff",
+                  justifyContent: "center",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                {ev.time}
+              </Typography>
             </FadeInSection>
             <FadeInSection direction="left" delay={300}>
-            <Typography
-              component="span"
-              sx={{
-                justifyContent: "space-around",
-                display: "flex",
-                alignItems: "center",
-                fontFamily: "Cormorant Garamond, serif",
-                fontStyle: "normal",
-                fontSize: {
-                  xs: "0.85rem",
-                  sm: "1.2rem",
-                  md: "clamp(14px, 2.2vw, 22px)",
-                },
-                minWidth: { xs: "35%", sm: "30%", md: "26%" },
-                color: "#fff",
-              }}
-            >
-              {ev.label}
-            </Typography>
+              <Typography
+                component="span"
+                sx={{
+                  justifyContent: "space-around",
+                  display: "flex",
+                  alignItems: "center",
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontStyle: "normal",
+                  fontSize: {
+                    xs: "0.85rem",
+                    sm: "1.2rem",
+                    md: "clamp(14px, 2.2vw, 22px)",
+                  },
+                  minWidth: { xs: "35%", sm: "30%", md: "26%" },
+                  color: "#fff",
+                }}
+              >
+                {ev.label}
+              </Typography>
             </FadeInSection>
           </Box>
         ))}

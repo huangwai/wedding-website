@@ -19,7 +19,7 @@ export default function WeddingParty() {
             variant="h2"
             textAlign="center"
             gutterBottom
-            sx={{ color: "#f2efe8" }}
+            sx={{ color: "#f2efe8", mt: 2 }}
           >
             Wedding Party
           </Typography>
@@ -30,7 +30,8 @@ export default function WeddingParty() {
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "center",
-              gap: { xs: 2, sm: 3, md: 4 },
+              mb: 2,
+              gap: { xs: 2, sm: 3, md: 2 },
             }}
           >
             {weddingParty.map(({ name, role, img }) => (
