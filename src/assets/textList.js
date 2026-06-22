@@ -87,12 +87,17 @@ export const weddingParty = [
 
 export const faqSection = [
   {
-    question: "What is the dress code?",
+    question: "WHAT TIME SHOULD I ARRIVE AT THE CEREMONY?",
+    answer:
+      "Because the ceremony begins promptly at 3:00 pm, we recommend you aim to arrive by 2:30 pm to ensure you are able to comfortably arrive on time.",
+  },
+  {
+    question: "WHAT IS THE DRESS CODE?",
     answer:
       "The dress code is semi-formal. Suits, cocktail dresses, or anything you feel great in!",
   },
   {
-    question: "Can I bring a plus one?",
+    question: "CAN I BRING A PLUS ONE?",
     answer:
       "Plus-ones are listed on your invitation. If your invitation does not include a guest, we kindly ask that you attend solo.",
   },
@@ -102,19 +107,20 @@ export const faqSection = [
   //     "Please arrive by 1:30 PM to allow time for parking and seating before the ceremony begins at 2:30 PM.",
   // },
   {
-    question: "Are kids welcome?",
+    question: "ARE KIDS WELCOME?",
     answer:
       "While we love your little ones, this will be an adults-only celebration.",
   },
   {
-    question: "Will there be parking available?",
+    question: "WILL THERE BE PARKING AVAILABLE?",
     answer:
-      "Yes, there will be complimentary parking available at the venue for all guests.",
+      "Ceremony: Parking is free! The main lot for Glenview Mansion is on the left as you enter Rockville Civic Center Park off Edmonston Drive (603 Edmonston Drive, Rockville, MD 20851) \n\nReception: Terra Gaucha offers free underground parking for the first 2 hours. The parking garage entrance is on Festival Street — just off Rockville Pike at Twinbrook Quarter. Note that finding the restaurant from the garage can be a little tricky, so give yourself a few extra minutes once you're parked. ",
+    ceremonyLink: "https://maps.app.goo.gl/yUK4cngvJCPTXK628",
+    receptionLink: "https://maps.app.goo.gl/VF7PrXYohN9WPVW46",
   },
   {
-    question: "Who can I contact if I have questions the day of the wedding?",
-    answer:
-      "Please reach out to mijuhhan@gmail.com if you have any questions or need assistance on the day of the wedding.",
+    question: "WHO CAN I CONTACT IF I HAVE QUESTIONS BEFORE THE WEDDING?",
+    answer: "Please reach out to mijuhhan@gmail.com if you have any questions",
   },
 ];
 

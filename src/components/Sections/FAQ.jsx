@@ -48,7 +48,7 @@ export default function FAQ() {
             >
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography
-                  fontWeight={600}
+                  fontWeight={500}
                   sx={{
                     fontSize: { xs: "0.95rem", sm: "1rem", md: "1.25rem" },
                   }}
@@ -59,10 +59,39 @@ export default function FAQ() {
               <AccordionDetails>
                 <Typography
                   sx={{
+                    whiteSpace: "pre-line",
                     fontSize: { xs: "0.9rem", sm: "0.95rem", md: "1.0rem" },
                   }}
                 >
-                  {faq.answer}
+                  {faq.ceremonyLink ? (
+                    <>
+                      {
+                        "Ceremony: Parking is free! The main lot for Glenview Mansion is on the left as you enter Rockville Civic Center Park off Edmonston Drive (603 Edmonston Drive, Rockville, MD 20851) "
+                      }
+                      <a
+                        href={faq.ceremonyLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#421603", fontWeight: 600 }}
+                      >
+                        Click here for parking details
+                      </a>
+
+                      {
+                        " \n\n Reception: Terra Gaucha offers free underground parking for the first 2 hours. The parking garage entrance is on Festival Street — just off Rockville Pike at Twinbrook Quarter. Note that finding the restaurant from the garage can be a little tricky, so give yourself a few extra minutes once you're parked. "
+                      }
+                      <a
+                        href={faq.receptionLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#421603", fontWeight: 600 }}
+                      >
+                        Click here for parking details
+                      </a>
+                    </>
+                  ) : (
+                    faq.answer
+                  )}
                 </Typography>
               </AccordionDetails>
             </Accordion>
