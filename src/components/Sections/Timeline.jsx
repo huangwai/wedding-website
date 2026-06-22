@@ -105,6 +105,7 @@ const Timeline = ({
                   justifyContent: "center",
                   display: "flex",
                   alignItems: "center",
+                  whiteSpace: "nowrap",
                 }}
               >
                 {ev.time}
@@ -126,6 +127,7 @@ const Timeline = ({
                   },
                   minWidth: { xs: "35%", sm: "30%", md: "26%" },
                   color: "#fff",
+                  whiteSpace: "nowrap",
                 }}
               >
                 {ev.label}

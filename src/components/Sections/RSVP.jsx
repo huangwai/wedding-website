@@ -14,12 +14,17 @@ export default function RSVP() {
         px: { xs: 2, sm: 4 },
         bgcolor: "#f2efe8",
         color: "#421603",
-        height: { xs: "45vh", md: "65vh" },
+        height: { xs: "55vh", md: "75vh" },
       }}
     >
       <Container maxWidth="md" sx={{ mt: 2 }}>
         <FadeInSection direction="down" delay={300}>
-          <Typography variant="h2" gutterBottom textAlign="center" sx={{mb:-1}}>
+          <Typography
+            variant="h2"
+            gutterBottom
+            textAlign="center"
+            sx={{ mb: -1 }}
+          >
             RSVP
           </Typography>
         </FadeInSection>
@@ -37,11 +42,10 @@ export default function RSVP() {
             sx={{
               maxWidth: "100%",
               // height: { xs: "600px", sm: "700px", md: "800px" },
-              height: "45vh",
               borderRadius: 2,
               overflow: "hidden",
               boxShadow: 2,
-              height: { xs: "22vh", sm: "25vh", md: "35vh" },
+              height: { xs: "35vh", md: "50vh" },
             }}
           >
             {/* <FadeInSection direction="up"> */}
@@ -51,10 +55,10 @@ export default function RSVP() {
               height="100%"
               style={{
                 border: "none",
-                transform: isMobile ? "scale(0.5)" : "scale(0.80)",
+                transform: isMobile ? "scale(0.75)" : "scale(0.95)", // 👈 larger scale
                 transformOrigin: "top left",
-                width: isMobile ? "200%" : "130%",
-                height: isMobile ? "200%" : "130%",
+                width: isMobile ? "133%" : "105%", // 👈 1/scale to fill width
+                height: isMobile ? "133%" : "105%", // 👈 1/scale to fill height
               }}
               title="Wedding RSVP"
             />

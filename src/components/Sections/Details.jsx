@@ -148,13 +148,14 @@ export default function Details() {
                   alt="Image of Venue"
                   image={item.image}
                   sx={{
-                    width: "90%",
+                    width: "100%",
                     mx: "auto",
+                    // height: "50",
                     objectFit: "contain",
                     objectPosition: "center",
                     borderRadius: 1,
                     flex: 1,
-                    minHeight: 0,
+                    minHeight: 0.25,
                   }}
                 />
               </CardContent>
