@@ -59,6 +59,7 @@ export default function RSVP() {
                 transformOrigin: "top left",
                 width: isMobile ? "133%" : "105%", // 👈 1/scale to fill width
                 height: isMobile ? "133%" : "105%", // 👈 1/scale to fill height
+                border: ".5px solid #cbb595",
               }}
               title="Wedding RSVP"
             />

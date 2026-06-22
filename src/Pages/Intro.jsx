@@ -4,36 +4,31 @@ import { Card, CardMedia } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
 
 const Intro = ({ handleEnterSite }) => {
+  const [started, setStarted] = useState(false);
   const [imageVisible, setImageVisible] = useState(false);
   const [buttonVisible, setButtonVisible] = useState(false);
   const [typographyVisible, setTypographyVisible] = useState(false);
   const audioRef = useRef(null);
 
   useEffect(() => {
-    const imageTimer = setTimeout(() => setImageVisible(true), 8000);
-    const buttonTimer = setTimeout(() => setButtonVisible(true), 11000);
-    const typographyTimer = setTimeout(() => setTypographyVisible(true), 4000);
-    const typographyHideTimer = setTimeout(
-      () => setTypographyVisible(false),
-      7000,
-    );
+    if (!started) return;
 
-    // Attempt autoplay on mount — succeeds on most mobile browsers
-    // and on desktop if the user has previously interacted with the site.
-    audioRef.current?.play().catch(() => {
-      // Autoplay blocked — music will start when the user clicks Enter.
-    });
+    const timers = [
+      setTimeout(() => setTypographyVisible(true), 4000),
+      setTimeout(() => setTypographyVisible(false), 7000),
+      setTimeout(() => setImageVisible(true), 11000),
+      setTimeout(() => setButtonVisible(true), 11000),
+    ];
 
-    return () => {
-      clearTimeout(typographyTimer);
-      clearTimeout(typographyHideTimer);
-      clearTimeout(imageTimer);
-      clearTimeout(buttonTimer);
-    };
-  }, []);
+    return () => timers.forEach(clearTimeout);
+  }, [started]);
+
+  const handleStart = () => {
+    audioRef.current?.play();
+    setStarted(true);
+  };
 
   const handleClick = () => {
-    // Ensures music is playing before the 2s fade-out begins.
     audioRef.current?.play();
     handleEnterSite();
   };
@@ -41,185 +36,113 @@ const Intro = ({ handleEnterSite }) => {
   return (
     <Box>
       <audio ref={audioRef} src="/Video/intro.mp4" loop />
-      <Box
-        sx={{
-          position: "relative",
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          backgroundColor: "#3b1717",
-          color: "#f2efe8",
-        }}
-      >
-        <Card
+
+      {/* ── Gate ── */}
+      {!started && (
+        <Box
           sx={{
-            backgroundColor: "transparent",
-            border: "none",
-            boxShadow: "none",
+            position: "fixed",
+            inset: 0,
+            zIndex: 50,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "#3b1717",
           }}
         >
-          <Typography
-            variant="h2"
+          {/* <img
+            src="/MJLogoV2.png"
+            alt="Logo"
+            style={{ maxWidth: "160px", marginBottom: "2rem", opacity: 0.9 }}
+          /> */}
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={handleStart}
             sx={{
               color: "#f2efe8",
-              opacity: typographyVisible ? 1 : 0,
-              transition: "opacity 1s ease",
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 1,
-              width: "100%",
-              textAlign: "center",
+              borderColor: "#f2efe8",
+              fontFamily: "Cormorant Garamond, serif",
+              fontWeight: "bold",
+              letterSpacing: "0.15em",
             }}
-            gutterBottom
           >
-            Welcome
-          </Typography>
-          <CardMedia
-            component="img"
-            image="/Photos/IntroImage.png"
-            alt="Reception venue"
-            sx={{
-              maxHeight: "100vh",
-              maxWidth: "100vw",
-              opacity: imageVisible ? 1 : 0,
-              transition: "opacity 1s ease",
-            }}
-          />
-        </Card>
+            Enter Our Wedding
+          </Button>
+        </Box>
+      )}
 
-        <Button
-          variant="outlined"
-          size="large"
-          onClick={handleClick}
+      {/* ── Intro sequence (only after gate click) ── */}
+      {started && (
+        <Box
           sx={{
-            opacity: buttonVisible ? 1 : 0,
-            transition: "opacity 1s ease",
-            fontWeight: "bold",
-            fontFamily: "Cormorant Garamond, serif",
+            position: "relative",
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            backgroundColor: "#3b1717",
+            color: "#f2efe8",
           }}
         >
-          Enter Our Wedding
-        </Button>
-      </Box>
+          <Card
+            sx={{
+              backgroundColor: "transparent",
+              border: "none",
+              boxShadow: "none",
+            }}
+          >
+            <Typography
+              variant="h2"
+              sx={{
+                color: "#f2efe8",
+                opacity: typographyVisible ? 1 : 0,
+                transition: "opacity 1s ease",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                zIndex: 1,
+                width: "100%",
+                textAlign: "center",
+              }}
+              gutterBottom
+            >
+              Welcome
+            </Typography>
+            <CardMedia
+              component="img"
+              image="/Photos/IntroImage.png"
+              alt="Reception venue"
+              sx={{
+                maxHeight: "100vh",
+                maxWidth: "100vw",
+                opacity: imageVisible ? 1 : 0,
+                transition: "opacity 1s ease",
+              }}
+            />
+          </Card>
+
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={handleClick}
+            sx={{
+              opacity: buttonVisible ? 1 : 0,
+              transition: "opacity 1s ease",
+              fontWeight: "bold",
+              fontFamily: "Cormorant Garamond, serif",
+            }}
+          >
+            More Details
+          </Button>
+        </Box>
+      )}
     </Box>
   );
 };
 
 export default Intro;
-// // src/Pages/EnterWedding.js
-// import { Box, Typography, Button, Fade } from "@mui/material";
-// import { Card, CardMedia } from "@mui/material";
-// import { useState, useEffect, useRef } from "react";
-// const Intro = ({ handleEnterSite, isAuthorized }) => {
-//   const [imageVisible, setImageVisible] = useState(false);
-//   const [buttonVisible, setButtonVisible] = useState(false);
-//   const [typographyVisible, setTypographyVisible] = useState(false);
-//   const audioRef = useRef(null);
-//   useEffect(() => {
-//     const imageTimer = setTimeout(() => setImageVisible(true), 8000);
-//     const buttonTimer = setTimeout(() => setButtonVisible(true), 11000);
-//     const typographyTimer = setTimeout(() => setTypographyVisible(true), 4000);
-//     const typographyHideTimer = setTimeout(
-//       () => setTypographyVisible(false),
-//       7000,
-//     );
-
-//     return () => {
-//       clearTimeout(typographyTimer);
-//       clearTimeout(typographyHideTimer);
-//       clearTimeout(imageTimer);
-//       clearTimeout(buttonTimer);
-//     };
-//   }, []);
-//   useEffect(() => {
-//     if (isAuthorized) {
-//       audioRef.current?.play();
-//     }
-//   }, [isAuthorized]);
-//   const handleClick = () => {
-//     audioRef.current?.play();
-//     handleEnterSite();
-//   };
-
-//   return (
-//     // <Fade in timeout={500}>
-//     <Box>
-//       <audio ref={audioRef} src="/Video/intro.mp4" loop />
-//       <Box
-//         sx={{
-//           position: "relative",
-//           minHeight: "100vh",
-//           display: "flex",
-//           flexDirection: "column",
-//           justifyContent: "center",
-//           alignItems: "center",
-//           textAlign: "center",
-//           backgroundColor: "#3b1717",
-//           color: "#f2efe8",
-//         }}
-//       >
-//         <Card
-//           sx={{
-//             backgroundColor: "transparent",
-//             border: "none",
-//             boxShadow: "none",
-//           }}
-//         >
-//           <Typography
-//             variant="h2"
-//             sx={{
-//               color: "#f2efe8",
-//               opacity: typographyVisible ? 1 : 0,
-//               transition: "opacity 1s ease",
-//               position: "absolute",
-//               top: "50%",
-//               left: "50%",
-//               transform: "translate(-50%, -50%)",
-//               zIndex: 1,
-//               width: "100%",
-//               textAlign: "center",
-//             }}
-//             gutterBottom
-//           >
-//             Welcome
-//           </Typography>
-//           <CardMedia
-//             component="img"
-//             image="/Photos/IntroImage.png"
-//             alt="Reception venue"
-//             sx={{
-//               maxHeight: "100vh",
-//               maxWidth: "100vw",
-//               opacity: imageVisible ? 1 : 0,
-//               transition: "opacity 1s ease",
-//             }}
-//           />
-//         </Card>
-
-//         <Button
-//           variant="outlined"
-//           size="large"
-//           onClick={handleClick}
-//           sx={{
-//             opacity: buttonVisible ? 1 : 0,
-//             transition: "opacity 1s ease",
-//             fontWeight: "bold",
-//             fontFamily: "Cormorant Garamond, serif",
-//             // fontSize: "1rem",
-//             // width: "15vw",
-//             // height: "5vh",
-//           }}
-//         >
-//           Enter Our Wedding
-//         </Button>
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default Intro;

@@ -78,7 +78,7 @@ export default function Details() {
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
-                border: ".5px solid #421603",
+                border: ".5px solid #cbb595",
                 mb: 2,
               }}
             >

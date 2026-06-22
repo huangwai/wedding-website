@@ -39,7 +39,12 @@ export default function FAQ() {
           {faqSection.map((faq, index) => (
             <Accordion
               key={index}
-              sx={{ mb: 1, color: "#421603", backgroundColor: "#e8e2d4" }}
+              sx={{
+                mb: 1,
+                color: "#421603",
+                backgroundColor: "#e8e2d4",
+                // border: ".5px solid #cbb595",
+              }}
             >
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography

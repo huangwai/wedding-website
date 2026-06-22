@@ -116,6 +116,7 @@ const Registry = ({
             p: { xs: 2, sm: 3, md: "6% 8%" },
             width: "100%",
             maxWidth: { md: "540px" },
+            border: ".5px solid #cbb595",
           }}
         >
           {/* Heading */}
