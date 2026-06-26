@@ -102,7 +102,7 @@ export default function Hero() {
               color: "#f2efe8",
             }}
           >
-            October 05, 2026
+            OCTOBER 05, 2026
           </Typography>
         </FadeInSection>
       </Box>
