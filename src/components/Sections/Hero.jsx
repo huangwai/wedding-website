@@ -75,13 +75,14 @@ export default function Hero() {
             variant="subtitle1"
             sx={{
               mt: 2,
+              mb: 2,
               fontFamily: "Cormorant Garamond, serif",
               fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
               opacity: 0.9,
               color: "#f2efe8",
             }}
           >
-            The Wedding of
+            THE WEDDING OF
           </Typography>
         </FadeInSection>
         <FadeInSection direction="up" delay={400}></FadeInSection>
