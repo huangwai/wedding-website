@@ -21,7 +21,7 @@ export default function TimeLineV2() {
             variant="h2"
             sx={{
               fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.8rem" },
-              fontWeight: 400,
+              // fontWeight: 600,
               lineHeight: 1,
               mb: "-4px",
               color: "#fff",
@@ -32,9 +32,9 @@ export default function TimeLineV2() {
           <Typography
             sx={{
               fontFamily: "Cormorant Garamond, serif",
-              fontStyle: "normal",
+              // fontStyle: "normal",
               fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.8rem" },
-              fontWeight: 400,
+              fontWeight: 600,
               letterSpacing: { xs: "0.15em", sm: "0.25em", md: "0.35em" },
               color: "#fff",
             }}
