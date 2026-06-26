@@ -71,6 +71,21 @@ export default function Hero() {
         }}
       >
         <FadeInSection direction="down" delay={400}>
+          <Typography
+            variant="subtitle1"
+            sx={{
+              mt: 2,
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
+              opacity: 0.9,
+              color: "#f2efe8",
+            }}
+          >
+            The Wedding of
+          </Typography>
+        </FadeInSection>
+        <FadeInSection direction="up" delay={400}></FadeInSection>
+        <FadeInSection direction="down" delay={400}>
           <Typography variant="h1" sx={{ color: "#e8e2d4" }}>
             Mi-Ju & Jimmy
           </Typography>
@@ -86,7 +101,7 @@ export default function Hero() {
               color: "#f2efe8",
             }}
           >
-            October 05, 2026 • Rockville, Maryland
+            October 05, 2026
           </Typography>
         </FadeInSection>
       </Box>

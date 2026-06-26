@@ -14,6 +14,8 @@ import Timeline from "../components/Sections/Timeline";
 import FadeInSection from "../components/FadeInSection";
 import ImageViewOne from "../components/Sections/ImageViewOne";
 import ImageViewSection from "../components/Sections/ImageViewSection";
+import DressCode from "../components/Sections/DressCode";
+import TimelineV2 from "../components/Sections/TimelineV2";
 function FrontPage() {
   return (
     <ThemeProvider theme={theme}>
@@ -26,7 +28,8 @@ function FrontPage() {
       <Details />
       {/* </FadeInSection> */}
       {/* <FadeInSection> */}
-      <Timeline />
+      {/* <Timeline /> */}
+      <TimelineV2 />
       {/* </FadeInSection> */}
       {/* <FadeInSection> */}
       <RSVP />
@@ -44,6 +47,7 @@ function FrontPage() {
       <ImageViewSection />
       {/* </FadeInSection> */}
       {/* <FadeInSection> */}
+      <DressCode />
       <FAQ />
       {/* </FadeInSection> */}
       {/* <FadeInSection> */}

@@ -6,6 +6,7 @@ export const navSections = [
   { label: "Wedding Party", id: "party" },
   // { label: "Travel", id: "travel" },
   { label: "Registry", id: "registry" },
+  { label: "Dress Code", id: "dresscode" },
   { label: "FAQ", id: "faq" },
   { label: "Gallery", id: "gallery" },
 
@@ -211,6 +212,30 @@ export const timelineItems = [
     title: "Reception",
     time: "6:30 PM",
     image: "/images/reception.png",
+  },
+];
+
+export const timelineItemsV2 = [
+  {
+    id: "ceremony",
+    title: "CEREMONY",
+    time: "3:00 - 3:45 pm",
+    description:
+      "Guests are invited to arrive 15-30 minutes early as the ceremony will begin at 3 pm.",
+  },
+  {
+    id: "coffee",
+    title: "COFFEE HOUR",
+    time: "4:00 - 5:30 pm",
+    description:
+      "Vietnamese coffee, matcha, and snacks are available for our guests.",
+  },
+  {
+    id: "dinner",
+    title: "DINNER",
+    time: "6:00 - 8:00 pm",
+    description:
+      "Join us at Terra Gaucha for Brazilian BBQ, speeches, and the send off.",
   },
 ];
 
