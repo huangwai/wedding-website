@@ -5,6 +5,7 @@ import FadeInSection from "../FadeInSection";
 export default function TimeLineV2() {
   return (
     <Box
+      id="timeline"
       sx={{
         backgroundColor: "#656440",
         color: "#F5F0E8",
