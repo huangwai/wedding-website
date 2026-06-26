@@ -74,7 +74,7 @@ export default function Hero() {
           <Typography
             variant="subtitle1"
             sx={{
-              mt: 2,
+              // mt: 2,
               mb: 2,
               fontFamily: "Cormorant Garamond, serif",
               fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
