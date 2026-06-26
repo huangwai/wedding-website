@@ -53,21 +53,15 @@ export default function WeddingParty() {
                 <Typography
                   color="#f2efe8"
                   fontWeight={600}
-                  sx={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    fontSize: { xs: "0.70rem", sm: "1.0rem", md: "1.2rem" },
-                  }}
+                  variant="body1"
+                  // sx={{
+                  //   fontFamily: "Cormorant Garamond, serif",
+                  //   fontSize: { xs: "0.70rem", sm: "1.0rem", md: "1.2rem" },
+                  // }}
                 >
                   {name}
                 </Typography>
-                <Typography
-                  color="#f2efe8"
-                  fontWeight={500}
-                  sx={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    fontSize: { xs: "0.70rem", sm: "0.9rem", md: "1rem" },
-                  }}
-                >
+                <Typography color="#f2efe8" fontWeight={500} variant="body1">
                   {role}
                 </Typography>
               </Box>

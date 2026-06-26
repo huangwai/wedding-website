@@ -49,18 +49,20 @@ export default function FAQ() {
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography
                   fontWeight={500}
-                  sx={{
-                    fontSize: { xs: "0.95rem", sm: "1rem", md: "1.25rem" },
-                  }}
+                  variant="h5"
+                  // sx={{
+                  //   fontSize: { xs: "0.95rem", sm: "1rem", md: "1.25rem" },
+                  // }}
                 >
                   {faq.question}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography
+                  variant="body1"
                   sx={{
                     whiteSpace: "pre-line",
-                    fontSize: { xs: "0.9rem", sm: "0.95rem", md: "1.0rem" },
+                    // fontSize: { xs: "0.9rem", sm: "0.95rem", md: "1.0rem" },
                   }}
                 >
                   {faq.ceremonyLink ? (

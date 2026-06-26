@@ -41,7 +41,11 @@ export default function DressCode() {
           <Typography
             textAlign="center"
             variant="h1"
-            sx={{ fontFamily: "Cormorant Garamond, serif", mb: 2 }}
+            sx={{
+              fontSize: { xs: "2.8rem", sm: "3rem", md: "3.8rem" },
+              fontFamily: "Cormorant Garamond, serif",
+              mb: 2,
+            }}
           >
             Dress Code
           </Typography>
@@ -50,6 +54,7 @@ export default function DressCode() {
         <FadeInSection direction="right" delay={300}>
           <Typography
             textAlign="center"
+            variant="body1"
             sx={{ fontFamily: "Cormorant Garamond, serif", mb: 2 }}
           >
             We would love to see our guests dressed to the nines for our big
@@ -60,6 +65,7 @@ export default function DressCode() {
 
         <FadeInSection direction="left" delay={300}>
           <Typography
+            variant="body1"
             textAlign="center"
             sx={{ fontFamily: "Cormorant Garamond, serif", mb: 2 }}
           >
@@ -73,7 +79,7 @@ export default function DressCode() {
             sx={{
               display: "flex",
               flexDirection: "row",
-              gap: 3,
+              gap: { xs: 1.5, sm: 2, md: 3 },
               justifyContent: "center",
               alignItems: "center",
             }}
@@ -82,8 +88,8 @@ export default function DressCode() {
               <Box
                 key={color}
                 sx={{
-                  width: 80,
-                  height: 80,
+                  width: { xs: 40, sm: 60, md: 80 },
+                  height: { xs: 40, sm: 60, md: 80 },
                   borderRadius: "50%",
                   backgroundColor: color,
                 }}

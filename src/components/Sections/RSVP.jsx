@@ -29,10 +29,7 @@ export default function RSVP() {
           </Typography>
         </FadeInSection>
         <FadeInSection direction="down">
-          <Typography
-            textAlign="center"
-            sx={{ fontFamily: "Cormorant Garamond, serif", mb: 2 }}
-          >
+          <Typography variant="body1" textAlign="center" sx={{ mb: 2 }}>
             Please respond by August 15, 2026
           </Typography>
         </FadeInSection>

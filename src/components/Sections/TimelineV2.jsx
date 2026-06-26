@@ -15,7 +15,7 @@ export default function TimeLineV2() {
       }}
     >
       {/* Header */}
-      <Box sx={{ mb: { xs: 6, md: 8 } }}>
+      <Box sx={{ mb: { xs: 3, md: 4 } }}>
         <FadeInSection direction="down" delay={300}>
           <Typography
             variant="h2"
@@ -30,6 +30,7 @@ export default function TimeLineV2() {
             The
           </Typography>
           <Typography
+            // variant="h3"
             sx={{
               fontFamily: "Cormorant Garamond, serif",
               // fontStyle: "normal",
@@ -101,13 +102,14 @@ export default function TimeLineV2() {
                 {section.time}
               </Typography>
               <Typography
+                variant="body1"
                 sx={{
                   // fontFamily: "serif",
-                  fontSize: {
-                    xs: "0.85rem",
-                    sm: "1.2rem",
-                    md: "clamp(14px, 2.2vw, 22px)",
-                  },
+                  // fontSize: {
+                  //   xs: "0.85rem",
+                  //   sm: "1.2rem",
+                  //   md: "clamp(14px, 2.2vw, 22px)",
+                  // },
                   lineHeight: 1.7,
                 }}
               >

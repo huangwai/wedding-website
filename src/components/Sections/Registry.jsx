@@ -142,13 +142,14 @@ const Registry = ({
           {/* Body */}
           <FadeInSection direction="left" delay={300}>
             <Typography
+              variant="body2"
               sx={{
-                fontFamily: "Cormorant Garamond, serif",
-                fontSize: {
-                  xs: "0.70rem",
-                  sm: "0.80rem",
-                  md: "clamp(12px, 2.0vw, 20px)",
-                },
+                // fontFamily: "Cormorant Garamond, serif",
+                // fontSize: {
+                //   xs: "0.70rem",
+                //   sm: "0.80rem",
+                //   md: "clamp(12px, 2.0vw, 20px)",
+                // },
                 color: textColor,
                 lineHeight: 1.8,
                 mb: { xs: 1, sm: 2, md: 3 },

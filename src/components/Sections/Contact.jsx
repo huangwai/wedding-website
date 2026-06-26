@@ -30,11 +30,12 @@ export default function Contact() {
         </FadeInSection>
         <FadeInSection direction="up" delay={300}>
           <Typography
-            sx={{
-              fontFamily: "Cormorant Garamond, serif",
-              fontSize: { xs: "0.9rem", sm: "1.1rem" },
-              // mb: 4,
-            }}
+            variant="body1"
+            // sx={{
+            //   fontFamily: "Cormorant Garamond, serif",
+            //   // fontSize: { xs: "0.9rem", sm: "1.1rem" },
+            //   // mb: 4,
+            // }}
           >
             Questions? Reach out anytime.
           </Typography>
@@ -43,10 +44,11 @@ export default function Contact() {
         <Stack spacing={1}>
           <FadeInSection direction="up" delay={300}>
             <Link
-              sx={{
-                fontFamily: "Cormorant Garamond, serif",
-                fontSize: { xs: "0.9rem", sm: "1.1rem" },
-              }}
+              variant="body1"
+              // sx={{
+              //   fontFamily: "Cormorant Garamond, serif",
+              //   fontSize: { xs: "0.9rem", sm: "1.1rem" },
+              // }}
               color="#421603"
               href="mailto:mijuhhan@gmail.com"
             >
@@ -55,11 +57,11 @@ export default function Contact() {
           </FadeInSection>
           <FadeInSection direction="up" delay={300}>
             <Typography
-              variant="body2"
-              sx={{
-                fontFamily: "Cormorant Garamond, serif",
-                fontSize: { xs: "0.8rem", sm: "0.9rem" },
-              }}
+              variant="body1"
+              // sx={{
+              //   fontFamily: "Cormorant Garamond, serif",
+              //   fontSize: { xs: "0.8rem", sm: "0.9rem" },
+              // }}
             >
               Please allow 24–48 hours for a response
             </Typography>
