@@ -30,14 +30,14 @@ export default function DressCode() {
           <Typography
             variant="h2"
             // gutterBottom
-
             textAlign="center"
-            sx={{ fontSize: { xs: "2.8rem", sm: "3.0rem", md: "3.8rem" } }}
+            sx={{
+              fontSize: { xs: "2.8rem", sm: "3.0rem", md: "3.8rem" },
+              mb: -3,
+            }}
           >
             The
           </Typography>
-        </FadeInSection>
-        <FadeInSection direction="down" delay={300}>
           <Typography
             textAlign="center"
             variant="h1"
