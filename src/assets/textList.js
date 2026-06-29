@@ -90,7 +90,7 @@ export const faqSection = [
   {
     question: "WHAT TIME SHOULD I ARRIVE AT THE CEREMONY?",
     answer:
-      "Because the ceremony begins promptly at 3:00 pm, we recommend you aim to arrive by 2:30 pm to ensure you are able to comfortably arrive on time.",
+      "The ceremony begins promptly at 3:00 pm and we recommend you arrive by 2:30 pm to ensure you are able to comfortably arrive on time.",
   },
   // {
   //   question: "WHAT IS THE DRESS CODE?",

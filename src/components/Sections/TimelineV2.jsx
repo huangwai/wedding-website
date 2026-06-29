@@ -102,7 +102,7 @@ export default function TimeLineV2() {
                 {section.time}
               </Typography>
               <Typography
-                variant="body1"
+                variant="body2"
                 sx={{
                   // fontFamily: "serif",
                   // fontSize: {

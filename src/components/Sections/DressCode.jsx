@@ -88,6 +88,7 @@ export default function DressCode() {
               <Box
                 key={color}
                 sx={{
+                  mb: 2,
                   width: { xs: 40, sm: 60, md: 80 },
                   height: { xs: 40, sm: 60, md: 80 },
                   borderRadius: "50%",
