@@ -29,8 +29,8 @@ function FrontPage() {
       <ImageViewOne />
       {/* <WeddingParty /> */}
 
-      <ImageViewSection />
       <DressCode />
+      <ImageViewSection />
       <FAQ />
       <Gallery />
       <Contact />
