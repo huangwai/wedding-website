@@ -25,9 +25,10 @@ function FrontPage() {
       <Details />
       <TimelineV2 />
       <RSVP />
+      <Registry />
       <ImageViewOne />
       {/* <WeddingParty /> */}
-      <Registry />
+
       <ImageViewSection />
       <DressCode />
       <FAQ />
