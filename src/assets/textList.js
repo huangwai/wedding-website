@@ -125,62 +125,6 @@ export const faqSection = [
   },
 ];
 
-export const hotels = [
-  //close to IAD Airport
-  {
-    name: "DoubleTree by Hilton Washington Dulles Airport",
-    address: "13869 Park Center Road, Herndon, Virginia, 20171, USA",
-    details: "About 10 minutes away from IAD Airport.",
-    link: "https://www.hilton.com/en/hotels/iaddddt-doubletree-washington-dulles-airport/",
-  },
-  //Close to DCA Airport
-  {
-    name: "Crystal Gateway Marriott",
-    address: "1700 Richmond Hwy, Arlington, VA 22202, USA",
-    details: "About 5 minutes away from DCA Airport.",
-    link: "https://www.marriott.com/en-us/hotels/wasgw-crystal-gateway-marriott/overview/",
-  },
-  //Close to BWI Airport
-  {
-    name: "Hilton Baltimore BWI Airport",
-    address: "1739 West Nursery Road, Linthicum Heights, Maryland, 21090, USA",
-    details:
-      "About 35 minutes away from the ceremony venue. Close to Georgetown and downtown DC.",
-    link: "https://www.hilton.com/en/hotels/bwiaphf-hilton-baltimore-bwi-airport/",
-  },
-  //Close to Glenview Mansion
-  {
-    name: "Hilton Washington DC/Rockville Hotel & Executive Meeting Ctr",
-    address: "1750 Rockville Pike, Rockville, MD 20852, USA",
-    details: "About 10 minutes away from the Glenview Mansion.",
-    link: "https://www.hilton.com/en/hotels/iadmrhf-hilton-washington-dc-rockville-hotel-and-executive-meeting-ctr/",
-  },
-  {
-    name: "Courtyard by Marriott Gaithersburg Washingtonian Center",
-    address: "204 Boardwalk Pl, Gaithersburg, MD 20878, USA",
-    details: "About 20 minutes away from the Glenview Mansion.",
-    link: "https://www.marriott.com/en-us/hotels/wascg-courtyard-gaithersburg-washingtonian-center/overview/",
-  },
-];
-
-export const airports = [
-  {
-    name: "Dulles International Airport (IAD)",
-    details:
-      "Approximately 40 minutes away from the ceremony venue. Expect about ~40–50 minutes by car depending on traffic via I-270 north",
-  },
-  {
-    name: "Reagan National Airport (DCA)",
-    details:
-      "Approximately 40 minutes away from the ceremony venue. Usually ~45–60 minutes by car via DC/I-495 and I-270, depending on route and time of day",
-  },
-  {
-    name: "Baltimore-Washington International Thurgood Marshall Airport (BWI)",
-    details:
-      "Approximately 40 minutes away from the ceremony venue. Typically takes ~1–1.5 hours by car depending on traffic — especially on weekends or holiday weekends.",
-  },
-];
-
 export const gallaryImages = [
   "/Photos/Engagement/DSC02905.jpeg",
   // "/Photos/Engagement/DSC03766.jpeg",
@@ -221,7 +165,7 @@ export const timelineItemsV2 = [
     title: "CEREMONY",
     time: "4:00 - 4:30 pm",
     description:
-      "Guests are invited to arrive 15-30 minutes early as the ceremony will begin at 4 pm.",
+      "Guests are invited to arrive 15-30 minutes early as the ceremony will begin promptly at 4 pm.",
   },
   {
     id: "coffee",
@@ -272,13 +216,6 @@ export const details = [
     image: "/Photos/Reception/terraGauchaV2.png",
     url: "https://maps.app.goo.gl/JxBEv23g7P7DMBng6",
   },
-];
-
-export const eventDetails = [
-  // { time: "3:30 pm - 3:00 pm", label: "Guest Arrival" },
-  { time: "4:00 pm - 4:30 pm", label: "Ceremony" },
-  { time: "4:30 pm - 5:30 pm", label: "Coffee Hour" },
-  { time: "6:00 pm - 8:00 pm", label: "Dinner" },
 ];
 
 export const imagePairList = [

@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, Link } from "@mui/material";
 import { useState } from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import video from "/public/Video/Hero.mp4";
@@ -105,6 +105,19 @@ export default function Hero() {
             OCTOBER 05, 2026
           </Typography>
         </FadeInSection>
+
+        {/* <Link
+          href="https://withjoy.com/jimmy-and-mi-ju/rsvp"
+          variant="outlined"
+          sx={{
+            mt: 2,
+            color: "#f2efe8",
+            borderColor: "#f2efe8",
+            fontSize: { xs: "0.875rem", sm: "1rem", md: "1.25rem" },
+          }}
+        >
+          Please RSVP Here By 08/30/2026
+        </Link> */}
       </Box>
     </Box>
   );

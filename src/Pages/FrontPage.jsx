@@ -10,7 +10,7 @@ import Contact from "../components/Sections/Contact";
 import Gallery from "../components/Sections/Gallary";
 import RSVP from "../components/Sections/RSVP";
 import theme from "../theme";
-import Timeline from "../components/Sections/Timeline";
+// import Timeline from "../components/Sections/Timeline";
 import FadeInSection from "../components/FadeInSection";
 import ImageViewOne from "../components/Sections/ImageViewOne";
 import ImageViewSection from "../components/Sections/ImageViewSection";
@@ -21,41 +21,19 @@ function FrontPage() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar />
-      {/* <FadeInSection> */}
       <Hero />
-      {/* </FadeInSection> */}
-      {/* <FadeInSect/ion> */}
       <Details />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
-      {/* <Timeline /> */}
       <TimelineV2 />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       <RSVP />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       <ImageViewOne />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       {/* <WeddingParty /> */}
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       <Registry />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       <ImageViewSection />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       <DressCode />
       <FAQ />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       <Gallery />
-      {/* </FadeInSection> */}
-      {/* <FadeInSection> */}
       <Contact />
-      {/* </FadeInSection> */}
+
       <Footer />
     </ThemeProvider>
   );
