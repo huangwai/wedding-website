@@ -32,7 +32,6 @@ export default function Details() {
             sx={{
               mb: -2,
               mt: 2,
-              fontSize: { xs: "2.2rem", sm: "2.7rem", md: "3.2rem" },
             }}
           >
             The

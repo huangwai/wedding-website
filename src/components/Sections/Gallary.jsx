@@ -40,7 +40,16 @@ export default function Gallery() {
     >
       <Container maxWidth="lg">
         <FadeInSection direction="down" delay={300}>
-          <Typography variant="h2" textAlign="center" gutterBottom>
+          <Typography
+            variant="h2"
+            gutterBottom
+            textAlign="center"
+            sx={{
+              mb: 2,
+              mt: 2,
+              fontSize: { xs: "2.0rem", sm: "2.5rem", md: "3rem" },
+            }}
+          >
             Gallery
           </Typography>
         </FadeInSection>

@@ -9,8 +9,11 @@ export default function TimeLineV2() {
       sx={{
         backgroundColor: "#656440",
         color: "#F5F0E8",
-        py: { xs: 6, md: 10 },
-        px: { xs: 3, md: 8 },
+        py: { xs: 2, sm: 3, md: 4 },
+        px: { xs: 2, sm: 3, md: 5 },
+        mx: "auto",
+        // mb: 2,
+        maxWidth: "100%",
         textAlign: "center",
       }}
     >
@@ -20,11 +23,9 @@ export default function TimeLineV2() {
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.8rem" },
-              // fontWeight: 600,
-              lineHeight: 1,
-              mb: "-4px",
-              color: "#fff",
+              mb: -2,
+              mt: 2,
+              // color: "#fff",
             }}
           >
             The
@@ -37,7 +38,7 @@ export default function TimeLineV2() {
               fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.8rem" },
               fontWeight: 600,
               letterSpacing: { xs: "0.15em", sm: "0.25em", md: "0.35em" },
-              color: "#fff",
+              // color: "#fff",
             }}
           >
             PROGRAM
@@ -52,10 +53,11 @@ export default function TimeLineV2() {
             flexDirection: "row", // always row
             justifyContent: "center",
             gap: { xs: 2, md: 4 },
+            mb: 2,
           }}
         >
           {timelineItemsV2.map((section) => (
-            <Box key={section.id} sx={{ flex: 1 }}>
+            <Box key={section.id} sx={{ flex: 1, backgroundColor: "#656440" }}>
               {" "}
               {/* remove maxWidth so they share space equally */}
               <Typography
@@ -73,7 +75,7 @@ export default function TimeLineV2() {
                     md: "clamp(14px, 2.2vw, 22px)",
                   },
                   minWidth: { xs: "35%", sm: "30%", md: "26%" },
-                  color: "#fff",
+                  // color: "#fff",
                   whiteSpace: "nowrap",
                 }}
               >
@@ -92,7 +94,7 @@ export default function TimeLineV2() {
                   textAlign: "right",
                   minWidth: { xs: "35%", sm: "30%", md: "26%" },
                   flexShrink: 0,
-                  color: "#fff",
+                  // color: "#fff",
                   justifyContent: "center",
                   display: "flex",
                   alignItems: "center",

@@ -3,7 +3,7 @@ export const navSections = [
   { label: "Details", id: "details" },
   { label: "Timeline", id: "timeline" },
   { label: "RSVP", id: "rsvp" },
-  { label: "Wedding Party", id: "party" },
+  // { label: "Wedding Party", id: "party" },
   // { label: "Travel", id: "travel" },
   { label: "Registry", id: "registry" },
   { label: "Dress Code", id: "dresscode" },
@@ -90,7 +90,7 @@ export const faqSection = [
   {
     question: "WHAT TIME SHOULD I ARRIVE AT THE CEREMONY?",
     answer:
-      "The ceremony begins promptly at 3:00 pm and we recommend you arrive by 2:30 pm to ensure you are able to comfortably arrive on time.",
+      "The ceremony begins promptly at 4:00 pm and we recommend you arrive 15-30 minutes before to ensure you are able to comfortably arrive on time.",
   },
   // {
   //   question: "WHAT IS THE DRESS CODE?",
@@ -219,14 +219,14 @@ export const timelineItemsV2 = [
   {
     id: "ceremony",
     title: "CEREMONY",
-    time: "3:00 - 3:45 pm",
+    time: "4:00 - 4:30 pm",
     description:
-      "Guests are invited to arrive 15-30 minutes early as the ceremony will begin at 3 pm.",
+      "Guests are invited to arrive 15-30 minutes early as the ceremony will begin at 4 pm.",
   },
   {
     id: "coffee",
     title: "COFFEE HOUR",
-    time: "4:00 - 5:30 pm",
+    time: "4:30 - 5:30 pm",
     description:
       "Vietnamese coffee, matcha, and snacks are available for our guests.",
   },
@@ -275,9 +275,9 @@ export const details = [
 ];
 
 export const eventDetails = [
-  { time: "2:30 pm - 3:00 pm", label: "Guest Arrival" },
-  { time: "3:00 pm - 3:45 pm", label: "Ceremony" },
-  { time: "3:45 pm - 5:30 pm", label: "Coffee Hour" },
+  // { time: "3:30 pm - 3:00 pm", label: "Guest Arrival" },
+  { time: "4:00 pm - 4:30 pm", label: "Ceremony" },
+  { time: "4:30 pm - 5:30 pm", label: "Coffee Hour" },
   { time: "6:00 pm - 8:00 pm", label: "Dinner" },
 ];
 

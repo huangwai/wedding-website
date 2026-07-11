@@ -5,6 +5,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Link,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { faqSection } from "../../assets/textList";
@@ -21,6 +22,7 @@ export default function DressCode() {
         color: "#421603",
         mx: "auto",
         maxWidth: "100%",
+        textAlign: "center",
         // mt: 1,
         // maxHeight: { xs: "45vh", md: "65vh" },
       }}
@@ -29,25 +31,23 @@ export default function DressCode() {
         <FadeInSection direction="down" delay={300}>
           <Typography
             variant="h2"
-            // gutterBottom
-            textAlign="center"
             sx={{
-              fontSize: { xs: "2.8rem", sm: "3.0rem", md: "3.8rem" },
-              mb: -3,
+              mb: -2,
+              mt: 2,
             }}
           >
             The
           </Typography>
           <Typography
-            textAlign="center"
-            variant="h1"
+            variant="h2"
             sx={{
-              fontSize: { xs: "2.8rem", sm: "3rem", md: "3.8rem" },
-              fontFamily: "Cormorant Garamond, serif",
               mb: 2,
+              fontFamily: "Cormorant Garamond, serif",
+              // fontSize: { xs: "2.0rem", sm: "2.5rem", md: "3rem" },
+              fontWeight: "none",
             }}
           >
-            Dress Code
+            DRESS CODE
           </Typography>
         </FadeInSection>
 
@@ -59,7 +59,15 @@ export default function DressCode() {
           >
             We would love to see our guests dressed to the nines for our big
             day! While optional, we invite you to match our fall wedding color
-            palette. See ideas here.
+            palette. {""}
+            <Link
+              color="#421603"
+              href="https://pin.it/6XNdUPepM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See ideas here.
+            </Link>
           </Typography>
         </FadeInSection>
 

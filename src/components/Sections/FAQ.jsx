@@ -28,8 +28,10 @@ export default function FAQ() {
             variant="h2"
             gutterBottom
             textAlign="center"
-
-            // sx={{ fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.8rem" } }}
+            sx={{
+              mb: 2,
+              mt: 2,
+            }}
           >
             Frequently Asked Questions
           </Typography>

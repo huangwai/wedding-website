@@ -38,7 +38,7 @@ function FrontPage() {
       <ImageViewOne />
       {/* </FadeInSection> */}
       {/* <FadeInSection> */}
-      <WeddingParty />
+      {/* <WeddingParty /> */}
       {/* </FadeInSection> */}
       {/* <FadeInSection> */}
       <Registry />

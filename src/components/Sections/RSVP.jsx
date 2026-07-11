@@ -9,6 +9,8 @@ export default function RSVP() {
   return (
     <Box
       id="rsvp"
+      gutterBottom
+      textAlign="center"
       sx={{
         py: { xs: 2, sm: 3, md: 4 },
         px: { xs: 2, sm: 4 },
@@ -21,20 +23,21 @@ export default function RSVP() {
         <FadeInSection direction="down" delay={300}>
           <Typography
             variant="h2"
-            gutterBottom
-            textAlign="center"
-            sx={{ mb: -1 }}
+            sx={{
+              mb: -2,
+              mt: 2,
+            }}
           >
             RSVP
           </Typography>
-        </FadeInSection>
-        <FadeInSection direction="down">
+          {/* </FadeInSection> */}
+          {/* <FadeInSection direction="down"> */}
           <Typography variant="body1" textAlign="center" sx={{ mb: 2 }}>
-            Please respond by August 15, 2026
+            Please reply by August 30, 2026
           </Typography>
-        </FadeInSection>
+          {/* </FadeInSection> */}
 
-        <FadeInSection direction="up" delay={300}>
+          {/* <FadeInSection direction="up" delay={300}> */}
           <Box
             sx={{
               maxWidth: "100%",

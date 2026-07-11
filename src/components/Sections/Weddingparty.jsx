@@ -6,6 +6,8 @@ export default function WeddingParty() {
   return (
     <Box
       id="party"
+      textAlign="center"
+      gutterBottom
       sx={{
         py: { xs: 2, sm: 3, md: 4 },
         px: { xs: 2, sm: 4 },
@@ -15,12 +17,7 @@ export default function WeddingParty() {
     >
       <Container maxWidth="lg">
         <FadeInSection direction="down" delay={300}>
-          <Typography
-            variant="h2"
-            textAlign="center"
-            gutterBottom
-            sx={{ color: "#f2efe8", mt: 2 }}
-          >
+          <Typography variant="h2" sx={{ color: "#f2efe8", mt: 2, mb: 3 }}>
             Wedding Party
           </Typography>
         </FadeInSection>

@@ -26,9 +26,10 @@ const theme = createTheme({
       fontWeight: 500,
       lineHeight: 1.25,
       fontSize: "2.25rem",
-      "@media (min-width:600px)": { fontSize: "3rem" },
-      "@media (min-width:900px)": { fontSize: "4rem" },
+      "@media (min-width:600px)": { fontSize: "2.2rem" },
+      "@media (min-width:900px)": { fontSize: "3.2rem" },
     },
+    // fontSize: { xs: "2.0rem", sm: "2.5rem", md: "3rem" },
     h3: {
       fontFamily: "Cormorant Garamond, serif",
       fontWeight: 500,
@@ -62,7 +63,7 @@ const theme = createTheme({
       fontSize: "0.95rem",
       lineHeight: 1.7,
       "@media (min-width:600px)": { fontSize: "1rem" },
-      "@media (min-width:900px)": { fontSize: "1.1rem" },
+      "@media (min-width:900px)": { fontSize: "1.3rem" },
     },
     body2: {
       fontFamily: "Cormorant Garamond, serif",

@@ -22,8 +22,11 @@ export default function Contact() {
           <Typography
             variant="h2"
             gutterBottom
-            // sx={{}}
-            // sx={{ fontSize: { xs: "1.8rem", sm: "2.4rem" } }}
+            textAlign="center"
+            sx={{
+              mb: 2,
+              mt: 2,
+            }}
           >
             Contact Us
           </Typography>
@@ -54,17 +57,6 @@ export default function Contact() {
             >
               mijuhhan@gmail.com
             </Link>
-          </FadeInSection>
-          <FadeInSection direction="up" delay={300}>
-            <Typography
-              variant="body1"
-              // sx={{
-              //   fontFamily: "Cormorant Garamond, serif",
-              //   fontSize: { xs: "0.8rem", sm: "0.9rem" },
-              // }}
-            >
-              Please allow 24–48 hours for a response
-            </Typography>
           </FadeInSection>
         </Stack>
       </Container>
