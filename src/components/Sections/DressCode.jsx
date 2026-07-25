@@ -18,7 +18,7 @@ export default function DressCode() {
       sx={{
         py: { xs: 2, sm: 3, md: 4 },
         px: { xs: 2, sm: 3, md: 5 },
-        backgroundColor: "#e8e2d4",
+        backgroundColor: "#f2efe8",
         color: "#421603",
         mx: "auto",
         maxWidth: "100%",
@@ -78,8 +78,8 @@ export default function DressCode() {
             sx={{ fontFamily: "Cormorant Garamond, serif", mb: 2 }}
           >
             Our dress code is cocktail attire. Ladies are free to wear
-            floor-length, tea-length, midi dresses, pantsuits, etc. Gentlemen
-            can wear suits (tie optional).
+            knee-length, tea-length, midi/ maxi dresses, pantsuits, etc.
+            Gentlemen can wear suits (tie optional).
           </Typography>
         </FadeInSection>
         <FadeInSection direction="up" delay={300}>

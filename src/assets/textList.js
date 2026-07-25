@@ -191,7 +191,7 @@ export const registry = [
     body: "However, if you would like to contribute to our new chapter together, we welcome gifting through our registry linked below.",
     links: [
       {
-        label: "Link to registery",
+        label: "Link to registry",
         url: "https://withjoy.com/jimmy-and-mi-ju/registry",
       },
       // add more registry links here
